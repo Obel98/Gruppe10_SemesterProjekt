@@ -15,5 +15,6 @@ public class Tester
     {
         System.out.println("Tester dette.");
         System.out.println("brian");
+        System.out.println("Borgar!!!");
     }
 }
