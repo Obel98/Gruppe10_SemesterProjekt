@@ -14,5 +14,6 @@ public class Tester
     public static void main(String[] args)
     {
         System.out.println("Tester dette.");
+        System.out.println("brian");
     }
 }
