@@ -17,5 +17,6 @@ public class Tester
         System.out.println("brian");
         System.out.println("Borgar!!!");
         System.out.println("Thorey");
+        System.out.println("Rasmus er best :D");
     }
 }
