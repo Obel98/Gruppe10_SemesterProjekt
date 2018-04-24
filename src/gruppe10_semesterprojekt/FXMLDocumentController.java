@@ -7,32 +7,41 @@ package gruppe10_semesterprojekt;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 
 /**
- *
  * @author Obel
  */
-public class FXMLDocumentController implements Initializable
-{
-    
+public class FXMLDocumentController implements Initializable {
     @FXML
-    private Label label;
-    
+    private TextField PasswordBox;
+
     @FXML
-    private void handleButtonAction(ActionEvent event)
-    {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
+    private TextField UsernameBox;
+
+    @FXML
+    private Button LogOnButton;
+
+    @FXML
+    private Button ResetPasswordButton;
+
+    @FXML
+    void LogOnAction(ActionEvent event) {
+
     }
-    
+
     @Override
-    public void initialize(URL url, ResourceBundle rb)
-    {
-        // TODO
-    }    
-    
+    public void initialize(URL location, ResourceBundle resources) {
+        
+    }
 }
+
+
+
