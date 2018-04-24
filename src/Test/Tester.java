@@ -18,6 +18,9 @@ public class Tester
         System.out.println("Borgar!!!");
         System.out.println("Thorey");
         System.out.println("Rasmus er bedst eller best, som er bedre :D");
-        System.out.println("Mads");
+        System.out.println("Mads Obel");
+        int rest = 0;
+        rest = 976 % 30;
+        System.out.println(rest);
     }
 }
