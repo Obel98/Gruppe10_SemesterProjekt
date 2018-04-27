@@ -2,95 +2,84 @@ package gruppe10_semesterprojekt;
 
 public class Borger {
 
-  private String name;
-  private String lastName;
-  private String address;
-  private String phoneNumber;
-  private String email;
-  private case Sag;
-  private contact String;
-  private history ArrayList<Sag>;
-  private password String;
-  private cpr String;
+    private String name;
+    private String lastName;
+    private String address;
+    private String phoneNumber;
+    private String email;
+    //private case Sag;
+    private String contact;
+    //private ArrayList<Sag> history;
+    private String password;
+    private String CPR;
 
-  public Borger(String cpr, String name, String lastName, String address, String phoneNumber, String email){
-      this.cpr = cpr;
-      this.name = name;
-      this.lastName = lastName;
-      this.address = address;
-      this.phoneNumber = phoneNumber;
-      this.email = email;
+    public Borger(String CPR, String name, String lastName, String address, String phoneNumber, String email) {
+        this.CPR = CPR;
+        this.name = name;
+        this.lastName = lastName;
+        this.address = address;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
 
-      this.password = generatePassword();
+        this.password = password;
 
+        //this.case =Sag();
+        this.contact = contact;
+        //this.ArrayList < Sag > history;
 
-      this.case = Sag();
-      this.contact = contact;
-      this.history = ArrayList<Sag>;
+    }
 
-  }
+    public String getCPR() {
+        return CPR;
+    }
 
-    public java.lang.String getName() {
+    public void setCPR(String CPR) {
+        this.CPR = CPR;
+    }
+
+    public String getName() {
         return name;
     }
 
-    public void setName(java.lang.String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public java.lang.String getLastName() {
+    public String getLastName() {
         return lastName;
     }
 
-    public void setLastName(java.lang.String lastName) {
+    public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
-    public java.lang.String getAddress() {
+    public String getAddress() {
         return address;
     }
 
-    public void setAddress(java.lang.String address) {
+    public void setAddress(String address) {
         this.address = address;
     }
 
-    public java.lang.String getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(java.lang.String phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
-    public java.lang.String getEmail() {
+    public String getEmail() {
         return email;
     }
 
-    public void setEmail(java.lang.String email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 
-    public contact getString() {
-        return String;
+    public String getPassword() {
+        return password;
     }
 
-    public void setString(cpr string) {
-        String = string;
-    }
-
-    public void setString(password string) {
-        String = string;
-    }
-
-    public void setString(contact string) {
-        String = string;
-    }
-
-    public history getArrayList() {
-        return ArrayList;
-    }
-
-    public void setArrayList(history arrayList) {
-        ArrayList = arrayList;
-    }
 }
+
