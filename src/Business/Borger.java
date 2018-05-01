@@ -1,4 +1,4 @@
-package gruppe10_semesterprojekt;
+package Business;
 
 public class Borger {
 

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package gruppe10_semesterprojekt;
+package Presentation;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -19,7 +19,9 @@ import javafx.scene.control.TextField;
 /**
  * @author Obel
  */
-public class FXMLDocumentController implements Initializable {
+public class FXMLDocumentController implements Initializable
+{
+
     @FXML
     private TextField PasswordBox;
 
@@ -33,15 +35,22 @@ public class FXMLDocumentController implements Initializable {
     private Button ResetPasswordButton;
 
     @FXML
-    void LogOnAction(ActionEvent event) {
-
+    void LogOnAction(ActionEvent event)
+    {
+        if ("administrator".equals(UsernameBox.getText()) && "admin".equals(PasswordBox.getText()))
+        {
+            System.out.println("Vellykket!");
+        }
     }
 
     @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        
+    public void initialize(URL location, ResourceBundle resources)
+    {
+
+    }
+
+    @FXML
+    private void ResetPasswordAction(ActionEvent event)
+    {
     }
 }
-
-
-
