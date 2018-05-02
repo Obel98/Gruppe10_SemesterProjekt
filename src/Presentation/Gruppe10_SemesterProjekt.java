@@ -23,9 +23,9 @@ public class Gruppe10_SemesterProjekt extends Application
     {
         Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         
-        Scene scene = new Scene(root);
+        Scene logIn = new Scene(root);
         
-        stage.setScene(scene);
+        stage.setScene(logIn);
         stage.show();
     }
 
