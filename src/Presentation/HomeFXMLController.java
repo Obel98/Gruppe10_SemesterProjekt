@@ -16,6 +16,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 /**
@@ -28,6 +29,16 @@ public class HomeFXMLController implements Initializable
 
     @FXML
     private Button logOutButton;
+    @FXML
+    private Label IDLabel;
+    @FXML
+    private Label nameLabel;
+    @FXML
+    private Label statusLabel;
+    @FXML
+    private Label textLabel;
+    @FXML
+    private Button viewCaseButton;
 
     /**
      * Initializes the controller class.
