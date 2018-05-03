@@ -64,12 +64,14 @@ public class HomeFXMLController implements Initializable
 
     @FXML
     private void viewCaseAction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("viewCase.fxml"));
+        Parent homeRoot = FXMLLoader.load(getClass().getResource("viewCase.fxml"));
+        Scene home = new Scene(homeRoot);
+        Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        appStage.setScene(home);
+        appStage.show();
+        System.out.println("yay!");
 
-        Scene viewCase = new Scene(root);
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(viewCase);
-        stage.show();
+
 
     }
 }
