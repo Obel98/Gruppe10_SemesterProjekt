@@ -60,4 +60,19 @@ public class HomeFXMLController implements Initializable
         stage.show();
     }
 
+    //Ting Mangler, todo fix dis shiet
+
+    @FXML
+    private void viewCaseAction(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("viewCase.fxml"));
+
+        Scene viewCase = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(viewCase);
+        stage.show();
+
+    }
 }
+
+
+
