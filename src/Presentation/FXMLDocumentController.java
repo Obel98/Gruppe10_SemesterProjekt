@@ -16,14 +16,15 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 /**
  * @author Obel
  */
-public class FXMLDocumentController implements Initializable
-{
+public class FXMLDocumentController implements Initializable {
 
     @FXML
     private TextField PasswordBox;
@@ -36,29 +37,31 @@ public class FXMLDocumentController implements Initializable
 
     @FXML
     private Button ResetPasswordButton;
+    @FXML
+    private Label passwordMsgLable;
 
     @FXML
-    void LogOnAction(ActionEvent event) throws IOException
-    {
-        if ("administrator".equals(UsernameBox.getText()) && "admin".equals(PasswordBox.getText()))
-        {
+    void LogOnAction(ActionEvent event) throws IOException {
+        if ("administrator".equals(UsernameBox.getText()) && "admin".equals(PasswordBox.getText())) {
             Parent homeRoot = FXMLLoader.load(getClass().getResource("HomeFXML.fxml"));
             Scene home = new Scene(homeRoot);
             Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             appStage.setScene(home);
             appStage.show();
             System.out.println("Vellykket!");
+        }else{
+            passwordMsgLable.setText("Inncorrect password, Try again!");
+            passwordMsgLable.setTextFill(Color.rgb(210, 39, 30));
+
         }
     }
 
     @Override
-    public void initialize(URL location, ResourceBundle resources)
-    {
+    public void initialize(URL location, ResourceBundle resources) {
 
     }
 
     @FXML
-    private void ResetPasswordAction(ActionEvent event)
-    {
+    private void ResetPasswordAction(ActionEvent event) {
     }
 }
