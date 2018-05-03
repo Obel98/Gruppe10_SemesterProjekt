@@ -12,3 +12,7 @@ nbproject/configs/
 nbproject/
 
 out/
+
+build/
+
+dist/
