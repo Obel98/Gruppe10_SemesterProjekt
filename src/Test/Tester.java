@@ -22,5 +22,6 @@ public class Tester
         int rest = 0;
         rest = 976 % 30;
         System.out.println(rest);
+        System.out.println("Super sonic mega test nr 1249583595295");
     }
 }
