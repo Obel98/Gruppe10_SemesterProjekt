@@ -15,6 +15,8 @@ import Aquaintance.IData;
 public class BusinessFacade implements Aquaintance.IBusiness {
 
     private IData data;
+    //Add to set instead.
+    private Case sag;
 
     @Override
     public void injectData(IData data) {
@@ -24,7 +26,7 @@ public class BusinessFacade implements Aquaintance.IBusiness {
     @Override
     public void getCase() {
         ICase newCase = data.getCase();
-        Case sag = new Case();
+        sag = new Case();
         sag.setID(newCase.getID());
         sag.setFirtName(newCase.getFirtName());
         sag.setLastName(newCase.getLastName());
@@ -34,6 +36,51 @@ public class BusinessFacade implements Aquaintance.IBusiness {
         sag.setCPR(newCase.getCPR());
         sag.setAddresse(newCase.getAddresse());
         sag.setJournal(newCase.getJournal());
+    }
+
+    @Override
+    public int getID() {
+        return sag.getID();
+    }
+
+    @Override
+    public String getFirtName() {
+        return sag.getFirtName();
+    }
+
+    @Override
+    public String getLastName() {
+        return sag.getLastName();
+    }
+
+    @Override
+    public int getPhoneNumber() {
+        return sag.getPhoneNumber();
+    }
+
+    @Override
+    public String getEmail() {
+        return sag.getEmail();
+    }
+
+    @Override
+    public int getBirthday() {
+        return sag.getBirthday();
+    }
+
+    @Override
+    public int getCPR() {
+        return sag.getCPR();
+    }
+
+    @Override
+    public String getAddresse() {
+        return sag.getAddresse();
+    }
+
+    @Override
+    public String getJournal() {
+        return sag.getJournal();
     }
 
 }

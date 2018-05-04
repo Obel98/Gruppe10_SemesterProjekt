@@ -23,18 +23,17 @@ import javafx.stage.Stage;
  */
 public class PresentationFacade implements Aquaintance.IPresentation {
 
-    private IBusiness business;
+    private IBusiness Business;
     private static IPresentation UI;
     private Stage stage = new Stage();
-    
-    public static IPresentation getUI()
-    {
+
+    public static IPresentation getUI() {
         return UI;
     }
 
     @Override
     public void injectBusiness(IBusiness business) {
-        this.business = business;
+        this.Business = business;
     }
 
     @Override
@@ -42,10 +41,9 @@ public class PresentationFacade implements Aquaintance.IPresentation {
         try
         {
             Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
-            
+
             Scene logIn = new Scene(root);
-            
-            
+
             stage.setScene(logIn);
             stage.show();
         } catch (IOException ex)
@@ -55,9 +53,53 @@ public class PresentationFacade implements Aquaintance.IPresentation {
     }
 
     @Override
-    public void loadHome(){
+    public void loadHome() {
+        System.out.println("Not supported yet.");
+    }
 
- }
+    @Override
+    public int getID() {
+        return Business.getID();
+    }
 
-    
+    @Override
+    public String getFirtName() {
+        return Business.getFirtName();
+    }
+
+    @Override
+    public String getLastName() {
+        return Business.getLastName();
+    }
+
+    @Override
+    public int getPhoneNumber() {
+        return Business.getPhoneNumber();
+    }
+
+    @Override
+    public String getEmail() {
+        return Business.getEmail();
+    }
+
+    @Override
+    public int getBirthday() {
+        return Business.getBirthday();
+    }
+
+    @Override
+    public int getCPR() {
+        return Business.getCPR();
+    }
+
+    @Override
+    public String getAddresse() {
+        return Business.getAddresse();
+    }
+
+    @Override
+    public String getJournal() {
+        return Business.getJournal();
+    }
+
 }

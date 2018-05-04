@@ -11,7 +11,25 @@ package Aquaintance;
  */
 public interface IBusiness {
 
-    public void injectData(IData data);
+    void injectData(IData data);
 
     void getCase();
+
+    int getID();
+
+    String getFirtName();
+
+    String getLastName();
+
+    int getPhoneNumber();
+
+    String getEmail();
+
+    int getBirthday();
+
+    int getCPR();
+
+    String getAddresse();
+
+    String getJournal();
 }

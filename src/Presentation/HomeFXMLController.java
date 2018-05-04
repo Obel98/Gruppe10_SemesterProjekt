@@ -5,6 +5,7 @@
  */
 package Presentation;
 
+import Aquaintance.IPresentation;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -26,6 +27,7 @@ import javafx.stage.Stage;
  */
 public class HomeFXMLController implements Initializable
 {
+    private IPresentation UI;
 
     @FXML
     private Button logOutButton;
@@ -42,11 +44,13 @@ public class HomeFXMLController implements Initializable
 
     /**
      * Initializes the controller class.
+     * @param url
+     * @param rb
      */
     @Override
     public void initialize(URL url, ResourceBundle rb)
     {
-        // TODO
+        UI = PresentationFacade.getUI();
     }
 
     @FXML
@@ -70,8 +74,6 @@ public class HomeFXMLController implements Initializable
         appStage.setScene(home);
         appStage.show();
         System.out.println("yay!");
-
-
 
     }
 }
