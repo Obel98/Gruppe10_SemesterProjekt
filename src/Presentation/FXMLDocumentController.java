@@ -5,6 +5,7 @@
  */
 package Presentation;
 
+import Aquaintance.IPresentation;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -26,6 +27,8 @@ import javafx.stage.Stage;
  * @author Obel
  */
 public class FXMLDocumentController implements Initializable {
+
+    private IPresentation UI;
     
     @FXML
     private PasswordField PasswordBox;
@@ -44,14 +47,17 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     void LogOnAction(ActionEvent event) throws IOException {
 
-        if ("administrator".equals(UsernameBox.getText()) && "admin".equals(PasswordBox.getText())) {
+        if ("administrator".equals(UsernameBox.getText()) && "admin".equals(PasswordBox.getText()))
+        {
             Parent homeRoot = FXMLLoader.load(getClass().getResource("HomeFXML.fxml"));
             Scene home = new Scene(homeRoot);
             Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             appStage.setScene(home);
             appStage.show();
+            
             System.out.println("Vellykket!");
-        } else {
+        } else
+        {
             passwordMsgLable.setText("Inncorrect password or username, Try again!");
             passwordMsgLable.setTextFill(Color.rgb(210, 39, 30));
 
@@ -60,7 +66,7 @@ public class FXMLDocumentController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        UI = PresentationFacade.getUI();
     }
 
     @FXML

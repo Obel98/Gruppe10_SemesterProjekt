@@ -5,11 +5,13 @@
  */
 package Data;
 
+import Aquaintance.ICase;
+
 /**
  *
  * @author borga
  */
-public class JournalFormat {
+public class CaseFormat implements ICase {
 
     private int ID;
     private String firtName;
@@ -21,7 +23,7 @@ public class JournalFormat {
     private String addresse;
     private String journal;
 
-    public JournalFormat(int ID, String firtName, String lastName, int phoneNumber, String email, int birthday, int CPR, String addresse, String journal) {
+    public CaseFormat(int ID, String firtName, String lastName, int phoneNumber, String email, int birthday, int CPR, String addresse, String journal) {
         this.ID = ID;
         this.firtName = firtName;
         this.lastName = lastName;
@@ -37,6 +39,50 @@ public class JournalFormat {
     public String toString() {
         return "JournalFormat{" + "ID=" + ID + ", firtName=" + firtName + ", lastName=" + lastName + ", phoneNumber=" + phoneNumber + ", email=" + email + ", birthday=" + birthday + ", CPR=" + CPR + ", addresse=" + addresse + ", journal=" + journal + '}';
     }
-    
+
+    @Override
+    public int getID() {
+        return ID;
+    }
+
+    @Override
+    public String getFirtName() {
+        return firtName;
+    }
+
+    @Override
+    public String getLastName() {
+        return lastName;
+    }
+
+    @Override
+    public int getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    @Override
+    public String getEmail() {
+        return email;
+    }
+
+    @Override
+    public int getBirthday() {
+        return birthday;
+    }
+
+    @Override
+    public int getCPR() {
+        return CPR;
+    }
+
+    @Override
+    public String getAddresse() {
+        return addresse;
+    }
+
+    @Override
+    public String getJournal() {
+        return journal;
+    }
     
 }
