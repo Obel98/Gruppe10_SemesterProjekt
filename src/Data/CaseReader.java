@@ -20,7 +20,8 @@ public class CaseReader {
     private ICase cf;
 
     public CaseReader(String fileName) {
-        file = new File("C:" + "/" + "Users" + "/" + "Mads Obel Jensen" + "/" + "Documents" + "/" + "NetBeansProjects" + "/" + "Gruppe10_SemesterProjekt" + "/" + fileName);
+        //file = new File("C:" + "/" + "Users" + "/" + "Mads Obel Jensen" + "/" + "Documents" + "/" + "NetBeansProjects" + "/" + "Gruppe10_SemesterProjekt" + "/" + fileName);
+        file = new File("/Users/Obel/NetBeansProjects/Gruppe10_SemesterProjekt" + "/" + fileName);
         readFile(file);
     }
 
@@ -52,5 +53,11 @@ public class CaseReader {
     public ICase getCf() {
         return cf;
     }
+    
+//    public static void main(String[] args)
+//    {
+//        CaseReader test = new CaseReader("Sag1.txt");
+//        System.out.println(test.getCf().getEmail());
+//    }
     
 }

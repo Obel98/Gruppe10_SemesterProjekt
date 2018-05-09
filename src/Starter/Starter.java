@@ -36,6 +36,9 @@ public class Starter extends Application
         Business.injectData(Data);
         UI.injectBusiness(Business);
         UI.start();
+        Data.getCase();
+        Business.getCase();
+        System.out.println(UI.getAddresse());
     }
 
     /**

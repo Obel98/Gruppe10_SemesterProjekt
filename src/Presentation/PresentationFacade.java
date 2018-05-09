@@ -15,6 +15,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 /**
@@ -23,11 +24,21 @@ import javafx.stage.Stage;
  */
 public class PresentationFacade implements Aquaintance.IPresentation {
 
-    private IBusiness Business;
+    private static IBusiness Business;
     private static IPresentation UI;
     private Stage stage = new Stage();
 
+    public PresentationFacade()
+    {
+    }
+
+    
+    
     public static IPresentation getUI() {
+        if(UI == null)
+        {
+            UI = new PresentationFacade();
+        }
         return UI;
     }
 
@@ -40,7 +51,10 @@ public class PresentationFacade implements Aquaintance.IPresentation {
     public void start() {
         try
         {
-            Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLDocument.fxml"));
+            Pane root = loader.load();
+            FXMLDocumentController controller = loader.getController();
+            controller.injectBusiness(Business);
 
             Scene logIn = new Scene(root);
 

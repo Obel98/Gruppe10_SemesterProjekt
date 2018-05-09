@@ -5,10 +5,12 @@
  */
 package Presentation;
 
+import Aquaintance.IBusiness;
 import Aquaintance.IPresentation;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -27,6 +29,7 @@ import javafx.stage.Stage;
  */
 public class HomeFXMLController implements Initializable
 {
+    private IBusiness Business;
     private IPresentation UI;
 
     @FXML
@@ -44,6 +47,7 @@ public class HomeFXMLController implements Initializable
 
     /**
      * Initializes the controller class.
+     *
      * @param url
      * @param rb
      */
@@ -51,6 +55,14 @@ public class HomeFXMLController implements Initializable
     public void initialize(URL url, ResourceBundle rb)
     {
         UI = PresentationFacade.getUI();
+        Platform.runLater(new Runnable()
+        {
+            @Override
+            public void run()
+            {
+                IDLabel.setText(String.valueOf(UI.getID()));
+            }
+        });
     }
 
     @FXML
@@ -65,9 +77,9 @@ public class HomeFXMLController implements Initializable
     }
 
     //Ting Mangler, todo fix dis shiet
-
     @FXML
-    private void viewCaseAction(ActionEvent event) throws IOException {
+    private void viewCaseAction(ActionEvent event) throws IOException
+    {
         Parent homeRoot = FXMLLoader.load(getClass().getResource("viewCase.fxml"));
         Scene home = new Scene(homeRoot);
         Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -76,7 +88,9 @@ public class HomeFXMLController implements Initializable
         System.out.println("yay!");
 
     }
+
+    public void injectBusiness(IBusiness business)
+    {
+        this.Business = business;
+    }
 }
-
-
-
