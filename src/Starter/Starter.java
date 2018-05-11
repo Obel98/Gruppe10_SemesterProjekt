@@ -32,6 +32,7 @@ public class Starter extends Application
         IData Data = new DataFacade();
         IBusiness Business = new BusinessFacade();
         IPresentation UI = new PresentationFacade();
+        System.out.println("Borgar er en dejlig mand <3");
         
         Business.injectData(Data);
         UI.injectBusiness(Business);
