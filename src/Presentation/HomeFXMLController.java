@@ -6,11 +6,11 @@
 package Presentation;
 
 import Aquaintance.IBusiness;
+import Aquaintance.ICase;
 import Aquaintance.IPresentation;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -20,6 +20,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 /**
@@ -27,10 +28,11 @@ import javafx.stage.Stage;
  *
  * @author Obel
  */
-public class HomeFXMLController implements Initializable
-{
+public class HomeFXMLController implements Initializable {
+
     private IBusiness Business;
     private IPresentation UI;
+    private ICase sag;
 
     @FXML
     private Button logOutButton;
@@ -52,15 +54,13 @@ public class HomeFXMLController implements Initializable
      * @param rb
      */
     @Override
-    public void initialize(URL url, ResourceBundle rb)
-    {
+    public void initialize(URL url, ResourceBundle rb) {
         UI = PresentationFacade.getUI();
         IDLabel.setText(String.valueOf(UI.getID()));
     }
 
     @FXML
-    private void LogOutAction(ActionEvent event) throws IOException
-    {
+    private void LogOutAction(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
 
         Scene logIn = new Scene(root);
@@ -69,21 +69,19 @@ public class HomeFXMLController implements Initializable
         stage.show();
     }
 
-    //Ting Mangler, todo fix dis shiet
     @FXML
-    private void viewCaseAction(ActionEvent event) throws IOException
-    {
-        Parent homeRoot = FXMLLoader.load(getClass().getResource("viewCase.fxml"));
-        Scene home = new Scene(homeRoot);
-        Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        appStage.setScene(home);
-        appStage.show();
-        System.out.println("yay!");
+    private void viewCaseAction(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("viewCase.fxml"));
+        Stage stage = new Stage();
+        Parent root = loader.load();
+        stage.setScene(new Scene(root));
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.initOwner(viewCaseButton.getScene().getWindow());
+        stage.showAndWait();
 
     }
 
-    public void injectBusiness(IBusiness business)
-    {
+    public void injectBusiness(IBusiness business) {
         this.Business = business;
     }
 }

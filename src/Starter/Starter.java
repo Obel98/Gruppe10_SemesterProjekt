@@ -23,31 +23,30 @@ import javafx.stage.Stage;
  *
  * @author Obel
  */
-public class Starter extends Application
-{
-    
+public class Starter extends Application {
+
     @Override
-    public void start(Stage stage) throws Exception
-    {
+    public void start(Stage stage) throws Exception {
+        
         IData Data = new DataFacade();
         IBusiness Business = new BusinessFacade();
         IPresentation UI = new PresentationFacade();
         System.out.println("Borgar er en dejlig mand <3");
-        
+
         Business.injectData(Data);
         UI.injectBusiness(Business);
         UI.start();
         Data.getCase();
         Business.getCase();
         System.out.println(UI.getAddresse());
+
     }
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         launch(args);
     }
-    
+
 }

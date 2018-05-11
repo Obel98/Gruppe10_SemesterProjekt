@@ -11,16 +11,18 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.Initializable;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
@@ -28,8 +30,7 @@ import javafx.stage.Stage;
 /**
  * @author Obel
  */
-public class FXMLDocumentController implements Initializable
-{
+public class FXMLDocumentController implements Initializable {
 
     private IPresentation UI;
     private IBusiness Business;
@@ -49,11 +50,9 @@ public class FXMLDocumentController implements Initializable
     private Label passwordMsgLable;
 
     @FXML
-    void LogOnAction(ActionEvent event) throws IOException
-    {
+    void LogOnAction(ActionEvent event) throws IOException {
 
-        if ("admin".equals(UsernameBox.getText()) && "admin".equals(PasswordBox.getText()))
-        {
+        if ("admin".equals(UsernameBox.getText()) && "admin".equals(PasswordBox.getText())) {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("HomeFXML.fxml"));
             Pane homeRoot = loader.load();
             HomeFXMLController controller = loader.getController();
@@ -64,9 +63,7 @@ public class FXMLDocumentController implements Initializable
             appStage.show();
 
             System.out.println("Vellykket!");
-        }
-        else
-        {
+        } else {
             passwordMsgLable.setText("Inncorrect password or username, Try again!");
             passwordMsgLable.setTextFill(Color.rgb(210, 39, 30));
 
@@ -74,18 +71,24 @@ public class FXMLDocumentController implements Initializable
     }
 
     @Override
-    public void initialize(URL location, ResourceBundle resources)
-    {
+    public void initialize(URL location, ResourceBundle resources) {
         UI = PresentationFacade.getUI();
     }
 
     @FXML
-    private void ResetPasswordAction(ActionEvent event)
-    {
+    private void ResetPasswordAction(ActionEvent event) {
     }
 
-    public void injectBusiness(IBusiness business)
-    {
+    public void injectBusiness(IBusiness business) {
         this.Business = business;
+    }
+
+    @FXML
+    private void LogOnAction(KeyEvent event) throws IOException {
+        if (event.getCode().equals(KeyCode.ENTER)) {
+            LogOnAction(event);
+
+        }
+
     }
 }

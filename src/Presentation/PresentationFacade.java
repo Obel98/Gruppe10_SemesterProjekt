@@ -28,15 +28,11 @@ public class PresentationFacade implements Aquaintance.IPresentation {
     private static IPresentation UI;
     private Stage stage = new Stage();
 
-    public PresentationFacade()
-    {
+    public PresentationFacade() {
     }
 
-    
-    
     public static IPresentation getUI() {
-        if(UI == null)
-        {
+        if (UI == null) {
             UI = new PresentationFacade();
         }
         return UI;
@@ -49,8 +45,7 @@ public class PresentationFacade implements Aquaintance.IPresentation {
 
     @Override
     public void start() {
-        try
-        {
+        try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLDocument.fxml"));
             Pane root = loader.load();
             FXMLDocumentController controller = loader.getController();
@@ -60,8 +55,7 @@ public class PresentationFacade implements Aquaintance.IPresentation {
 
             stage.setScene(logIn);
             stage.show();
-        } catch (IOException ex)
-        {
+        } catch (IOException ex) {
             Logger.getLogger(PresentationFacade.class.getName()).log(Level.SEVERE, null, ex);
         }
     }

@@ -5,6 +5,8 @@
  */
 package Presentation;
 
+import Aquaintance.IBusiness;
+import Aquaintance.IPresentation;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -12,6 +14,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -20,10 +23,9 @@ import javafx.scene.control.Label;
  */
 public class ViewCase implements Initializable {
 
-    @FXML
-    private Button saveButton;
-    @FXML
-    private Button saveDraftButton;
+    private IPresentation UI;
+    private IBusiness business;
+
     @FXML
     private Label datoLabel;
     @FXML
@@ -44,6 +46,14 @@ public class ViewCase implements Initializable {
     private Label phoneNumberLabel;
     @FXML
     private Label emailLabel;
+    @FXML
+    private Button addToCaseButton;
+    @FXML
+    private Button attackFileButton;
+    @FXML
+    private Button caseEvaulationButton;
+    @FXML
+    private Button backButton;
 
     /**
      * Initializes the controller class.
@@ -51,14 +61,12 @@ public class ViewCase implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-
-    @FXML
-    private void SaveAction(ActionEvent event) {
     }
 
     @FXML
-    private void saveDraftAction(ActionEvent event) {
+    private void backOnAction(ActionEvent event) {
+        Stage stage = (Stage) backButton.getScene().getWindow();
+        stage.close();
     }
-    
+
 }
