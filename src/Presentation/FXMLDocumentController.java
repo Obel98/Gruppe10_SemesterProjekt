@@ -86,7 +86,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void LogOnAction(KeyEvent event) throws IOException {
         if (event.getCode().equals(KeyCode.ENTER)) {
-            LogOnAction(event);
+            
 
         }
 
