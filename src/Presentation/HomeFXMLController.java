@@ -55,14 +55,7 @@ public class HomeFXMLController implements Initializable
     public void initialize(URL url, ResourceBundle rb)
     {
         UI = PresentationFacade.getUI();
-        Platform.runLater(new Runnable()
-        {
-            @Override
-            public void run()
-            {
-                IDLabel.setText(String.valueOf(UI.getID()));
-            }
-        });
+        IDLabel.setText(String.valueOf(UI.getID()));
     }
 
     @FXML
