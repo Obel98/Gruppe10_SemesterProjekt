@@ -49,7 +49,7 @@
                         <Insets left="50.0" />
                      </VBox.margin>
                   </Text>
-                  <PasswordField fx:id="PasswordBox" minHeight="-Infinity" minWidth="-Infinity" translateY="-15.0">
+                  <PasswordField fx:id="PasswordBox" minHeight="-Infinity" minWidth="-Infinity" onAction="#LogOnAction" translateY="-15.0">
                      <VBox.margin>
                         <Insets left="50.0" right="50.0" />
                      </VBox.margin>
