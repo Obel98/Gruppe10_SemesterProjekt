@@ -18,3 +18,5 @@ build/
 dist/
 
 \.DS_Store
+
+*.json
