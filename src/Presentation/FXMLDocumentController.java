@@ -78,7 +78,7 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private void ResetPasswordAction(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("NewPassword.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("ForgotPassword.fxml"));
         Stage stage = new Stage();
         Parent root = loader.load();
         stage.setScene(new Scene(root));
@@ -91,8 +91,13 @@ public class FXMLDocumentController implements Initializable {
         this.Business = business;
     }
 
+    private void LogOnAction(KeyEvent event) throws IOException{
+        
+
+    }
+
     @FXML
-    private void LogOnAction(KeyEvent event) throws IOException {
+    private void pressEnter(KeyEvent event) throws IOException {
         if (event.getCode().equals(KeyCode.ENTER)) {
             if ("admin".equals(UsernameBox.getText()) && "admin".equals(PasswordBox.getText())) {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("HomeFXML.fxml"));
@@ -111,6 +116,5 @@ public class FXMLDocumentController implements Initializable {
 
             }
         }
-
     }
 }
