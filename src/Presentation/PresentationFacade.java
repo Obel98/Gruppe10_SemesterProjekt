@@ -46,9 +46,9 @@ public class PresentationFacade implements Aquaintance.IPresentation {
     @Override
     public void start() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLDocument.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("LogInScreen.fxml"));
             Pane root = loader.load();
-            FXMLDocumentController controller = loader.getController();
+            LogInScreenController controller = loader.getController();
             controller.injectBusiness(Business);
 
             Scene logIn = new Scene(root);

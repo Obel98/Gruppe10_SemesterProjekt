@@ -43,15 +43,9 @@ public class ForgotPasswordController implements Initializable {
     /**
      * Initializes the controller class.
      */
-    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }
-
-    @FXML
-    private void userNameOnAction(ActionEvent event) {
-
     }
 
     @FXML
@@ -73,12 +67,14 @@ public class ForgotPasswordController implements Initializable {
         stage.close();
     }
 
-
     @FXML
     private void pressEnter(KeyEvent event) {
-         if (event.getCode().equals(KeyCode.ENTER)) {
+        if (event.getCode().equals(KeyCode.ENTER)) {
             if ("admin".equals(UserNameTextField.getText())) {
                 passwordTextField.setText("admin");
+                invalidUserName.setText("");
+            } else if ("sagb".equals(UserNameTextField.getText())) {
+                passwordTextField.setText("sagb");
                 invalidUserName.setText("");
             } else {
                 invalidUserName.setText("Inncorrect username, Try again!");
