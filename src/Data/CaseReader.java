@@ -26,10 +26,10 @@ public class CaseReader {
 
         //Rasmus
 //        file = new File("C:\\Users\\rasmu\\Documents\\Gruppe10_SemesterProjekt" + "/" + fileName);
-        file = new File("C:\\Users\\rasmu\\Desktop\\Code\\Semester 2\\Gruppe10_SemesterProjekt" + "/" + fileName);
+//        file = new File("C:\\Users\\rasmu\\Desktop\\Code\\Semester 2\\Gruppe10_SemesterProjekt" + "/" + fileName);
 
         //Borgar
-//        file = new File("C:\\Users\\borga\\Documents\\NetBeansProjects\\SemesterProjekt\\Gruppe10_SemesterProjekt" + "/" + fileName);
+        file = new File("C:\\Users\\borga\\Documents\\NetBeansProjects\\SemesterProjekt\\Gruppe10_SemesterProjekt" + "/" + fileName);
         readFile(file);
     }
 
