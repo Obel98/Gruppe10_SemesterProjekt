@@ -27,7 +27,6 @@ public class CaseReader {
         //Rasmus
         file = new File("C:\\Users\\rasmu\\Documents\\Gruppe10_SemesterProjekt" + "/" + fileName);
 //        file = new File("C:\\Users\\rasmu\\Desktop\\Code\\Semester 2\\Gruppe10_SemesterProjekt" + "/" + fileName);
-
         //Borgar
       //  file = new File("C:\\Users\\borga\\Documents\\NetBeansProjects\\SemesterProjekt\\Gruppe10_SemesterProjekt" + "/" + fileName);
         
@@ -40,12 +39,10 @@ public class CaseReader {
 
     private void readFile(File file) {
 
-        try (Scanner input = new Scanner(file))
-        {
+        try (Scanner input = new Scanner(file)) {
             String[] temp = new String[10];
             int i = 0;
-            while (input.hasNextLine())
-            {
+            while (input.hasNextLine()) {
                 temp[i] = input.nextLine();
                 i++;
             }
@@ -56,8 +53,7 @@ public class CaseReader {
                     temp[9]);
             System.out.println(cf.toString());
 
-        } catch (FileNotFoundException ex)
-        {
+        } catch (FileNotFoundException ex) {
             System.out.println("Cannot find file " + ex);
         }
 
@@ -66,11 +62,10 @@ public class CaseReader {
     public ICase getCf() {
         return cf;
     }
-    
+
 //    public static void main(String[] args)
 //    {
 //        CaseReader test = new CaseReader("Sag1.txt");
 //        System.out.println(test.getCf().getEmail());
 //    }
-    
 }
