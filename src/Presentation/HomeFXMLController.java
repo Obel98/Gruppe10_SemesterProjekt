@@ -61,7 +61,7 @@ public class HomeFXMLController implements Initializable {
 
     @FXML
     private void LogOutAction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("LogInScreen.fxml"));
 
         Scene logIn = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
