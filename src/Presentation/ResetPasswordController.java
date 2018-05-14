@@ -20,7 +20,7 @@ import javafx.scene.input.KeyEvent;
  *
  * @author rasmu
  */
-public class RestPasswordController implements Initializable {
+public class ResetPasswordController implements Initializable {
 
     @FXML
     private Button RestButton;

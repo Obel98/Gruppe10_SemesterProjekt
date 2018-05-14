@@ -20,6 +20,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.MenuItem;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -46,6 +49,10 @@ public class HomeFXMLController implements Initializable {
     private Label textLabel;
     @FXML
     private Button viewCaseButton;
+    @FXML
+    private Label AdminIDLabel;
+    @FXML
+    private MenuItem menuButton;
 
     /**
      * Initializes the controller class.
@@ -84,4 +91,16 @@ public class HomeFXMLController implements Initializable {
     public void injectBusiness(IBusiness business) {
         this.Business = business;
     }
+
+    @FXML
+    private void changePassword(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("ResetPassword.fxml"));
+        Stage stage = new Stage();
+        Parent root = loader.load();
+        stage.setScene(new Scene(root));
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.initOwner(menuButton.getParentPopup().getOwnerWindow());
+        stage.showAndWait();
+    }
+
 }
