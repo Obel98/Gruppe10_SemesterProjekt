@@ -30,6 +30,7 @@ public class ForgotPasswordController implements Initializable {
 
     @FXML
     private TextField UserNameTextField;
+    @FXML
     private TextField passwordTextField;
     @FXML
     private Button backButton;
