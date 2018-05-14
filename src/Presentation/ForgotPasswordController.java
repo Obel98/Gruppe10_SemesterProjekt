@@ -30,7 +30,6 @@ public class ForgotPasswordController implements Initializable {
 
     @FXML
     private TextField UserNameTextField;
-    @FXML
     private TextField passwordTextField;
     @FXML
     private Button backButton;
@@ -73,10 +72,6 @@ public class ForgotPasswordController implements Initializable {
         stage.close();
     }
 
-    @FXML
-    private void userNameOnAction(KeyEvent event) {
-       
-    }
 
     @FXML
     private void pressEnter(KeyEvent event) {

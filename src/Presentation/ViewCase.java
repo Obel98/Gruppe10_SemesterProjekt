@@ -54,6 +54,8 @@ public class ViewCase implements Initializable {
     private Button caseEvaulationButton;
     @FXML
     private Button backButton;
+    @FXML
+    private Label AdminIDLabel;
 
     /**
      * Initializes the controller class.

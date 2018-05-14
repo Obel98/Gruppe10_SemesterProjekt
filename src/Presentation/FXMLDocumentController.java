@@ -47,7 +47,6 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private Button ResetPasswordButton;
-    @FXML
     private Label passwordMsgLable;
 
     @FXML
