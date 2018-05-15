@@ -61,6 +61,7 @@ public class LogInScreenController implements Initializable {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("ForgotPassword.fxml"));
         Stage stage = new Stage();
         Parent root = loader.load();
+        stage.setResizable(false);
         stage.setScene(new Scene(root));
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.initOwner(ResetPasswordButton.getScene().getWindow());

@@ -112,6 +112,7 @@ public class CaseWorkerHomeFXMLController implements Initializable {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("ResetPassword.fxml"));
         Stage stage = new Stage();
         Parent root = loader.load();
+        stage.setResizable(false);
         stage.setScene(new Scene(root));
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.initOwner(menuButton.getParentPopup().getOwnerWindow());
