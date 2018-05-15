@@ -11,6 +11,8 @@ import Aquaintance.IPresentation;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import Business.Case;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -23,6 +25,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.TextArea;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -41,18 +44,26 @@ public class CaseWorkerHomeFXMLController implements Initializable {
     private Button logOutButton;
     @FXML
     private Label IDLabel;
-    @FXML
     private Label nameLabel;
     @FXML
     private Label statusLabel;
-    @FXML
-    private Label textLabel;
     @FXML
     private Button viewCaseButton;
     @FXML
     private Label AdminIDLabel;
     @FXML
     private MenuItem menuButton;
+    @FXML
+    private Label FirstNameLabel;
+    @FXML
+    private Label LastNameLabel;
+    @FXML
+    private Label PhonenumberLabel;
+    @FXML
+    private Label EmailLabel;
+    private Label CaseTextLabel;
+    @FXML
+    private TextArea CaseTextArea;
 
     /**
      * Initializes the controller class.
@@ -64,6 +75,11 @@ public class CaseWorkerHomeFXMLController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         UI = PresentationFacade.getUI();
         IDLabel.setText(String.valueOf(UI.getID()));
+        FirstNameLabel.setText(String.valueOf(UI.getFirtName()));
+        LastNameLabel.setText(String.valueOf(UI.getLastName()));
+        PhonenumberLabel.setText((String.valueOf(UI.getPhoneNumber())));
+        EmailLabel.setText(String.valueOf((UI.getEmail())));
+        CaseTextArea.setText((String.valueOf(UI.getJournal())));
     }
 
     @FXML

@@ -8,13 +8,14 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.CaseWorkerHomeFXMLController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.CaseWorkerHomeFXMLController">
    <children>
       <Pane layoutX="113.0" layoutY="55.0" prefHeight="50.0" style="-fx-background-color: #39A67f;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <Button fx:id="logOutButton" blendMode="DARKEN" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#LogOutAction" text="Log ud" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
@@ -27,113 +28,168 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <AnchorPane layoutY="50.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+      <AnchorPane layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
          <children>
-            <ScrollPane layoutY="41.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <ScrollPane fitToHeight="true" fitToWidth="true" layoutY="41.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <content>
-                  <VBox prefHeight="470.0" prefWidth="895.0">
+                  <VBox>
                      <children>
-                        <VBox prefHeight="200.0" prefWidth="100.0">
+                        <VBox>
                            <children>
-                              <AnchorPane prefHeight="200.0">
+                              <AnchorPane>
                                  <children>
-                                    <AnchorPane layoutX="20.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <children>
-                                          <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                          <AnchorPane>
                                              <children>
-                                                <VBox prefHeight="200.0" prefWidth="100.0">
+                                                <HBox AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <children>
-                                                      <Label text="ID:" wrapText="true">
-                                                         <font>
-                                                            <Font size="18.0" />
-                                                         </font>
-                                                         <VBox.margin>
-                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                                         </VBox.margin>
-                                                      </Label>
-                                                      <Label text="Name:">
-                                                         <font>
-                                                            <Font size="18.0" />
-                                                         </font>
-                                                         <VBox.margin>
-                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                                         </VBox.margin>
-                                                      </Label>
+                                                      <VBox>
+                                                         <children>
+                                                            <Label text="CaseID:" wrapText="true">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <Label text="Name:">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <Label text="Phonenumber">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                               </VBox.margin>
+                                                               <padding>
+                                                                  <Insets right="10.0" />
+                                                               </padding>
+                                                            </Label>
+                                                            <Label text="Email">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                               </VBox.margin>
+                                                               <padding>
+                                                                  <Insets right="10.0" />
+                                                               </padding>
+                                                            </Label>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox>
+                                                         <children>
+                                                            <Label fx:id="IDLabel" text="Label">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                               <padding>
+                                                                  <Insets right="10.0" />
+                                                               </padding>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+                                                               <children>
+                                                                  <Label fx:id="FirstNameLabel" text="Label">
+                                                                     <font>
+                                                                        <Font size="18.0" />
+                                                                     </font>
+                                                                     <padding>
+                                                                        <Insets right="10.0" />
+                                                                     </padding>
+                                                                     <HBox.margin>
+                                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                     </HBox.margin>
+                                                                  </Label>
+                                                                  <Label fx:id="LastNameLabel" layoutX="10.0" layoutY="10.0" text="Label">
+                                                                     <font>
+                                                                        <Font size="18.0" />
+                                                                     </font>
+                                                                     <padding>
+                                                                        <Insets right="10.0" />
+                                                                     </padding>
+                                                                     <HBox.margin>
+                                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                     </HBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </HBox>
+                                                            <Label fx:id="PhonenumberLabel" text="Label">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                               </VBox.margin>
+                                                               <padding>
+                                                                  <Insets right="10.0" />
+                                                               </padding>
+                                                            </Label>
+                                                            <Label fx:id="EmailLabel" text="Label">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                               </VBox.margin>
+                                                               <padding>
+                                                                  <Insets right="10.0" />
+                                                               </padding>
+                                                            </Label>
+                                                         </children>
+                                                      </VBox>
                                                    </children>
-                                                </VBox>
-                                                <VBox prefHeight="200.0" prefWidth="100.0">
-                                                   <children>
-                                                      <Label fx:id="IDLabel" text="Label">
-                                                         <font>
-                                                            <Font size="18.0" />
-                                                         </font>
-                                                         <padding>
-                                                            <Insets right="10.0" />
-                                                         </padding>
-                                                         <VBox.margin>
-                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                                         </VBox.margin>
-                                                      </Label>
-                                                      <Label fx:id="nameLabel" text="Label">
-                                                         <font>
-                                                            <Font size="18.0" />
-                                                         </font>
-                                                         <padding>
-                                                            <Insets right="10.0" />
-                                                         </padding>
-                                                         <VBox.margin>
-                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                                         </VBox.margin>
-                                                      </Label>
-                                                   </children>
-                                                </VBox>
-                                                <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                </HBox>
                                              </children>
-                                          </HBox>
-                                       </children>
-                                    </AnchorPane>
-                                    <AnchorPane layoutX="248.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                       <children>
-                                          <Label layoutX="53.0" layoutY="26.0" text="Status:" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
-                                             <font>
-                                                <Font size="18.0" />
-                                             </font>
-                                          </Label>
-                                          <Label fx:id="statusLabel" layoutX="110.0" layoutY="5.0" text="Status ??" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="5.0">
-                                             <font>
-                                                <Font size="18.0" />
-                                             </font>
-                                          </Label>
-                                          <Label fx:id="textLabel" layoutX="4.0" layoutY="51.0" text="Label" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="105.0" AnchorPane.topAnchor="35.0">
-                                             <font>
-                                                <Font size="18.0" />
-                                             </font>
-                                          </Label>
-                                          <HBox layoutX="368.0" layoutY="76.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0">
+                                          </AnchorPane>
+                                          <AnchorPane HBox.hgrow="ALWAYS">
                                              <children>
-                                                <Separator orientation="VERTICAL" prefHeight="200.0" />
-                                                <VBox prefHeight="200.0" prefWidth="100.0">
-                                                   <children>
-                                                      <Button fx:id="viewCaseButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#viewCaseAction" prefHeight="50.0" prefWidth="100.0" text="View Case">
-                                                         <font>
-                                                            <Font name="System Bold" size="12.0" />
-                                                         </font>
-                                                         <VBox.margin>
-                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                                         </VBox.margin>
-                                                      </Button>
-                                                   </children>
-                                                </VBox>
+                                                <Label layoutX="53.0" layoutY="26.0" text="Status:" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="statusLabel" layoutX="110.0" layoutY="5.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="5.0">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Separator orientation="VERTICAL" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                <TextArea fx:id="CaseTextArea" editable="false" layoutX="53.0" layoutY="19.0" wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="40.0" />
                                              </children>
-                                          </HBox>
+                                          </AnchorPane>
+                                          <Separator orientation="VERTICAL" />
+                                          <VBox>
+                                             <children>
+                                                <Button fx:id="viewCaseButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#viewCaseAction" prefHeight="50.0" prefWidth="100.0" text="View Case">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </VBox.margin>
+                                                </Button>
+                                             </children>
+                                          </VBox>
                                        </children>
-                                    </AnchorPane>
+                                    </HBox>
                                  </children>
                                  <VBox.margin>
                                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                  </VBox.margin>
                               </AnchorPane>
-                              <Separator prefWidth="200.0" />
+                              <Separator />
                            </children>
                         </VBox>
                      </children>
