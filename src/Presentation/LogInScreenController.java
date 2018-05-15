@@ -48,7 +48,8 @@ public class LogInScreenController implements Initializable {
     @FXML
     private Button ResetPasswordButton;
 
-    private Label passwordMsgLable;
+    @FXML
+    private Label passwordMsgLabel;
 
     @FXML
     void LogOnAction(ActionEvent event) throws IOException {
@@ -90,8 +91,8 @@ public class LogInScreenController implements Initializable {
 
                 System.out.println("Vellykket!");
             } else {
-                passwordMsgLable.setText("Inncorrect password or username, Try again!");
-                passwordMsgLable.setTextFill(Color.rgb(210, 39, 30));
+                passwordMsgLabel.setText("Inncorrect password or username, Try again!");
+                passwordMsgLabel.setTextFill(Color.rgb(210, 39, 30));
 
             }
         }
@@ -113,6 +114,7 @@ public class LogInScreenController implements Initializable {
             System.out.println("Sagsbehandler!");
 
         }
+         
         if ("admin".equals(UsernameBox.getText()) && "admin".equals(PasswordBox.getText())) {
             Parent root = FXMLLoader.load(getClass().getResource("AdminFXML.fxml"));
             Scene adminHome = new Scene(root);
@@ -121,9 +123,10 @@ public class LogInScreenController implements Initializable {
             stage.show();
 
             System.out.println("Administrator!");
-        } else if (!"admin".equals(UsernameBox.getText()) && !"admin".equals(PasswordBox.getText()) || (!"sagb".equals(UsernameBox.getText()) && !"sagb".equals(PasswordBox.getText()))){
-            passwordMsgLable.setText("Inncorrect password or username, Try again!");
-            passwordMsgLable.setTextFill(Color.rgb(210, 39, 30));
+        } else {
+            
+            passwordMsgLabel.setText("Inncorrect password or username, Try again!");
+            passwordMsgLabel.setTextFill(Color.rgb(210, 39, 30));
 
         }
     }
