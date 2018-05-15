@@ -30,10 +30,17 @@ public class PasswordGenerator {
     }
 
     private void getPassword() {
-//        generatePassword(8, ALPHA);
         System.out.println(generatePassword(8, ALPHA));
     }
-    
+
+    public static void setRandom(SecureRandom random) {
+        PasswordGenerator.random = random;
+    }
+
+    public static SecureRandom getRandom() {
+        return random;
+    }
+
     
     public static void main(String[] args) {
         PasswordGenerator pg = new PasswordGenerator();
