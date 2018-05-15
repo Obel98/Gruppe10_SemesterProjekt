@@ -110,4 +110,8 @@ public class PresentationFacade implements Aquaintance.IPresentation {
         return Business.getJournal();
     }
 
+    @Override
+    public String getStatus() {
+        return Business.getStatus();
+    }
 }

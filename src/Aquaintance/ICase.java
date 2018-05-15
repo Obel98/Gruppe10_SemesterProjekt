@@ -28,4 +28,6 @@ public interface ICase {
     public String getAddresse();
 
     public String getJournal();
+
+    public String getStatus();
 }

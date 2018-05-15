@@ -80,6 +80,7 @@ public class CaseWorkerHomeFXMLController implements Initializable {
         PhonenumberLabel.setText((String.valueOf(UI.getPhoneNumber())));
         EmailLabel.setText(String.valueOf((UI.getEmail())));
         CaseTextArea.setText((String.valueOf(UI.getJournal())));
+        statusLabel.setText(UI.getStatus());
     }
 
     @FXML

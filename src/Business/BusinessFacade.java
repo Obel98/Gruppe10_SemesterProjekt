@@ -36,6 +36,7 @@ public class BusinessFacade implements Aquaintance.IBusiness {
         sag.setCPR(newCase.getCPR());
         sag.setAddresse(newCase.getAddresse());
         sag.setJournal(newCase.getJournal());
+        sag.setStatus(newCase.getStatus());
     }
 
     @Override
@@ -81,6 +82,11 @@ public class BusinessFacade implements Aquaintance.IBusiness {
     @Override
     public String getJournal() {
         return sag.getJournal();
+    }
+    
+    @Override
+    public String getStatus() {
+        return sag.getStatus();
     }
 
 }

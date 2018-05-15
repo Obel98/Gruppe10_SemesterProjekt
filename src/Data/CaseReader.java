@@ -41,7 +41,7 @@ public class CaseReader {
     private void readFile(File file) {
 
         try (Scanner input = new Scanner(file)) {
-            String[] temp = new String[10];
+            String[] temp = new String[11];
             int i = 0;
             while (input.hasNextLine()) {
                 temp[i] = input.nextLine();
@@ -51,7 +51,7 @@ public class CaseReader {
                     temp[3], Integer.parseInt(temp[4]),
                     temp[5], Integer.parseInt(temp[6]),
                     Integer.parseInt(temp[7]), temp[8],
-                    temp[9]);
+                    temp[9],temp[10]);
             System.out.println(cf.toString());
 
         } catch (FileNotFoundException ex) {

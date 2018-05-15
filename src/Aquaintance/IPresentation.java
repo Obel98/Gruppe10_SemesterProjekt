@@ -34,5 +34,7 @@ public interface IPresentation {
     String getAddresse();
 
     String getJournal();
+    
+    String getStatus();
 
 }

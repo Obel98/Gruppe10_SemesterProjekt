@@ -11,6 +11,7 @@ public class Case implements Aquaintance.ICase {
     private int CPR;
     private String addresse;
     private String journal;
+    private String status;
 
     public void setID(int ID) {
         this.ID = ID;
@@ -47,6 +48,8 @@ public class Case implements Aquaintance.ICase {
     public void setJournal(String journal) {
         this.journal = journal;
     }
+
+    public void setStatus(String status) { this.status = status; }
 
     @Override
     public int getID() {
@@ -92,4 +95,7 @@ public class Case implements Aquaintance.ICase {
     public String getJournal() {
         return journal;
     }
+
+    @Override
+    public String getStatus(){return status;}
 }

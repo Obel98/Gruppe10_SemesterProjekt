@@ -22,8 +22,9 @@ public class CaseFormat implements ICase {
     private int CPR;
     private String addresse;
     private String journal;
+    private String status;
 
-    public CaseFormat(int ID, String firtName, String lastName, int phoneNumber, String email, int birthday, int CPR, String addresse, String journal) {
+    public CaseFormat(int ID, String firtName, String lastName, int phoneNumber, String email, int birthday, int CPR, String addresse, String journal, String status) {
         this.ID = ID;
         this.firtName = firtName;
         this.lastName = lastName;
@@ -33,11 +34,12 @@ public class CaseFormat implements ICase {
         this.CPR = CPR;
         this.addresse = addresse;
         this.journal = journal;
+        this.status = status;
     }
 
     @Override
     public String toString() {
-        return "JournalFormat{" + "ID=" + ID + ", firtName=" + firtName + ", lastName=" + lastName + ", phoneNumber=" + phoneNumber + ", email=" + email + ", birthday=" + birthday + ", CPR=" + CPR + ", addresse=" + addresse + ", journal=" + journal + '}';
+        return "JournalFormat{" + "ID=" + ID + ", firtName=" + firtName + ", lastName=" + lastName + ", phoneNumber=" + phoneNumber + ", email=" + email + ", birthday=" + birthday + ", CPR=" + CPR + ", addresse=" + addresse + ", journal=" + journal + ", status=" + status + '}';
     }
 
     @Override
@@ -84,5 +86,8 @@ public class CaseFormat implements ICase {
     public String getJournal() {
         return journal;
     }
+
+    @Override
+    public String getStatus(){ return status;}
     
 }

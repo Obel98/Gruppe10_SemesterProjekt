@@ -166,7 +166,7 @@
                                                    </font>
                                                 </Label>
                                                 <Separator orientation="VERTICAL" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                                <TextArea fx:id="CaseTextArea" editable="false" layoutX="53.0" layoutY="19.0" wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="40.0" />
+                                                <TextArea fx:id="CaseTextArea" editable="false" layoutX="53.0" layoutY="19.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="40.0" />
                                              </children>
                                           </AnchorPane>
                                           <Separator orientation="VERTICAL" />

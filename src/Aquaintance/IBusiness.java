@@ -32,4 +32,6 @@ public interface IBusiness {
     String getAddresse();
 
     String getJournal();
+    
+    String getStatus();
 }
