@@ -51,11 +51,6 @@ public class LogInScreenController implements Initializable {
     @FXML
     private Label passwordMsgLabel;
 
-    @FXML
-    void LogOnAction(ActionEvent event) throws IOException {
-
-    }
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         UI = PresentationFacade.getUI();
@@ -79,7 +74,7 @@ public class LogInScreenController implements Initializable {
     @FXML
     private void pressEnter(KeyEvent event) throws IOException {
         if (event.getCode().equals(KeyCode.ENTER)) {
-            if ("admin".equals(UsernameBox.getText()) && "admin".equals(PasswordBox.getText())) {
+            if ("sagb".equals(UsernameBox.getText()) && "sagb".equals(PasswordBox.getText())) {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("HomeFXML.fxml"));
                 Pane homeRoot = loader.load();
                 HomeFXMLController controller = loader.getController();
@@ -91,10 +86,10 @@ public class LogInScreenController implements Initializable {
 
                 System.out.println("Vellykket!");
             }
-            if ("sagb".equals(UsernameBox.getText()) && "sagb".equals(PasswordBox.getText())) {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("HomeFXML.fxml"));
+            if ("admin".equals(UsernameBox.getText()) && "admin".equals(PasswordBox.getText())) {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("AdminFXML.fxml"));
                 Pane homeRoot = loader.load();
-                HomeFXMLController controller = loader.getController();
+                AdminFXML controller = loader.getController();
                 controller.injectBusiness(Business);
                 Scene caseWorkerHome = new Scene(homeRoot);
                 Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -113,6 +108,7 @@ public class LogInScreenController implements Initializable {
 
     @FXML
     private void LogOnButtonAction(ActionEvent event) throws IOException {
+
         if ("sagb".equals(UsernameBox.getText()) && "sagb".equals(PasswordBox.getText())) {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("HomeFXML.fxml"));
             Pane homeRoot = loader.load();
@@ -128,15 +124,18 @@ public class LogInScreenController implements Initializable {
         }
 
         if ("admin".equals(UsernameBox.getText()) && "admin".equals(PasswordBox.getText())) {
-            Parent root = FXMLLoader.load(getClass().getResource("AdminFXML.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("AdminFXML.fxml"));
+            Pane root = loader.load();
+            AdminFXML controller = loader.getController();
+            controller.injectBusiness(Business);
             Scene adminHome = new Scene(root);
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(adminHome);
             stage.show();
 
             System.out.println("Administrator!");
-        } else {
 
+        } else {
             passwordMsgLabel.setText("Inncorrect password or username, Try again!");
             passwordMsgLabel.setTextFill(Color.rgb(210, 39, 30));
 
