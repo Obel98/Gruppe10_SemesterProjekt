@@ -62,6 +62,38 @@ public class CaseWorkerHomeFXMLController implements Initializable {
     private Button viewCaseButton;
     @FXML
     private MenuItem menuButton;
+    @FXML
+    private Label caseIDLabel1;
+    @FXML
+    private Label firstNameLabel1;
+    @FXML
+    private Label lastNameLabel1;
+    @FXML
+    private Label PhonenumberLabel1;
+    @FXML
+    private Label emailLabel1;
+    @FXML
+    private Label caseStatusLabel1;
+    @FXML
+    private TextArea caseTextArea1;
+    @FXML
+    private Button viewCaseButton1;
+    @FXML
+    private Label caseIDLabel11;
+    @FXML
+    private Label firstNameLabel11;
+    @FXML
+    private Label lastNameLabel11;
+    @FXML
+    private Label PhonenumberLabel11;
+    @FXML
+    private Label emailLabel11;
+    @FXML
+    private Label caseStatusLabel11;
+    @FXML
+    private TextArea caseTextArea11;
+    @FXML
+    private Button viewCaseButton11;
 
     
 
