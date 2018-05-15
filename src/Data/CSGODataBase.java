@@ -23,8 +23,8 @@ public class CSGODataBase
         boolean running = true;
         while (running)
         {
-            Database db = new Database("jdbc:postgresql://horton.elephantsql.com:5432/orbruzwc",
-                    "orbruzwc", "jz2ddyS-O2wDkiP4bsuJ8T_vzA3tw5HQ");
+            Database db = new Database("jdbc:postgresql://elmer.db.elephantsql.com:5432/jkclsvjn",
+                    "jkclsvjn", "5vckjZ8LGdP6g2S6eHLeP5w34mASozc1");
             System.out.println("Choose function:\n"
                     + "Press 1, 2, 3, 4 or 5 for functions 1-5.\n"
                     + "1: List the names of the coaches and their teams.\n"
@@ -39,7 +39,7 @@ public class CSGODataBase
                     db.listNames();
                     break;
 
-                case 2:
+            /*    case 2:
                     db.winners();
                     break;
 
@@ -57,7 +57,7 @@ public class CSGODataBase
 
                 case 6:
                     running = false;
-                    break;
+                    break;*/
             }
         }
         menuNavi.close();

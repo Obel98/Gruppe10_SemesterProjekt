@@ -42,8 +42,8 @@ public class Database
             Connection db = DriverManager.getConnection(dburl, dbusername, dbpassword);
 
             Statement st = db.createStatement();
-            ResultSet rs = st.executeQuery("select coaches.name, coachesFor.teamName from coachesFor, coaches where coaches.nickName = coachesFor.nickName");
-            System.out.println("These are the coaches, their names followed by their team:");
+            ResultSet rs = st.executeQuery("select * from admin;");
+            System.out.println("Admin list:");
             while (rs.next())
             {
                 int i = 1;
@@ -67,8 +67,8 @@ public class Database
             System.out.println(e);
         }
 
-    }
-
+    }}
+    /*
     public void winners()
     {
         try
@@ -261,4 +261,4 @@ public class Database
             System.out.println(e);
         }
     }
-}
+}*/
