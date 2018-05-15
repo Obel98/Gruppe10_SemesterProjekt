@@ -106,7 +106,7 @@
                                                             </Label>
                                                             <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
                                                                <children>
-                                                                  <Label fx:id="FirstNameLabel" text="Label">
+                                                                  <Label fx:id="firstNameLabel" text="Label">
                                                                      <font>
                                                                         <Font size="18.0" />
                                                                      </font>
@@ -117,7 +117,7 @@
                                                                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                                      </HBox.margin>
                                                                   </Label>
-                                                                  <Label fx:id="LastNameLabel" layoutX="10.0" layoutY="10.0" text="Label">
+                                                                  <Label fx:id="lastNameLabel" layoutX="10.0" layoutY="10.0" text="Label">
                                                                      <font>
                                                                         <Font size="18.0" />
                                                                      </font>
@@ -141,7 +141,7 @@
                                                                   <Insets right="10.0" />
                                                                </padding>
                                                             </Label>
-                                                            <Label fx:id="EmailLabel" text="Label">
+                                                            <Label fx:id="emailLabel" text="Label">
                                                                <font>
                                                                   <Font size="18.0" />
                                                                </font>
@@ -171,7 +171,7 @@
                                                    </font>
                                                 </Label>
                                                 <Separator orientation="VERTICAL" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                                <TextArea fx:id="CaseTextArea" editable="false" layoutX="53.0" layoutY="19.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="40.0">
+                                                <TextArea fx:id="caseTextArea" editable="false" layoutX="53.0" layoutY="19.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="40.0">
                                                    <font>
                                                       <Font size="14.0" />
                                                    </font></TextArea>

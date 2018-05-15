@@ -28,9 +28,15 @@ public class ViewCase implements Initializable {
     private IBusiness business;
 
     @FXML
-    private Label datoLabel;
+    private Label AdminIDLabel;
     @FXML
-    private Label caseworkerLabel;
+    private Button backButton;
+    @FXML
+    private Button addToCaseButton;
+    @FXML
+    private Button attachFileButton;
+    @FXML
+    private Button caseEvaulationButton;
     @FXML
     private Label caseIDLabel;
     @FXML
@@ -38,25 +44,19 @@ public class ViewCase implements Initializable {
     @FXML
     private Label IDLabel;
     @FXML
+    private Label firstNameLabel;
+    @FXML
+    private Label lastNameLabel;
+    @FXML
     private Label addressLabel;
     @FXML
-    private Label phoneNumberLabel;
+    private Label phonenumberLabel;
     @FXML
     private Label emailLabel;
     @FXML
-    private Button addToCaseButton;
+    private Label dateLabel;
     @FXML
-    private Button caseEvaulationButton;
-    @FXML
-    private Button backButton;
-    @FXML
-    private Label AdminIDLabel;
-    @FXML
-    private Button attachFileButton;
-    @FXML
-    private Label FirstNameLabel;
-    @FXML
-    private Label LastNameLabel;
+    private Label caseworkerLabel;
     @FXML
     private TextArea CaseTextArea;
 
@@ -65,15 +65,15 @@ public class ViewCase implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        /*UI = PresentationFacade.getUI();
-        IDLabel.setText(String.valueOf(UI.getID()));
-        FirstNameLabel.setText(UI.getFirtName());
-        LastNameLabel.setText(UI.getLastName());
-        phoneNumberLabel.setText((String.valueOf(UI.getPhoneNumber())));
+        UI = PresentationFacade.getUI();
+        caseIDLabel.setText(String.valueOf(UI.getID()));
+        firstNameLabel.setText(UI.getFirtName());
+        lastNameLabel.setText(UI.getLastName());
+        phonenumberLabel.setText((String.valueOf(UI.getPhoneNumber())));
         emailLabel.setText((UI.getEmail()));
         CaseTextArea.setText((String.valueOf(UI.getJournal())));
         caseStatusLabel.setText(UI.getStatus());
-    */
+        addressLabel.setText(UI.getAddresse());
     }
 
     @FXML

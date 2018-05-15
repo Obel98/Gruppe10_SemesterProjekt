@@ -42,30 +42,28 @@ public class CaseWorkerHomeFXMLController implements Initializable {
 
     @FXML
     private Button logOutButton;
-    private Label IDLabel;
-    private Label nameLabel;
-    private Label statusLabel;
-    @FXML
-    private Button viewCaseButton;
     @FXML
     private Label AdminIDLabel;
     @FXML
-    private MenuItem menuButton;
+    private Label caseIDLabel;
     @FXML
-    private Label FirstNameLabel;
+    private Label firstNameLabel;
     @FXML
-    private Label LastNameLabel;
+    private Label lastNameLabel;
     @FXML
     private Label PhonenumberLabel;
     @FXML
-    private Label EmailLabel;
-    private Label CaseTextLabel;
-    @FXML
-    private TextArea CaseTextArea;
-    @FXML
-    private Label caseIDLabel;
+    private Label emailLabel;
     @FXML
     private Label caseStatusLabel;
+    @FXML
+    private TextArea caseTextArea;
+    @FXML
+    private Button viewCaseButton;
+    @FXML
+    private MenuItem menuButton;
+
+    
 
     /**
      * Initializes the controller class.
@@ -76,13 +74,13 @@ public class CaseWorkerHomeFXMLController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         UI = PresentationFacade.getUI();
-        IDLabel.setText(String.valueOf(UI.getID()));
-        FirstNameLabel.setText(String.valueOf(UI.getFirtName()));
-        LastNameLabel.setText(String.valueOf(UI.getLastName()));
+        caseIDLabel.setText(String.valueOf(UI.getID()));
+        firstNameLabel.setText(String.valueOf(UI.getFirtName()));
+        lastNameLabel.setText(String.valueOf(UI.getLastName()));
         PhonenumberLabel.setText((String.valueOf(UI.getPhoneNumber())));
-        EmailLabel.setText(String.valueOf((UI.getEmail())));
-        CaseTextArea.setText((String.valueOf(UI.getJournal())));
-        statusLabel.setText(UI.getStatus());
+        emailLabel.setText(String.valueOf((UI.getEmail())));
+        caseTextArea.setText((String.valueOf(UI.getJournal())));
+        caseStatusLabel.setText(UI.getStatus());
     }
 
     @FXML

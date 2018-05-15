@@ -159,7 +159,7 @@
                                                 </Label>
                                                 <HBox>
                                                    <children>
-                                                      <Label fx:id="FirstnameLabel" text="Label">
+                                                      <Label fx:id="firstNameLabel" text="Label">
                                                          <HBox.margin>
                                                             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                          </HBox.margin>
@@ -167,7 +167,7 @@
                                                             <Font size="18.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label fx:id="LastNameLabel" layoutX="10.0" layoutY="10.0" text="Label">
+                                                      <Label fx:id="lastNameLabel" layoutX="10.0" layoutY="10.0" text="Label">
                                                          <HBox.margin>
                                                             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                          </HBox.margin>
@@ -185,7 +185,7 @@
                                                       <Font size="18.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="phoneNumberLabel" text="Label">
+                                                <Label fx:id="phonenumberLabel" text="Label">
                                                    <VBox.margin>
                                                       <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                    </VBox.margin>
@@ -220,7 +220,7 @@
                                                 <Font size="18.0" />
                                              </font>
                                           </Label>
-                                          <Label fx:id="datoLabel" text="Label">
+                                          <Label fx:id="dateLabel" text="Label">
                                              <HBox.margin>
                                                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                              </HBox.margin>
