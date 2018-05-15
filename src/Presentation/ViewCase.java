@@ -14,6 +14,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
 /**
@@ -31,15 +32,11 @@ public class ViewCase implements Initializable {
     @FXML
     private Label caseworkerLabel;
     @FXML
-    private Label caseTextLabel;
-    @FXML
     private Label caseIDLabel;
     @FXML
     private Label caseStatusLabel;
     @FXML
     private Label IDLabel;
-    @FXML
-    private Label nameLabel;
     @FXML
     private Label addressLabel;
     @FXML
@@ -49,20 +46,34 @@ public class ViewCase implements Initializable {
     @FXML
     private Button addToCaseButton;
     @FXML
-    private Button attackFileButton;
-    @FXML
     private Button caseEvaulationButton;
     @FXML
     private Button backButton;
     @FXML
     private Label AdminIDLabel;
+    @FXML
+    private Button attachFileButton;
+    @FXML
+    private Label FirstNameLabel;
+    @FXML
+    private Label LastNameLabel;
+    @FXML
+    private TextArea CaseTextArea;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        /*UI = PresentationFacade.getUI();
+        IDLabel.setText(String.valueOf(UI.getID()));
+        FirstNameLabel.setText(UI.getFirtName());
+        LastNameLabel.setText(UI.getLastName());
+        phoneNumberLabel.setText((String.valueOf(UI.getPhoneNumber())));
+        emailLabel.setText((UI.getEmail()));
+        CaseTextArea.setText((String.valueOf(UI.getJournal())));
+        caseStatusLabel.setText(UI.getStatus());
+    */
     }
 
     @FXML

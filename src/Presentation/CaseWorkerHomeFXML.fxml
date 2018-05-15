@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -15,7 +20,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.CaseWorkerHomeFXMLController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.CaseWorkerHomeFXMLController">
    <children>
       <Pane layoutX="113.0" layoutY="55.0" prefHeight="50.0" style="-fx-background-color: #39A67f;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <Button fx:id="logOutButton" blendMode="DARKEN" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#LogOutAction" text="Log ud" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
@@ -88,7 +93,7 @@
                                                       </VBox>
                                                       <VBox>
                                                          <children>
-                                                            <Label fx:id="IDLabel" text="Label">
+                                                            <Label fx:id="caseIDLabel" text="Label">
                                                                <font>
                                                                   <Font size="18.0" />
                                                                </font>
@@ -160,13 +165,16 @@
                                                       <Font size="18.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="statusLabel" layoutX="110.0" layoutY="5.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="5.0">
+                                                <Label fx:id="caseStatusLabel" layoutX="110.0" layoutY="5.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="5.0">
                                                    <font>
                                                       <Font size="18.0" />
                                                    </font>
                                                 </Label>
                                                 <Separator orientation="VERTICAL" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                                <TextArea fx:id="CaseTextArea" editable="false" layoutX="53.0" layoutY="19.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="40.0" />
+                                                <TextArea fx:id="CaseTextArea" editable="false" layoutX="53.0" layoutY="19.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="40.0">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font></TextArea>
                                              </children>
                                           </AnchorPane>
                                           <Separator orientation="VERTICAL" />

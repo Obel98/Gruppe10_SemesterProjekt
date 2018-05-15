@@ -42,10 +42,8 @@ public class CaseWorkerHomeFXMLController implements Initializable {
 
     @FXML
     private Button logOutButton;
-    @FXML
     private Label IDLabel;
     private Label nameLabel;
-    @FXML
     private Label statusLabel;
     @FXML
     private Button viewCaseButton;
@@ -64,6 +62,10 @@ public class CaseWorkerHomeFXMLController implements Initializable {
     private Label CaseTextLabel;
     @FXML
     private TextArea CaseTextArea;
+    @FXML
+    private Label caseIDLabel;
+    @FXML
+    private Label caseStatusLabel;
 
     /**
      * Initializes the controller class.
