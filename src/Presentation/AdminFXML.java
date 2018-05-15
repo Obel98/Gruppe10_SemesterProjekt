@@ -42,8 +42,6 @@ public class AdminFXML implements Initializable {
     private Button logOutButton;
     @FXML
     private MenuItem menuButton;
-    @FXML
-    private ChoiceBox userListBox;
 
     public AdminFXML() {
     }
