@@ -16,6 +16,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
+import Business.PasswordGenerator;
+import javafx.scene.control.PasswordField;
+
 /**
  * FXML Controller class
  *
@@ -34,13 +37,19 @@ public class ResetPasswordController implements Initializable {
     @FXML
     private Label InvaldInputLabel;
 
+    PasswordGenerator pg = new PasswordGenerator();
+    @FXML
+    private PasswordField password2;
+    @FXML
+    private PasswordField password1;
+
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void ResetButtonOnAction(ActionEvent event) {
@@ -59,5 +68,5 @@ public class ResetPasswordController implements Initializable {
     @FXML
     private void userNameOnAction(ActionEvent event) {
     }
-    
+
 }

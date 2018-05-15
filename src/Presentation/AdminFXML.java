@@ -5,6 +5,7 @@
  */
 package Presentation;
 
+import Aquaintance.IBusiness;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Observable;
@@ -34,6 +35,7 @@ import javafx.stage.Stage;
  */
 public class AdminFXML implements Initializable {
 
+    private IBusiness business;
     @FXML
     private Label AdminIDLabel;
     @FXML
@@ -50,6 +52,10 @@ public class AdminFXML implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+    }
+
+    public void injectData(IBusiness business) {
+        this.business = business;
     }
 
     @FXML
@@ -71,6 +77,10 @@ public class AdminFXML implements Initializable {
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.initOwner(menuButton.getParentPopup().getOwnerWindow());
         stage.showAndWait();
+    }
+
+    void injectBusiness(IBusiness Business) {
+        this.business = business;
     }
 
 }
