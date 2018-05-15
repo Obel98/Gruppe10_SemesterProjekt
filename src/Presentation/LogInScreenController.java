@@ -75,9 +75,9 @@ public class LogInScreenController implements Initializable {
     private void pressEnter(KeyEvent event) throws IOException {
         if (event.getCode().equals(KeyCode.ENTER)) {
             if ("sagb".equals(UsernameBox.getText()) && "sagb".equals(PasswordBox.getText())) {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("HomeFXML.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("CaseWorkerHomeFXML.fxml"));
                 Pane homeRoot = loader.load();
-                HomeFXMLController controller = loader.getController();
+                CaseWorkerHomeFXMLController controller = loader.getController();
                 controller.injectBusiness(Business);
                 Scene home = new Scene(homeRoot);
                 Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -98,6 +98,19 @@ public class LogInScreenController implements Initializable {
 
                 System.out.println("Sagsbehandler!");
 
+            }
+            if ("sec".equals(UsernameBox.getText()) && "sec".equals(PasswordBox.getText())) {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("SecretaryHomeFXML.fxml"));
+                Pane root = loader.load();
+                SecretaryHomeFXMLController controller = loader.getController();
+                controller.injectBusiness(Business);
+                Scene secHome = new Scene(root);
+                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                stage.setScene(secHome);
+                stage.show();
+
+                System.out.println("Secretary!");
+
             } else {
                 passwordMsgLabel.setText("Inncorrect password or username, Try again!");
                 passwordMsgLabel.setTextFill(Color.rgb(210, 39, 30));
@@ -110,9 +123,9 @@ public class LogInScreenController implements Initializable {
     private void LogOnButtonAction(ActionEvent event) throws IOException {
 
         if ("sagb".equals(UsernameBox.getText()) && "sagb".equals(PasswordBox.getText())) {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("HomeFXML.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("CaseWorkerHomeFXML.fxml"));
             Pane homeRoot = loader.load();
-            HomeFXMLController controller = loader.getController();
+            CaseWorkerHomeFXMLController controller = loader.getController();
             controller.injectBusiness(Business);
             Scene caseWorkerHome = new Scene(homeRoot);
             Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -135,6 +148,19 @@ public class LogInScreenController implements Initializable {
 
             System.out.println("Administrator!");
 
+        }
+
+        if ("sec".equals(UsernameBox.getText()) && "sec".equals(PasswordBox.getText())) {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("SecretaryHomeFXML.fxml"));
+            Pane root = loader.load();
+            SecretaryHomeFXMLController controller = loader.getController();
+            controller.injectBusiness(Business);
+            Scene secHome = new Scene(root);
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(secHome);
+            stage.show();
+
+            System.out.println("Secretary!");
         } else {
             passwordMsgLabel.setText("Inncorrect password or username, Try again!");
             passwordMsgLabel.setTextFill(Color.rgb(210, 39, 30));

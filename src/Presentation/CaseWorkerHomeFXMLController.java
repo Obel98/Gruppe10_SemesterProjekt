@@ -31,7 +31,7 @@ import javafx.stage.Stage;
  *
  * @author Obel
  */
-public class HomeFXMLController implements Initializable {
+public class CaseWorkerHomeFXMLController implements Initializable {
 
     private IBusiness Business;
     private IPresentation UI;

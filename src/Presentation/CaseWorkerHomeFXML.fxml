@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.HomeFXMLController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.CaseWorkerHomeFXMLController">
    <children>
       <Pane layoutX="113.0" layoutY="55.0" prefHeight="50.0" style="-fx-background-color: #39A67f;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <Button fx:id="logOutButton" blendMode="DARKEN" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#LogOutAction" text="Log ud" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
