@@ -69,7 +69,6 @@ public class HomeFXMLController implements Initializable {
     @FXML
     private void LogOutAction(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("LogInScreen.fxml"));
-
         Scene logIn = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(logIn);
@@ -85,7 +84,6 @@ public class HomeFXMLController implements Initializable {
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.initOwner(viewCaseButton.getScene().getWindow());
         stage.showAndWait();
-
     }
 
     public void injectBusiness(IBusiness business) {
