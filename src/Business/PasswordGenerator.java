@@ -20,17 +20,13 @@ public class PasswordGenerator {
     private static final String NUMERIC = "0123456789";
     private static final String SPECIAL_CHARS = "!@#$%^&*_=+-/";
 
-    public static String generatePassword(int len, String dic) {
+    private static String generatePassword(int len, String dic) {
         String password = "";
         for (int i = 0; i < len; i++) {
             int index = random.nextInt(dic.length());
             password += dic.charAt(index);
         }
         return password;
-    }
-
-    private void getPassword() {
-        System.out.println(generatePassword(8, ALPHA));
     }
 
     public static void setRandom(SecureRandom random) {
@@ -40,11 +36,4 @@ public class PasswordGenerator {
     public static SecureRandom getRandom() {
         return random;
     }
-
-    
-    public static void main(String[] args) {
-        PasswordGenerator pg = new PasswordGenerator();
-        pg.getPassword();
-    }
-
 }
