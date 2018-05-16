@@ -6,7 +6,6 @@
 package Data;
 
 import java.sql.*;
-import java.util.Scanner;
 
 /**
  *
@@ -37,13 +36,11 @@ public class Database
             System.out.println(ex);
         }
 
-        try
+        try (Connection db = DriverManager.getConnection(dburl, dbusername, dbpassword);
+                Statement st = db.createStatement();
+                ResultSet rs = st.executeQuery("select * from employee;");)
         {
-            Connection db = DriverManager.getConnection(dburl, dbusername, dbpassword);
-
-            Statement st = db.createStatement();
-            ResultSet rs = st.executeQuery("select * from admin;");
-            System.out.println("Admin list:");
+            System.out.println("Employee list:");
             while (rs.next())
             {
                 int i = 1;
@@ -55,9 +52,6 @@ public class Database
                 System.out.println(rs.getString(i) + " ");
 
             }
-            db.close();
-            rs.close();
-            st.close();
             System.out.println("Press enter to go back to the menu.");
             System.in.read();
             System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
@@ -67,8 +61,9 @@ public class Database
             System.out.println(e);
         }
 
-    }}
-    /*
+    }
+}
+/*
     public void winners()
     {
         try
