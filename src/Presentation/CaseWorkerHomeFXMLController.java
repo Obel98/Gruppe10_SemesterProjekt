@@ -13,7 +13,11 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import Business.Case;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
+import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -26,8 +30,11 @@ import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextArea;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.Window;
 
 /**
  * FXML Controller class
@@ -63,39 +70,7 @@ public class CaseWorkerHomeFXMLController implements Initializable {
     @FXML
     private MenuItem menuButton;
     @FXML
-    private Label caseIDLabel1;
-    @FXML
-    private Label firstNameLabel1;
-    @FXML
-    private Label lastNameLabel1;
-    @FXML
-    private Label PhonenumberLabel1;
-    @FXML
-    private Label emailLabel1;
-    @FXML
-    private Label caseStatusLabel1;
-    @FXML
-    private TextArea caseTextArea1;
-    @FXML
-    private Button viewCaseButton1;
-    @FXML
-    private Label caseIDLabel11;
-    @FXML
-    private Label firstNameLabel11;
-    @FXML
-    private Label lastNameLabel11;
-    @FXML
-    private Label PhonenumberLabel11;
-    @FXML
-    private Label emailLabel11;
-    @FXML
-    private Label caseStatusLabel11;
-    @FXML
-    private TextArea caseTextArea11;
-    @FXML
-    private Button viewCaseButton11;
-
-    
+    private VBox VBox;
 
     /**
      * Initializes the controller class.
@@ -103,6 +78,15 @@ public class CaseWorkerHomeFXMLController implements Initializable {
      * @param url
      * @param rb
      */
+    public void injectBusiness(IBusiness business) {
+        this.Business = business;
+    }
+
+    private void addCase() throws IOException {
+        Pane newVBox = FXMLLoader.load(getClass().getResource("casePreview.fxml"));
+        VBox.getChildren().add(newVBox);
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         UI = PresentationFacade.getUI();
@@ -113,6 +97,12 @@ public class CaseWorkerHomeFXMLController implements Initializable {
         emailLabel.setText(String.valueOf((UI.getEmail())));
         caseTextArea.setText((String.valueOf(UI.getJournal())));
         caseStatusLabel.setText(UI.getStatus());
+
+        try {
+            addCase();
+        } catch (IOException ex) {
+            Logger.getLogger(CaseWorkerHomeFXMLController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     @FXML
@@ -135,10 +125,6 @@ public class CaseWorkerHomeFXMLController implements Initializable {
         stage.showAndWait();
     }
 
-    public void injectBusiness(IBusiness business) {
-        this.Business = business;
-    }
-
     @FXML
     private void changePassword(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("ResetPassword.fxml"));
@@ -150,5 +136,4 @@ public class CaseWorkerHomeFXMLController implements Initializable {
         stage.initOwner(menuButton.getParentPopup().getOwnerWindow());
         stage.showAndWait();
     }
-
 }
