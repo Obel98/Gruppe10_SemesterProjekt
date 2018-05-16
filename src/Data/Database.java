@@ -11,49 +11,33 @@ import java.sql.*;
  *
  * @author Obel
  */
-public class Database
-{
+public class Database {
 
     private final String dburl;
     private final String dbusername;
     private final String dbpassword;
 
-    public Database(String dburl, String dbusername, String dbpassword)
-    {
+    public Database(String dburl, String dbusername, String dbpassword) {
         this.dburl = dburl;
         this.dbusername = dbusername;
         this.dbpassword = dbpassword;
     }
 
-    public void listNames()
-    {
-        try
-        {
+    public void listNames() {
+        try {
             Class.forName("org.postgresql.Driver");
-        }
-        catch (ClassNotFoundException ex)
-        {
+        } catch (ClassNotFoundException ex) {
             System.out.println(ex);
         }
 
         try (Connection db = DriverManager.getConnection(dburl, dbusername, dbpassword);
                 Statement st = db.createStatement();
-                ResultSet rs = st.executeQuery("select * from employee;");)
-        {
-<<<<<<< Updated upstream
+                ResultSet rs = st.executeQuery("select * from employee;");) {
             System.out.println("Employee list:");
-=======
-            Connection db = DriverManager.getConnection(dburl, dbusername, dbpassword);
-
-            Statement st = db.createStatement();
-            ResultSet rs = st.executeQuery("select * from casefile;");
             System.out.println("Admin list:");
->>>>>>> Stashed changes
-            while (rs.next())
-            {
+            while (rs.next()) {
                 int i = 1;
-                while (i < rs.getMetaData().getColumnCount())
-                {
+                while (i < rs.getMetaData().getColumnCount()) {
                     System.out.print(rs.getString(i) + " ");
                     i++;
                 }
@@ -63,9 +47,7 @@ public class Database
             System.out.println("Press enter to go back to the menu.");
             System.in.read();
             System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             System.out.println(e);
         }
 
