@@ -33,20 +33,32 @@ public class ViewCase implements Initializable {
     private Button backButton;
     @FXML
     private Button attachFileButton;
+    @FXML
     private Label caseIDLabel;
+    @FXML
     private Label caseStatusLabel;
+    @FXML
     private Label firstNameLabel;
+    @FXML
     private Label lastNameLabel;
+    @FXML
     private Label addressLabel;
+    @FXML
     private Label phonenumberLabel;
+    @FXML
     private Label emailLabel;
+    @FXML
     private TextArea CaseTextArea;
     @FXML
-    private Button saveButton;
+    private Button addToCaseButton;
     @FXML
-    private Button saveDraftButton;
+    private Button caseEvaulationButton;
     @FXML
-    private TextArea commentTextArea;
+    private Label IDLabel;
+    @FXML
+    private Label dateLabel;
+    @FXML
+    private Label caseworkerLabel;
 
     /**
      * Initializes the controller class.
@@ -70,16 +82,5 @@ public class ViewCase implements Initializable {
         stage.close();
     }
 
-    @FXML
-    private void saveOnAction(ActionEvent event) {
-    }
-
-    @FXML
-    private void saveDraftOnAction(ActionEvent event) {
-    }
-
-    @FXML
-    private void attachFileOnAction(ActionEvent event) {
-    }
 
 }
