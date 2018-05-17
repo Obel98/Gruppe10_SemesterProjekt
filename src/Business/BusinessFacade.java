@@ -7,6 +7,8 @@ package Business;
 
 import Aquaintance.ICase;
 import Aquaintance.IData;
+import java.sql.Connection;
+import java.sql.ResultSet;
 
 /**
  *
@@ -17,6 +19,8 @@ public class BusinessFacade implements Aquaintance.IBusiness {
     private IData data;
     //Add to set instead.
     private Case sag;
+    private ResultSet rs;
+    private static Connection db;
 
     @Override
     public void injectData(IData data) {
@@ -90,9 +94,10 @@ public class BusinessFacade implements Aquaintance.IBusiness {
     }
 
     @Override
-    public void getDatabase()
+    public ResultSet sendQuery(String query)
     {
-        
+        rs = data.sendQuery(query);
+        return rs;
     }
 
 }

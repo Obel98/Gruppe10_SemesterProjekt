@@ -5,6 +5,9 @@
  */
 package Aquaintance;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+
 /**
  *
  * @author Mads Obel Jensen
@@ -15,7 +18,7 @@ public interface IBusiness {
 
     void getCase();
     
-    void getDatabase();
+    ResultSet sendQuery(String query);
 
     int getID();
 

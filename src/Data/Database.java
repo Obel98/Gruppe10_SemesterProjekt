@@ -17,6 +17,7 @@ public class Database
     private final String dburl;
     private final String dbusername;
     private final String dbpassword;
+    private static Connection db;
 
     public Database(String dburl, String dbusername, String dbpassword)
     {
@@ -41,6 +42,28 @@ public class Database
                 ResultSet rs = st.executeQuery(query);)
         {
             return rs;
+        }
+        catch (Exception e)
+        {
+            System.out.println(e);
+        }
+        return null;
+    }
+
+    public Connection getConnection()
+    {
+        try
+        {
+            Class.forName("org.postgresql.Driver");
+        }
+        catch (ClassNotFoundException ex)
+        {
+            System.out.println(ex);
+        }
+
+        try (Connection db = DriverManager.getConnection("jdbc:postgresql://elmer.db.elephantsql.com:5432/jkclsvjn", "jkclsvjn", "5vckjZ8LGdP6g2S6eHLeP5w34mASozc1");)
+        {
+            return db;
         }
         catch (Exception e)
         {
