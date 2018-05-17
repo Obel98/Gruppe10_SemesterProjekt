@@ -6,6 +6,7 @@
 package Data;
 
 import Aquaintance.ICase;
+import java.sql.ResultSet;
 
 /**
  *
@@ -14,12 +15,22 @@ import Aquaintance.ICase;
 public class DataFacade implements Aquaintance.IData {
 
     private ICase iCase;
+    private ResultSet rs;
             
     @Override
     public ICase getCase() {
         CaseReader IC = new CaseReader("Sag1.txt");
-        iCase = IC.getCf();
+        iCase = IC.getCase();
         return iCase;
+    }
+
+    @Override
+    public ResultSet sendQuery(String query)
+    {
+                    Database db = new Database("jdbc:postgresql://elmer.db.elephantsql.com:5432/jkclsvjn",
+                    "jkclsvjn", "5vckjZ8LGdP6g2S6eHLeP5w34mASozc1");
+                    rs = db.sendQuery(query);
+                    return rs;
     }
     
 }

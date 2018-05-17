@@ -5,6 +5,8 @@
  */
 package Aquaintance;
 
+import java.sql.ResultSet;
+
 /**
  *
  * @author Mads Obel Jensen
@@ -12,4 +14,5 @@ package Aquaintance;
 public interface IData {
 
     public ICase getCase();
+    public ResultSet sendQuery(String query);
 }

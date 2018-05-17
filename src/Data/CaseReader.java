@@ -25,7 +25,7 @@ public class CaseReader {
 //        file = new File("/Users/Obel/NetBeansProjects/Gruppe10_SemesterProjekt" + "/" + fileName);
 
         //Rasmus
-//        file = new File("C:\\Users\\rasmu\\Documents\\Gruppe10_SemesterProjekt" + "/" + fileName);
+        file = new File("C:\\Users\\rasmu\\Documents\\Gruppe10_SemesterProjekt" + "/" + fileName);
         //file = new File("C:\\Users\\rasmu\\Desktop\\Code\\Semester 2\\Gruppe10_SemesterProjekt" + "/" + fileName);
 
 
@@ -60,13 +60,13 @@ public class CaseReader {
 
     }
 
-    public ICase getCf() {
+    public ICase getCase() {
         return cf;
     }
 
 //    public static void main(String[] args)
 //    {
 //        CaseReader test = new CaseReader("Sag1.txt");
-//        System.out.println(test.getCf().getEmail());
+//        System.out.println(test.getCase().getEmail());
 //    }
 }

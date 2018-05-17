@@ -37,6 +37,16 @@ public class AdminFXML implements Initializable {
     private Button logOutButton;
     @FXML
     private MenuItem menuButton;
+    @FXML
+    private TextField searchTextField;
+    @FXML
+    private Button searchButton;
+    @FXML
+    private Button addUserButton;
+    @FXML
+    private Button editUserButton;
+    @FXML
+    private Button deleteUserButton;
 
     public AdminFXML() {
     }
@@ -76,6 +86,25 @@ public class AdminFXML implements Initializable {
 
     void injectBusiness(IBusiness Business) {
         this.business = business;
+    }
+
+    @FXML
+    private void searchOnAction(ActionEvent event) {
+    }
+
+    @FXML
+    private void addUserOnAction(ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("addUser.fxml"));
+        Stage stage = new Stage();
+        Parent root = loader.load();
+        stage.setScene(new Scene(root));
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.initOwner(addUserButton.getScene().getWindow());
+        stage.showAndWait();
+    }
+
+    @FXML
+    private void editUserOnAction(ActionEvent event) {
     }
 
 }
