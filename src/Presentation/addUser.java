@@ -12,37 +12,42 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuButton;
 import javafx.scene.control.TextField;
-import javafx.scene.input.KeyEvent;
-import javafx.stage.Stage;
-
-import Business.PasswordGenerator;
-import javafx.scene.control.PasswordField;
 
 /**
  * FXML Controller class
  *
  * @author rasmu
  */
-public class ResetPasswordController implements Initializable {
+public class addUser implements Initializable {
 
     @FXML
-    private Button RestButton;
+    private Label AdminIDLabel;
     @FXML
     private Button backButton;
     @FXML
-    private Label invalidUserName;
+    private Button saveButton;
     @FXML
-    private TextField UserNameTextField;
+    private TextField TempCodeTextField;
     @FXML
-    private Label InvaldInputLabel;
-
-    PasswordGenerator pg = new PasswordGenerator();
-
+    private TextField usernameTextField;
     @FXML
-    private PasswordField password2;
+    private TextField addressTextField;
     @FXML
-    private PasswordField password1;
+    private TextField phonenumberTextField;
+    @FXML
+    private TextField emailTextField;
+    @FXML
+    private TextField CPRTextField;
+    @FXML
+    private TextField dateOfBirthTextField;
+    @FXML
+    private TextField lastNameTextField;
+    @FXML
+    private TextField firstNameTextField;
+    @FXML
+    private MenuButton typeMenuButton;
 
     /**
      * Initializes the controller class.
@@ -50,23 +55,14 @@ public class ResetPasswordController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }
-
-    @FXML
-    private void ResetButtonOnAction(ActionEvent event) {
-    }
+    }    
 
     @FXML
     private void backOnAction(ActionEvent event) {
-        Stage stage = (Stage) backButton.getScene().getWindow();
-        stage.close();
     }
 
     @FXML
-    private void pressEnter(KeyEvent event) {
+    private void saveOnAction(ActionEvent event) {
     }
-
-    @FXML
-    private void userNameOnAction(ActionEvent event) {
-    }
+    
 }

@@ -8,11 +8,8 @@ package Presentation;
 import Aquaintance.IBusiness;
 import java.io.IOException;
 import java.net.URL;
-import java.util.Observable;
 import java.util.ResourceBundle;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -21,10 +18,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
-import javafx.scene.control.TextField;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -42,6 +37,16 @@ public class AdminFXML implements Initializable {
     private Button logOutButton;
     @FXML
     private MenuItem menuButton;
+    @FXML
+    private TextField searchTextField;
+    @FXML
+    private Button searchButton;
+    @FXML
+    private Button addUserButton;
+    @FXML
+    private Button editUserButton;
+    @FXML
+    private Button deleteUserButton;
 
     public AdminFXML() {
     }
@@ -81,6 +86,25 @@ public class AdminFXML implements Initializable {
 
     void injectBusiness(IBusiness Business) {
         this.business = business;
+    }
+
+    @FXML
+    private void searchOnAction(ActionEvent event) {
+    }
+
+    @FXML
+    private void addUserOnAction(ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("addUser.fxml"));
+        Stage stage = new Stage();
+        Parent root = loader.load();
+        stage.setScene(new Scene(root));
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.initOwner(addUserButton.getScene().getWindow());
+        stage.showAndWait();
+    }
+
+    @FXML
+    private void editUserOnAction(ActionEvent event) {
     }
 
 }

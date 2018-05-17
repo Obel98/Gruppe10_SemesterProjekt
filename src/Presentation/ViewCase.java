@@ -32,17 +32,11 @@ public class ViewCase implements Initializable {
     @FXML
     private Button backButton;
     @FXML
-    private Button addToCaseButton;
-    @FXML
     private Button attachFileButton;
-    @FXML
-    private Button caseEvaulationButton;
     @FXML
     private Label caseIDLabel;
     @FXML
     private Label caseStatusLabel;
-    @FXML
-    private Label IDLabel;
     @FXML
     private Label firstNameLabel;
     @FXML
@@ -54,11 +48,17 @@ public class ViewCase implements Initializable {
     @FXML
     private Label emailLabel;
     @FXML
+    private TextArea CaseTextArea;
+    @FXML
+    private Button addToCaseButton;
+    @FXML
+    private Button caseEvaulationButton;
+    @FXML
+    private Label IDLabel;
+    @FXML
     private Label dateLabel;
     @FXML
     private Label caseworkerLabel;
-    @FXML
-    private TextArea CaseTextArea;
 
     /**
      * Initializes the controller class.
@@ -81,5 +81,6 @@ public class ViewCase implements Initializable {
         Stage stage = (Stage) backButton.getScene().getWindow();
         stage.close();
     }
+
 
 }
