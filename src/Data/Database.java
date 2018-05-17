@@ -16,7 +16,6 @@ public class Database {
     private final String dburl;
     private final String dbusername;
     private final String dbpassword;
-    private static Connection db;
 
     public Database(String dburl, String dbusername, String dbpassword) {
         this.dburl = dburl;
@@ -35,7 +34,6 @@ public class Database {
 
         try (Connection db = DriverManager.getConnection(dburl, dbusername, dbpassword);
                 Statement st = db.createStatement();
-                }
                 ResultSet rs = st.executeQuery(query);)
         {
             return rs;
