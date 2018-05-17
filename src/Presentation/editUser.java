@@ -21,8 +21,12 @@ import javafx.stage.Stage;
  *
  * @author rasmu
  */
-public class addUser implements Initializable {
+public class editUser implements Initializable {
 
+    @FXML
+    private Label AdminIDLabel;
+    @FXML
+    private Button backButton;
     @FXML
     private TextField TempCodeTextField;
     @FXML
@@ -44,11 +48,7 @@ public class addUser implements Initializable {
     @FXML
     private MenuButton typeMenuButton;
     @FXML
-    private Label AdminIDLabel1;
-    @FXML
     private Button SaveButton;
-    @FXML
-    private Button backButton;
 
     /**
      * Initializes the controller class.

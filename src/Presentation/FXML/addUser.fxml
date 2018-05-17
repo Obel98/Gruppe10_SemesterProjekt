@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -16,34 +21,39 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.addUser">
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.addUser">
     <children>
-        <Separator layoutX="-281.0" layoutY="221.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0" />
-        <Pane layoutX="123.0" layoutY="65.0" prefHeight="50.0" style="-fx-background-color: #39A67f;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-        <Label fx:id="AdminIDLabel" alignment="CENTER" layoutX="20.0" layoutY="20.0" maxWidth="-Infinity" text="Tilføj Bruger" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="10.0">
-            <font>
-                <Font name="System Bold" size="18.0" />
-            </font>
-        </Label>
-        <Button fx:id="backButton" blendMode="DARKEN" layoutX="20.0" layoutY="20.0" mnemonicParsing="false" onAction="#backOnAction" text="Tilbage" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
-            <font>
-                <Font name="System Bold" size="12.0" />
-            </font>
-        </Button>
-        <AnchorPane layoutX="236.0" layoutY="-22.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="700.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
-            <children>
-                <HBox layoutX="235.0" layoutY="-36.0" prefHeight="35.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                    <children>
-                        <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveOnAction" prefHeight="25.0" prefWidth="100.0" text="Gem">
-                            <HBox.margin>
-                                <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
-                            </HBox.margin>
-                        </Button>
-                    </children>
-                </HBox>
-            </children>
-        </AnchorPane>
-      <AnchorPane layoutX="-10.0" layoutY="68.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0">
+      <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0">
+         <children>
+            <Pane style="-fx-background-color: #39A67f;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Label fx:id="AdminIDLabel1" alignment="CENTER" maxWidth="-Infinity" text="Tilføj Bruger" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="10.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button fx:id="SaveButton" blendMode="DARKEN" mnemonicParsing="false" onAction="#SaveOnAction" text="Gem">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="backButton" blendMode="DARKEN" mnemonicParsing="false" onAction="#backOnAction" text="Tilbage">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-10.0" layoutY="68.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
          <children>
             <GridPane AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
               <columnConstraints>

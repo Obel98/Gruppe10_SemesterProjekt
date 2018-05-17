@@ -105,7 +105,14 @@ public class AdminFXML implements Initializable {
     }
 
     @FXML
-    private void editUserOnAction(ActionEvent event) {
+    private void editUserOnAction(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/editUser.fxml"));
+        Stage stage = new Stage();
+        Parent root = loader.load();
+        stage.setScene((new Scene(root)));
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.initOwner(editUserButton.getScene().getWindow());
+        stage.showAndWait();
     }
 
 }

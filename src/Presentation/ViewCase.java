@@ -7,9 +7,11 @@ package Presentation;
 
 import Aquaintance.IBusiness;
 import Aquaintance.IPresentation;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -97,7 +99,22 @@ public class ViewCase implements Initializable {
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.initOwner(caseEvaulationButton.getScene().getWindow());
         stage.showAndWait();
-        
+
+    }
+
+    @FXML
+    private void addToCaseOnAction(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/caseComment.fxml"));
+        Stage stage = new Stage();
+        Parent root = loader.load();
+        stage.setScene((new Scene(root)));
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.initOwner(addToCaseButton.getScene().getWindow());
+        stage.showAndWait();
+    }
+
+    @FXML
+    private void attachFileOnAction(ActionEvent event) {
     }
 
 
