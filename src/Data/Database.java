@@ -40,15 +40,7 @@ public class Database
                 Statement st = db.createStatement();
                 ResultSet rs = st.executeQuery("select * from employee;");)
         {
-<<<<<<< Updated upstream
-            System.out.println("Employee list:");
-=======
-            Connection db = DriverManager.getConnection(dburl, dbusername, dbpassword);
 
-            Statement st = db.createStatement();
-            ResultSet rs = st.executeQuery("select * from casefile;");
-            System.out.println("Admin list:");
->>>>>>> Stashed changes
             while (rs.next())
             {
                 int i = 1;

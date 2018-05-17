@@ -22,10 +22,10 @@ public class CaseReader {
     public CaseReader(String fileName) {
         //Obel
         //file = new File("C:" + "/" + "Users" + "/" + "Mads Obel Jensen" + "/" + "Documents" + "/" + "NetBeansProjects" + "/" + "Gruppe10_SemesterProjekt" + "/" + fileName);
-        file = new File("/Users/Obel/NetBeansProjects/Gruppe10_SemesterProjekt" + "/" + fileName);
+        //file = new File("/Users/Obel/NetBeansProjects/Gruppe10_SemesterProjekt" + "/" + fileName);
 
         //Rasmus
-//        file = new File("C:\\Users\\rasmu\\Documents\\Gruppe10_SemesterProjekt" + "/" + fileName);
+        file = new File("C:\\Users\\rasmu\\Documents\\Gruppe10_SemesterProjekt" + "/" + fileName);
         //file = new File("C:\\Users\\rasmu\\Desktop\\Code\\Semester 2\\Gruppe10_SemesterProjekt" + "/" + fileName);
 
 
