@@ -89,7 +89,7 @@ public class ViewCase implements Initializable {
 
     @FXML
     private void caseEvaluationOnAction(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("DetermineTreatment.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/DetermineTreatment.fxml"));
         Stage stage = new Stage();
         Parent root = loader.load();
         stage.setResizable(false);

@@ -77,7 +77,7 @@ public class CaseWorkerHomeFXMLController implements Initializable {
     }
 
     private void addCase() throws IOException {
-        Pane newVBox = FXMLLoader.load(getClass().getResource("casePreview.fxml"));
+        Pane newVBox = FXMLLoader.load(getClass().getResource("FXML/casePreview.fxml"));
         VBox.getChildren().add(newVBox);
     }
 
@@ -101,7 +101,7 @@ public class CaseWorkerHomeFXMLController implements Initializable {
 
     @FXML
     private void LogOutAction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("LogInScreen.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("FXML/LogInScreen.fxml"));
         Scene logIn = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(logIn);
@@ -110,7 +110,7 @@ public class CaseWorkerHomeFXMLController implements Initializable {
 
     @FXML
     private void viewCaseAction(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("viewCase.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/viewCase.fxml"));
         Stage stage = new Stage();
         Parent root = loader.load();
         stage.setScene(new Scene(root));
@@ -121,7 +121,7 @@ public class CaseWorkerHomeFXMLController implements Initializable {
 
     @FXML
     private void changePassword(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("ResetPassword.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/ResetPassword.fxml"));
         Stage stage = new Stage();
         Parent root = loader.load();
         stage.setResizable(false);

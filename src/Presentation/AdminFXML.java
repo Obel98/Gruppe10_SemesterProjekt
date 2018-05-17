@@ -66,7 +66,7 @@ public class AdminFXML implements Initializable {
 
     @FXML
     private void logOutOnAction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("LogInScreen.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("FXML/LogInScreen.fxml"));
 
         Scene logIn = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -76,7 +76,7 @@ public class AdminFXML implements Initializable {
 
     @FXML
     private void changePassword(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("ResetPassword.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/ResetPassword.fxml"));
         Stage stage = new Stage();
         Parent root = loader.load();
         stage.setScene(new Scene(root));
@@ -95,7 +95,7 @@ public class AdminFXML implements Initializable {
 
     @FXML
     private void addUserOnAction(ActionEvent event) throws IOException{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("addUser.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/addUser.fxml"));
         Stage stage = new Stage();
         Parent root = loader.load();
         stage.setScene(new Scene(root));

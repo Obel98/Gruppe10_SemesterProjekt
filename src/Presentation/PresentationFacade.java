@@ -43,7 +43,7 @@ public class PresentationFacade implements Aquaintance.IPresentation {
     @Override
     public void start() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("LogInScreen.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/LogInScreen.fxml"));
             Pane root = loader.load();
             LogInScreenController controller = loader.getController();
             controller.injectBusiness(Business);

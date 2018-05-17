@@ -54,7 +54,7 @@ public class CasePreviewController implements Initializable {
 
     @FXML
     private void viewCaseAction(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("viewCase.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/viewCase.fxml"));
         Stage stage = new Stage();
         Parent root = loader.load();
         stage.setScene(new Scene(root));

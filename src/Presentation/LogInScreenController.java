@@ -58,7 +58,7 @@ public class LogInScreenController implements Initializable {
 
     @FXML
     private void ResetPasswordAction(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("ForgotPassword.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/ForgotPassword.fxml"));
         Stage stage = new Stage();
         Parent root = loader.load();
         stage.setResizable(false);
@@ -76,7 +76,7 @@ public class LogInScreenController implements Initializable {
     private void pressEnter(KeyEvent event) throws IOException {
         if (event.getCode().equals(KeyCode.ENTER)) {
             if ("sagb".equals(UsernameBox.getText()) && "sagb".equals(PasswordBox.getText())) {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("CaseWorkerHomeFXML.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/CaseWorkerHomeFXML.fxml"));
                 Pane homeRoot = loader.load();
                 CaseWorkerHomeFXMLController controller = loader.getController();
                 controller.injectBusiness(Business);
@@ -90,7 +90,7 @@ public class LogInScreenController implements Initializable {
                 System.out.println("Vellykket!");
             }
             if ("admin".equals(UsernameBox.getText()) && "admin".equals(PasswordBox.getText())) {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("AdminFXML.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/AdminFXML.fxml"));
                 Pane homeRoot = loader.load();
                 AdminFXML controller = loader.getController();
                 controller.injectBusiness(Business);
@@ -105,7 +105,7 @@ public class LogInScreenController implements Initializable {
 
             }
             if ("sec".equals(UsernameBox.getText()) && "sec".equals(PasswordBox.getText())) {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("SecretaryHomeFXML.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/SecretaryHomeFXML.fxml"));
                 Pane root = loader.load();
                 SecretaryHomeFXMLController controller = loader.getController();
                 controller.injectBusiness(Business);
@@ -129,7 +129,7 @@ public class LogInScreenController implements Initializable {
     @FXML
     private void LogOnButtonAction(ActionEvent event) throws IOException {
         if ("sagb".equals(UsernameBox.getText()) && "sagb".equals(PasswordBox.getText())) {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("CaseWorkerHomeFXML.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/CaseWorkerHomeFXML.fxml"));
                 Pane homeRoot = loader.load();
                 CaseWorkerHomeFXMLController controller = loader.getController();
                 controller.injectBusiness(Business);
@@ -143,7 +143,7 @@ public class LogInScreenController implements Initializable {
                 System.out.println("Vellykket!");
             }
             if ("admin".equals(UsernameBox.getText()) && "admin".equals(PasswordBox.getText())) {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("AdminFXML.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/AdminFXML.fxml"));
                 Pane homeRoot = loader.load();
                 AdminFXML controller = loader.getController();
                 controller.injectBusiness(Business);
@@ -158,7 +158,7 @@ public class LogInScreenController implements Initializable {
 
             }
             if ("sec".equals(UsernameBox.getText()) && "sec".equals(PasswordBox.getText())) {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("SecretaryHomeFXML.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/SecretaryHomeFXML.fxml"));
                 Pane root = loader.load();
                 SecretaryHomeFXMLController controller = loader.getController();
                 controller.injectBusiness(Business);

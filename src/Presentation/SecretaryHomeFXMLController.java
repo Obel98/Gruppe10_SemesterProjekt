@@ -56,7 +56,7 @@ public class SecretaryHomeFXMLController implements Initializable {
 
     @FXML
     private void LogOutAction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("LogInScreen.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("FXML/LogInScreen.fxml"));
         Scene logIn = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(logIn);
