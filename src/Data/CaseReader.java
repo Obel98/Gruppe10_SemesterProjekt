@@ -60,13 +60,13 @@ public class CaseReader {
 
     }
 
-    public ICase getCf() {
+    public ICase getCase() {
         return cf;
     }
 
 //    public static void main(String[] args)
 //    {
 //        CaseReader test = new CaseReader("Sag1.txt");
-//        System.out.println(test.getCf().getEmail());
+//        System.out.println(test.getCase().getEmail());
 //    }
 }
