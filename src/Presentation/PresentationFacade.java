@@ -52,6 +52,7 @@ public class PresentationFacade implements Aquaintance.IPresentation {
 
             stage.setScene(logIn);
             stage.show();
+            stage.setResizable(false);
         } catch (IOException ex) {
             Logger.getLogger(PresentationFacade.class.getName()).log(Level.SEVERE, null, ex);
         }

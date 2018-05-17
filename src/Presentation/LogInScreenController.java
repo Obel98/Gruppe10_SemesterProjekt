@@ -81,7 +81,9 @@ public class LogInScreenController implements Initializable {
                 CaseWorkerHomeFXMLController controller = loader.getController();
                 controller.injectBusiness(Business);
                 Scene home = new Scene(homeRoot);
-                Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                Stage appStage = new Stage();
+                appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                appStage.setResizable(true);
                 appStage.setScene(home);
                 appStage.show();
 
@@ -93,7 +95,9 @@ public class LogInScreenController implements Initializable {
                 AdminFXML controller = loader.getController();
                 controller.injectBusiness(Business);
                 Scene caseWorkerHome = new Scene(homeRoot);
-                Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                Stage appStage = new Stage();
+                appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                appStage.setResizable(true);
                 appStage.setScene(caseWorkerHome);
                 appStage.show();
 
@@ -106,7 +110,9 @@ public class LogInScreenController implements Initializable {
                 SecretaryHomeFXMLController controller = loader.getController();
                 controller.injectBusiness(Business);
                 Scene secHome = new Scene(root);
-                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                Stage stage = new Stage();
+                stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                stage.setResizable(true);
                 stage.setScene(secHome);
                 stage.show();
 
@@ -122,50 +128,53 @@ public class LogInScreenController implements Initializable {
 
     @FXML
     private void LogOnButtonAction(ActionEvent event) throws IOException {
-
         if ("sagb".equals(UsernameBox.getText()) && "sagb".equals(PasswordBox.getText())) {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("CaseWorkerHomeFXML.fxml"));
-            Pane homeRoot = loader.load();
-            CaseWorkerHomeFXMLController controller = loader.getController();
-            controller.injectBusiness(Business);
-            Scene caseWorkerHome = new Scene(homeRoot);
-            Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            appStage.setScene(caseWorkerHome);
-            appStage.show();
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("CaseWorkerHomeFXML.fxml"));
+                Pane homeRoot = loader.load();
+                CaseWorkerHomeFXMLController controller = loader.getController();
+                controller.injectBusiness(Business);
+                Scene home = new Scene(homeRoot);
+                Stage appStage = new Stage();
+                appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                appStage.setResizable(true);
+                appStage.setScene(home);
+                appStage.show();
 
-            System.out.println("Sagsbehandler!");
+                System.out.println("Vellykket!");
+            }
+            if ("admin".equals(UsernameBox.getText()) && "admin".equals(PasswordBox.getText())) {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("AdminFXML.fxml"));
+                Pane homeRoot = loader.load();
+                AdminFXML controller = loader.getController();
+                controller.injectBusiness(Business);
+                Scene caseWorkerHome = new Scene(homeRoot);
+                Stage appStage = new Stage();
+                appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                appStage.setResizable(true);
+                appStage.setScene(caseWorkerHome);
+                appStage.show();
 
-        }
+                System.out.println("Sagsbehandler!");
 
-        if ("admin".equals(UsernameBox.getText()) && "admin".equals(PasswordBox.getText())) {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("AdminFXML.fxml"));
-            Pane root = loader.load();
-            AdminFXML controller = loader.getController();
-            controller.injectBusiness(Business);
-            Scene adminHome = new Scene(root);
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(adminHome);
-            stage.show();
+            }
+            if ("sec".equals(UsernameBox.getText()) && "sec".equals(PasswordBox.getText())) {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("SecretaryHomeFXML.fxml"));
+                Pane root = loader.load();
+                SecretaryHomeFXMLController controller = loader.getController();
+                controller.injectBusiness(Business);
+                Scene secHome = new Scene(root);
+                Stage stage = new Stage();
+                stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                stage.setResizable(true);
+                stage.setScene(secHome);
+                stage.show();
 
-            System.out.println("Administrator!");
+                System.out.println("Secretary!");
 
-        }
+            } else {
+                passwordMsgLabel.setText("Inncorrect password or username, Try again!");
+                passwordMsgLabel.setTextFill(Color.rgb(210, 39, 30));
 
-        if ("sec".equals(UsernameBox.getText()) && "sec".equals(PasswordBox.getText())) {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("SecretaryHomeFXML.fxml"));
-            Pane root = loader.load();
-            SecretaryHomeFXMLController controller = loader.getController();
-            controller.injectBusiness(Business);
-            Scene secHome = new Scene(root);
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(secHome);
-            stage.show();
-
-            System.out.println("Secretary!");
-        } else {
-            passwordMsgLabel.setText("Inncorrect password or username, Try again!");
-            passwordMsgLabel.setTextFill(Color.rgb(210, 39, 30));
-
-        }
+            }
     }
 }
