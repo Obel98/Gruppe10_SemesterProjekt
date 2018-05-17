@@ -39,7 +39,7 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </HBox.margin>
                   </Button>
-                  <Button fx:id="caseEvaulationButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Case Evaluation">
+                  <Button fx:id="caseEvaulationButton" mnemonicParsing="false" onAction="#caseEvaluationOnAction" prefHeight="25.0" prefWidth="100.0" text="Sagsvurdering">
                      <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </HBox.margin>
