@@ -14,6 +14,8 @@ public interface IBusiness {
     void injectData(IData data);
 
     void getCase();
+    
+    void getDatabase();
 
     int getID();
 

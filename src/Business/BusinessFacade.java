@@ -89,4 +89,10 @@ public class BusinessFacade implements Aquaintance.IBusiness {
         return sag.getStatus();
     }
 
+    @Override
+    public void getDatabase()
+    {
+        
+    }
+
 }
