@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="480.0" minWidth="900.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.ViewCase">
+   <children>
+      <Separator layoutX="-281.0" layoutY="221.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0" />
+      <Pane layoutX="123.0" layoutY="65.0" prefHeight="50.0" style="-fx-background-color: #39A67f;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="backButton1" blendMode="DARKEN" layoutX="843.0" layoutY="11.0" mnemonicParsing="false" onAction="#backOnAction" text="Gem">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="backButton" blendMode="DARKEN" layoutX="774.0" layoutY="11.0" mnemonicParsing="false" onAction="#backOnAction" text="Tilbage">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children></Pane>
+      <Label fx:id="AdminIDLabel" alignment="CENTER" layoutX="20.0" layoutY="20.0" maxWidth="-Infinity" text="Vudering" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="236.0" layoutY="-22.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="700.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <HBox layoutX="235.0" layoutY="-36.0" prefHeight="35.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="88.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0">
+         <children>
+            <GridPane layoutX="152.0" layoutY="5.0" prefHeight="385.0" prefWidth="748.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="152.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <MenuButton layoutX="75.0" layoutY="25.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="98.0">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Action 1" />
+                              <MenuItem mnemonicParsing="false" text="Action 2" />
+                           </items>
+                        </MenuButton>
+                        <Label layoutX="75.0" layoutY="6.0" text="Forventet slutdato for ydelse">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="177.0" GridPane.rowIndex="2">
+                     <children>
+                        <MenuButton layoutX="74.0" layoutY="26.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="98.0" AnchorPane.leftAnchor="74.0" AnchorPane.topAnchor="26.0">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Action 1" />
+                            <MenuItem mnemonicParsing="false" text="Action 2" />
+                          </items>
+                        </MenuButton>
+                        <Label layoutX="74.0" layoutY="6.0" text="Forventet startdato for ydelse">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                     <children>
+                        <MenuButton layoutX="74.0" layoutY="25.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="98.0" AnchorPane.leftAnchor="74.0" AnchorPane.topAnchor="25.0">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Månedydelse" />
+                              <MenuItem mnemonicParsing="false" text="Dagligydelse" />
+                              <MenuItem mnemonicParsing="false" text="Årligyde" />
+                           </items>
+                        </MenuButton>
+                        <Label layoutX="74.0" layoutY="6.0" text="Ydelsesenhed">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <Label layoutX="74.0" layoutY="6.0" text="Ydelsesenhedspris">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="74.0" layoutY="24.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5">
+                     <children>
+                        <Label layoutX="75.0" layoutY="5.0" text="Antal gentagelser (af perioden)">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="75.0" layoutY="23.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <children>
+                        <Label layoutX="75.0" layoutY="5.0" text="Basisindsatspris i alt">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="75.0" layoutY="23.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <children>
+                        <Label layoutX="75.0" layoutY="5.0" text="Ydelsefrekvens (periode længde)">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <MenuButton layoutX="75.0" layoutY="29.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="98.0">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Action 1" />
+                              <MenuItem mnemonicParsing="false" text="Action 2" />
+                           </items>
+                        </MenuButton>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="addToCaseButton" layoutX="74.0" layoutY="26.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Vælg" />
+                        <Label layoutX="73.0" layoutY="4.0" text="Ydelser">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                     <children>
+                        <Label layoutX="75.0" layoutY="6.0" text="Lovhjemmel">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <MenuButton layoutX="75.0" layoutY="26.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="98.0" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="26.0">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="§ 108, stk. 1" />
+                              <MenuItem mnemonicParsing="false" text="§ 216, stk. 4" />
+                              <MenuItem mnemonicParsing="false" text="§ 530, stk. 9" />
+                              <MenuItem mnemonicParsing="false" text="§ 837, stk. 6" />
+                           </items>
+                        </MenuButton>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <Label layoutX="75.0" layoutY="5.0" text="Tilbud">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <MenuButton layoutX="75.0" layoutY="25.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="98.0">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Andrt længevarende botilbud til voksne" />
+                              <MenuItem mnemonicParsing="false" text="Action 2" />
+                           </items>
+                        </MenuButton>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <MenuButton layoutX="75.0" layoutY="25.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="98.0">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Action 1" />
+                              <MenuItem mnemonicParsing="false" text="Action 2" />
+                           </items>
+                        </MenuButton>
+                        <Label layoutX="75.0" layoutY="6.0" text="Kontoplansnummer">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="6">
+                     <children>
+                        <MenuButton layoutX="75.0" layoutY="19.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="98.0">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Action 1" />
+                              <MenuItem mnemonicParsing="false" text="Action 2" />
+                           </items>
+                        </MenuButton>
+                        <Label layoutX="75.0" text="Udfører">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
+                     <children>
+                        <Label layoutX="75.0" layoutY="5.0" text="Ydelsesantal">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="75.0" layoutY="23.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

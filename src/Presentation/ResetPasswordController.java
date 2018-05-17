@@ -38,6 +38,7 @@ public class ResetPasswordController implements Initializable {
     private Label InvaldInputLabel;
 
     PasswordGenerator pg = new PasswordGenerator();
+
     @FXML
     private PasswordField password2;
     @FXML
@@ -68,5 +69,4 @@ public class ResetPasswordController implements Initializable {
     @FXML
     private void userNameOnAction(ActionEvent event) {
     }
-
 }
