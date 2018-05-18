@@ -162,8 +162,9 @@
                         </Label>
                         <MenuButton fx:id="typeMenuButton" mnemonicParsing="false" prefWidth="100.0" text="Type">
                           <items>
-                            <MenuItem mnemonicParsing="false" text="Action 1" />
-                            <MenuItem mnemonicParsing="false" text="Action 2" />
+                            <MenuItem mnemonicParsing="false" text="Sagsbehandler" />
+                            <MenuItem mnemonicParsing="false" text="Sekretær" />
+                              <MenuItem mnemonicParsing="false" text="Administrator" />
                           </items>
                            <VBox.margin>
                               <Insets />
