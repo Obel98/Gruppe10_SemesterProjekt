@@ -27,6 +27,8 @@ public class DataFacade implements Aquaintance.IData
         return iCase; 
         
     }
+    
+    
 
     @Override
     public ArrayList<String> sendQuery(String query)

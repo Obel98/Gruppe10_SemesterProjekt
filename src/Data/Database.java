@@ -19,10 +19,10 @@ public class Database {
     private final String dbpassword;
     private ArrayList<String> result;
 
-    public Database(String dburl, String dbusername, String dbpassword) {
-        this.dburl = dburl;
-        this.dbusername = dbusername;
-        this.dbpassword = dbpassword;
+    public Database() {
+        this.dburl = "jdbc:postgresql://elmer.db.elephantsql.com:5432/jkclsvjn";
+        this.dbusername = "jkclsvjn";
+        this.dbpassword = "5vckjZ8LGdP6g2S6eHLeP5w34mASozc1";
     }
 
     public ArrayList<String> sendQuery(String query)
@@ -97,27 +97,5 @@ public class Database {
             System.out.println(e);
         }
         return resultString;
-    }
-
-    public Connection getConnection()
-    {
-        try
-        {
-            Class.forName("org.postgresql.Driver");
-        }
-        catch (ClassNotFoundException ex)
-        {
-            System.out.println(ex);
-        }
-
-        try (Connection db = DriverManager.getConnection("jdbc:postgresql://elmer.db.elephantsql.com:5432/jkclsvjn", "jkclsvjn", "5vckjZ8LGdP6g2S6eHLeP5w34mASozc1");)
-        {
-            return db;
-        }
-        catch (Exception e)
-        {
-            System.out.println(e);
-        }
-        return null;
     }
 }

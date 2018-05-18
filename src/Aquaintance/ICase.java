@@ -10,6 +10,7 @@ package Aquaintance;
  * @author Mads Obel Jensen
  */
 public interface ICase {
+    public ICase getCaseByID(int ID);
 
     public int getID();
 
