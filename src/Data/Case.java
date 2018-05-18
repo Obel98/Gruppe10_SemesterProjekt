@@ -6,6 +6,11 @@
 package Data;
 
 import Aquaintance.ICase;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
 
 /**
  *
@@ -28,13 +33,13 @@ public class Case implements ICase
     public Case(int ID, Borger borger, String journal)
     {
         this.ID = ID;
-        this.firtName = firtName;
-        this.lastName = lastName;
-        this.phoneNumber = phoneNumber;
-        this.email = email;
-        this.birthday = birthday;
-        this.CPR = CPR;
-        this.addresse = addresse;
+        this.firtName = borger.getFirstName();
+        this.lastName = borger.getLastName();
+        this.phoneNumber = borger.getPhoneNumber();
+        this.email = borger.getEmail();
+        this.birthday = borger.getBirthday();
+        this.CPR = borger.getCPR();
+        this.addresse = borger.getAddress;
         this.journal = journal;
         this.status = "Under behandling";
     }
@@ -103,6 +108,45 @@ public class Case implements ICase
     public String getStatus()
     {
         return status;
+    }
+
+    @Override
+    public ICase getCase(int ID)
+    {
+        try
+        {
+            Class.forName("org.postgresql.Driver");
+        }
+        catch (ClassNotFoundException ex)
+        {
+            System.out.println(ex);
+        }
+
+        try (Connection db = DriverManager.getConnection("jdbc:postgresql://elmer.db.elephantsql.com:5432/jkclsvjn", "jkclsvjn", "5vckjZ8LGdP6g2S6eHLeP5w34mASozc1");
+                Statement st = db.createStatement();
+                ResultSet rs = st.executeQuery("Select * from casefile where caseid ='" + ID + "'" );)
+        {
+            String[] result = new String[4];
+            while (rs.next())
+            {
+                int i = 1;
+                while (i < rs.getMetaData().getColumnCount())
+                {
+                    //System.out.print(rs.getString(i) + " ");
+                    result[i] = (rs.getString(i));
+                    i++;
+                }
+                //System.out.println(rs.getString(i) + " ");
+                result[i] = (rs.getString(i));
+            }
+            System.out.println(result[0] + result[1] + result[2] + result[3]);
+            //return result;
+        }
+        catch (Exception e)
+        {
+            System.out.println(e);
+        }
+        return null;
     }
 
 }
