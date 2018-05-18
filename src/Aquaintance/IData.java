@@ -17,4 +17,5 @@ public interface IData {
     public ICase getCase();
     public ArrayList<String> sendQuery(String query);
     public String sendQueryTest(String query);
+    public ICase getCase(int id);
 }

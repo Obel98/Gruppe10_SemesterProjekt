@@ -27,6 +27,8 @@ public class DataFacade implements Aquaintance.IData
         return iCase; 
         
     }
+    
+    
 
     @Override
     public ArrayList<String> sendQuery(String query)
@@ -46,6 +48,16 @@ public class DataFacade implements Aquaintance.IData
         //rs = 
         return db.sendQueryTest(query);
         //return rs;
+    }
+    
+    public ICase getCase(int id)
+    {
+         Database db = new Database("jdbc:postgresql://elmer.db.elephantsql.com:5432/jkclsvjn",
+                "jkclsvjn", "5vckjZ8LGdP6g2S6eHLeP5w34mASozc1");
+        //rs = 
+         String result = db.sendQueryTest("select * from casefile where caseid = 3");
+        CaseFormat sag = new CaseFormat(1, "", "", 1, "", 1, 1, "", "", "");
+        return sag;
     }
 
 }

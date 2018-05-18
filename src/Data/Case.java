@@ -11,7 +11,8 @@ import Aquaintance.ICase;
  *
  * @author borga
  */
-public class CaseFormat implements ICase {
+public class Case implements ICase
+{
 
     private int ID;
     private String firtName;
@@ -24,7 +25,8 @@ public class CaseFormat implements ICase {
     private String journal;
     private String status;
 
-    public CaseFormat(int ID, String firtName, String lastName, int phoneNumber, String email, int birthday, int CPR, String addresse, String journal, String status) {
+    public Case(int ID, Borger borger, String journal)
+    {
         this.ID = ID;
         this.firtName = firtName;
         this.lastName = lastName;
@@ -34,60 +36,73 @@ public class CaseFormat implements ICase {
         this.CPR = CPR;
         this.addresse = addresse;
         this.journal = journal;
-        this.status = status;
+        this.status = "Under behandling";
     }
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return "JournalFormat{" + "ID=" + ID + ", firtName=" + firtName + ", lastName=" + lastName + ", phoneNumber=" + phoneNumber + ", email=" + email + ", birthday=" + birthday + ", CPR=" + CPR + ", addresse=" + addresse + ", journal=" + journal + ", status=" + status + '}';
     }
 
     @Override
-    public int getID() {
+    public int getID()
+    {
         return ID;
     }
 
     @Override
-    public String getFirstName() {
+    public String getFirstName()
+    {
         return firtName;
     }
 
     @Override
-    public String getLastName() {
+    public String getLastName()
+    {
         return lastName;
     }
 
     @Override
-    public int getPhoneNumber() {
+    public int getPhoneNumber()
+    {
         return phoneNumber;
     }
 
     @Override
-    public String getEmail() {
+    public String getEmail()
+    {
         return email;
     }
 
     @Override
-    public int getBirthday() {
+    public int getBirthday()
+    {
         return birthday;
     }
 
     @Override
-    public int getCPR() {
+    public int getCPR()
+    {
         return CPR;
     }
 
     @Override
-    public String getAddresse() {
+    public String getAddresse()
+    {
         return addresse;
     }
 
     @Override
-    public String getCommentar() {
+    public String getCommentar()
+    {
         return journal;
     }
 
     @Override
-    public String getStatus(){ return status;}
-    
+    public String getStatus()
+    {
+        return status;
+    }
+
 }
