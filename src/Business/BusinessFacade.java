@@ -31,9 +31,11 @@ public class BusinessFacade implements Aquaintance.IBusiness {
     @Override
     public void getCase() {
         //ICase newCase = data.getCase();
-        sag = new Case(Integer.parseInt(data.sendQueryTest("SELECT caseid FROM accessto WHERE username = 'tota'")), "Problemer med TEXT column", new Borger(data.sendQueryTest("SELECT cpr FROM users WHERE username = 'borgar30'"), data.sendQueryTest("SELECT firstname FROM users WHERE username = 'borgar30'"), data.sendQueryTest("SELECT lastname FROM users WHERE username = 'borgar30'"), data.sendQueryTest("SELECT address FROM users WHERE username = 'borgar30'"), data.sendQueryTest("SELECT telephonenumber FROM users WHERE username = 'borgar30'"), data.sendQueryTest("SELECT email FROM users WHERE username = 'borgar30'")), data.sendQueryTest("SELECT date FROM casefile WHERE caseid = (SELECT caseid FROM accessto WHERE username = 'tota')"));
-        sag.getBorger().setUsername("borgar30");
-        sag.getBorger().setBirthday("SELECT birthday FROM users WHERE username = 'borgar30'");
+//        Borger borge = new Borger(CPR, name, lastName, address, phoneNumber, email):
+        ICase sag = data.getCase(3);
+        //sag = new Case(Integer.parseInt(data.sendQueryTest("SELECT caseid FROM accessto WHERE username = 'tota'")), "Problemer med TEXT column", new Borger(data.sendQueryTest("SELECT cpr FROM users WHERE username = 'borgar30'"), data.sendQueryTest("SELECT firstname FROM users WHERE username = 'borgar30'"), data.sendQueryTest("SELECT lastname FROM users WHERE username = 'borgar30'"), data.sendQueryTest("SELECT address FROM users WHERE username = 'borgar30'"), data.sendQueryTest("SELECT telephonenumber FROM users WHERE username = 'borgar30'"), data.sendQueryTest("SELECT email FROM users WHERE username = 'borgar30'")), data.sendQueryTest("SELECT date FROM casefile WHERE caseid = (SELECT caseid FROM accessto WHERE username = 'tota')"));
+        //sag.getBorger().setUsername("borgar30");
+        //sag.getBorger().setBirthday("SELECT birthday FROM users WHERE username = 'borgar30'");
         //ICase newCase = sag;
         /*sag.setID(newCase.getID());
         sag.setFirstName(newCase.getFirstName());

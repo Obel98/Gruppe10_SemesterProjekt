@@ -1,5 +1,7 @@
 package Business;
 
+import Data.Borger;
+
 public class Case implements Aquaintance.ICase {
 
     private int ID;

@@ -1,4 +1,4 @@
-package Business;
+package Data;
 
 public class Borger {
 
