@@ -12,6 +12,8 @@ public class Borger {
     //private ArrayList<Sag> history;
     private String password;
     private String CPR;
+    private String birthday;
+    private String username;
 
     public Borger(String CPR, String name, String lastName, String address, String phoneNumber, String email) {
         this.CPR = CPR;
@@ -80,6 +82,28 @@ public class Borger {
     public String getPassword() {
         return password;
     }
+
+    public String getBirthday()
+    {
+        return birthday;
+    }
+
+    public void setBirthday(String birthday)
+    {
+        this.birthday = birthday;
+    }
+
+    public String getUsername()
+    {
+        return username;
+    }
+
+    public void setUsername(String username)
+    {
+        this.username = username;
+    }
+    
+    
 
 }
 

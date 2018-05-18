@@ -203,7 +203,7 @@
       </AnchorPane>
       <MenuBar layoutX="14.0" layoutY="63.0" style="-fx-background-color: #39A67f;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
         <menus>
-          <Menu mnemonicParsing="false" text="Indstillninger">
+          <Menu mnemonicParsing="false" text="Indstillinger">
             <items>
               <MenuItem fx:id="menuButton" mnemonicParsing="false" onAction="#changePassword" text="Skift kodeord" />
             </items>

@@ -6,6 +6,7 @@
 package Aquaintance;
 
 import java.sql.ResultSet;
+import java.util.ArrayList;
 
 /**
  *
@@ -14,5 +15,6 @@ import java.sql.ResultSet;
 public interface IData {
 
     public ICase getCase();
-    public ResultSet sendQuery(String query);
+    public ArrayList<String> sendQuery(String query);
+    public String sendQueryTest(String query);
 }

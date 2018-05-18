@@ -85,7 +85,7 @@ public class CaseWorkerHomeFXMLController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         UI = PresentationFacade.getUI();
         caseIDLabel.setText(String.valueOf(UI.getID()));
-        firstNameLabel.setText(String.valueOf(UI.getFirtName()));
+        firstNameLabel.setText(String.valueOf(UI.getFirstName()));
         lastNameLabel.setText(String.valueOf(UI.getLastName()));
         PhonenumberLabel.setText((String.valueOf(UI.getPhoneNumber())));
         emailLabel.setText(String.valueOf((UI.getEmail())));
@@ -101,11 +101,27 @@ public class CaseWorkerHomeFXMLController implements Initializable {
 
     @FXML
     private void LogOutAction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("FXML/LogInScreen.fxml"));
+        /*Parent root = FXMLLoader.load(getClass().getResource("FXML/LogInScreen.fxml"));
         Scene logIn = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(logIn);
-        stage.show();
+        stage.show();*/
+        try 
+        {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/LogInScreen.fxml"));
+            Pane root = loader.load();
+            LogInScreenController controller = loader.getController();
+            controller.injectBusiness(Business);
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene logIn = new Scene(root);
+
+            stage.setScene(logIn);
+            stage.show();
+            stage.setResizable(false);
+        } catch (IOException ex) 
+        {
+            Logger.getLogger(PresentationFacade.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     @FXML

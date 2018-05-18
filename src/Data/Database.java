@@ -6,6 +6,7 @@
 package Data;
 
 import java.sql.*;
+import java.util.ArrayList;
 
 /**
  *
@@ -16,6 +17,7 @@ public class Database {
     private final String dburl;
     private final String dbusername;
     private final String dbpassword;
+    private ArrayList<String> result;
 
     public Database(String dburl, String dbusername, String dbpassword) {
         this.dburl = dburl;
@@ -23,8 +25,9 @@ public class Database {
         this.dbpassword = dbpassword;
     }
 
-    public ResultSet sendQuery(String query)
+    public ArrayList<String> sendQuery(String query)
     {
+        
         try
         {
             Class.forName("org.postgresql.Driver");
@@ -36,13 +39,64 @@ public class Database {
                 Statement st = db.createStatement();
                 ResultSet rs = st.executeQuery(query);)
         {
-            return rs;
+            result = new ArrayList<>();
+            while (rs.next())
+            {
+                int i = 1;
+                while (i < rs.getMetaData().getColumnCount())
+                {
+                    //System.out.print(rs.getString(i) + " ");
+                    result.add(rs.getString(i));
+                    i++;
+                }
+                //System.out.println(rs.getString(i) + " ");
+                result.add(rs.getString(i));
+            }
+            //System.out.println(result);
+            //return result;
         }
         catch (Exception e)
         {
             System.out.println(e);
         }
-        return null;
+        return result;
+    }
+    
+    public String sendQueryTest(String query)
+    {
+        String resultString = "";
+        try
+        {
+            Class.forName("org.postgresql.Driver");
+        } catch (ClassNotFoundException ex) {
+            System.out.println(ex);
+        }
+
+        try (Connection db = DriverManager.getConnection(dburl, dbusername, dbpassword);
+                Statement st = db.createStatement();
+                ResultSet rs = st.executeQuery(query);)
+        {
+            //String resultString = "";
+            while (rs.next())
+            {
+                int i = 1;
+                while (i < rs.getMetaData().getColumnCount())
+                {
+                    //System.out.print(rs.getString(i) + " ");
+                    resultString += rs.getString(i);
+                    i++;
+                }
+                //System.out.println(rs.getString(i) + " ");
+                resultString += rs.getString(i);
+            }
+            System.out.println(resultString);
+            //return result;
+        }
+        catch (Exception e)
+        {
+            System.out.println(e);
+        }
+        return resultString;
     }
 
     public Connection getConnection()

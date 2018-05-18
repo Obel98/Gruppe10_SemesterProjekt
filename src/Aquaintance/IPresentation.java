@@ -19,7 +19,7 @@ public interface IPresentation {
 
     int getID();
 
-    String getFirtName();
+    String getFirstName();
 
     String getLastName();
 
@@ -31,10 +31,12 @@ public interface IPresentation {
 
     int getCPR();
 
-    String getAddresse();
+    String getAddress();
 
     String getJournal();
     
     String getStatus();
+    
+    String getUsername();
 
 }

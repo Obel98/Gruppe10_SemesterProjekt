@@ -48,7 +48,7 @@ public class CaseFormat implements ICase {
     }
 
     @Override
-    public String getFirtName() {
+    public String getFirstName() {
         return firtName;
     }
 
@@ -83,7 +83,7 @@ public class CaseFormat implements ICase {
     }
 
     @Override
-    public String getJournal() {
+    public String getCommentar() {
         return journal;
     }
 

@@ -34,14 +34,19 @@ public class Starter extends Application {
         IData Data = new DataFacade();
         IBusiness Business = new BusinessFacade();
         IPresentation UI = new PresentationFacade();
-        System.out.println("Borgar er en dejlig mand <3");
 
         Business.injectData(Data);
         UI.injectBusiness(Business);
         UI.start();
-        Data.getCase();
+        //Data.getCase();
         Business.getCase();
-        System.out.println(UI.getAddresse());
+        //String eba = "test";
+        //System.out.println(eba.equals("Sagsbehandler"));
+        //System.out.println(UI.getAddresse());
+        //System.out.println(Data.sendQueryTest("SELECT type FROM users WHERE username = 'tota' AND password = 'abcabc'"));
+        // Sagsbehandler: tota // abcabc
+        // Admin: admin // 12345
+        // Borger: borgar30 // 12345
 
     }
 

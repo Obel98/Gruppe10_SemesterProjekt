@@ -3,22 +3,55 @@ package Business;
 public class Case implements Aquaintance.ICase {
 
     private int ID;
-    private String firtName;
+    private String firstName;
     private String lastName;
     private int phoneNumber;
     private String email;
     private int birthday;
     private int CPR;
     private String addresse;
-    private String journal;
+    private String commentar;
     private String status;
+    private Borger borger;
+    private String date;
 
+    public Case(int ID, String commentar, Borger borger, String date)
+    {
+        this.ID = ID;
+        this.commentar = commentar;
+        this.status = "Under behandling";
+        this.borger = borger;
+        this.date = date;
+    }
+
+    public Borger getBorger()
+    {
+        return borger;
+    }
+
+    public void setBorger(Borger borger)
+    {
+        this.borger = borger;
+    }
+
+    public String getDate()
+    {
+        return date;
+    }
+
+    public void setDate(String date)
+    {
+        this.date = date;
+    }
+
+    
+    
     public void setID(int ID) {
         this.ID = ID;
     }
 
-    public void setFirtName(String firtName) {
-        this.firtName = firtName;
+    public void setFirstName(String firtName) {
+        this.firstName = firtName;
     }
 
     public void setLastName(String lastName) {
@@ -45,8 +78,8 @@ public class Case implements Aquaintance.ICase {
         this.addresse = addresse;
     }
 
-    public void setJournal(String journal) {
-        this.journal = journal;
+    public void setCommentar(String commentar) {
+        this.commentar = commentar;
     }
 
     public void setStatus(String status) { this.status = status; }
@@ -57,8 +90,8 @@ public class Case implements Aquaintance.ICase {
     }
 
     @Override
-    public String getFirtName() {
-        return firtName;
+    public String getFirstName() {
+        return firstName;
     }
 
     @Override
@@ -92,8 +125,8 @@ public class Case implements Aquaintance.ICase {
     }
 
     @Override
-    public String getJournal() {
-        return journal;
+    public String getCommentar() {
+        return commentar;
     }
 
     @Override

@@ -18,11 +18,11 @@ public interface IBusiness {
 
     void getCase();
     
-    ResultSet sendQuery(String query);
+    void sendQuery(String query);
 
     int getID();
 
-    String getFirtName();
+    String getFirstName();
 
     String getLastName();
 
@@ -34,9 +34,20 @@ public interface IBusiness {
 
     int getCPR();
 
-    String getAddresse();
+    String getAddress();
 
     String getJournal();
     
     String getStatus();
+    
+    String getUsername();
+    
+    boolean validUsername(String username);
+    
+    boolean validPassword(String username, String password);
+    
+    String getUserType(String username, String password);
+    
+    public String passThrough(String query);
+    
 }

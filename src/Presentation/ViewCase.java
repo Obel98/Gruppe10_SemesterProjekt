@@ -74,13 +74,14 @@ public class ViewCase implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         UI = PresentationFacade.getUI();
         caseIDLabel.setText(String.valueOf(UI.getID()));
-        firstNameLabel.setText(UI.getFirtName());
+        firstNameLabel.setText(UI.getFirstName());
         lastNameLabel.setText(UI.getLastName());
         phonenumberLabel.setText((String.valueOf(UI.getPhoneNumber())));
         emailLabel.setText((UI.getEmail()));
         CaseTextArea.setText((String.valueOf(UI.getJournal())));
         caseStatusLabel.setText(UI.getStatus());
-        addressLabel.setText(UI.getAddresse());
+        addressLabel.setText(UI.getAddress());
+        IDLabel.setText(UI.getUsername());
     }
 
     @FXML

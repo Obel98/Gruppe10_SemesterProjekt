@@ -13,7 +13,7 @@ public interface ICase {
 
     public int getID();
 
-    public String getFirtName();
+    public String getFirstName();
 
     public String getLastName();
 
@@ -27,7 +27,7 @@ public interface ICase {
 
     public String getAddresse();
 
-    public String getJournal();
+    public String getCommentar();
 
     public String getStatus();
 }

@@ -9,6 +9,8 @@ import Aquaintance.IBusiness;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -21,6 +23,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -66,12 +69,29 @@ public class AdminFXML implements Initializable {
 
     @FXML
     private void logOutOnAction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("FXML/LogInScreen.fxml"));
+        /*Parent root = FXMLLoader.load(getClass().getResource("FXML/LogInScreen.fxml"));
 
         Scene logIn = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(logIn);
-        stage.show();
+        stage.show(); */
+        try 
+        {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/LogInScreen.fxml"));
+            Pane root = loader.load();
+            LogInScreenController controller = loader.getController();
+            controller.injectBusiness(business);
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene logIn = new Scene(root);
+
+            stage.setScene(logIn);
+            stage.show();
+            stage.setResizable(false);
+        } catch (IOException ex) 
+        {
+            Logger.getLogger(PresentationFacade.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }
 
     @FXML

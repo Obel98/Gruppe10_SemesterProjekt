@@ -69,8 +69,8 @@ public class PresentationFacade implements Aquaintance.IPresentation {
     }
 
     @Override
-    public String getFirtName() {
-        return Business.getFirtName();
+    public String getFirstName() {
+        return Business.getFirstName();
     }
 
     @Override
@@ -99,8 +99,8 @@ public class PresentationFacade implements Aquaintance.IPresentation {
     }
 
     @Override
-    public String getAddresse() {
-        return Business.getAddresse();
+    public String getAddress() {
+        return Business.getAddress();
     }
 
     @Override
@@ -111,5 +111,11 @@ public class PresentationFacade implements Aquaintance.IPresentation {
     @Override
     public String getStatus() {
         return Business.getStatus();
+    }
+    
+    @Override
+    public String getUsername()
+    {
+        return Business.getUsername();
     }
 }
