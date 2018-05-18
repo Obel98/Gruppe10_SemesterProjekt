@@ -30,25 +30,11 @@ public class caseComment implements Initializable {
     @FXML
     private Button saveButton;
     @FXML
-    private TextField TempCodeTextField;
+    private Button saveDraftButton;
     @FXML
-    private TextField usernameTextField;
+    private Button attachFileButton;
     @FXML
-    private TextField addressTextField;
-    @FXML
-    private TextField phonenumberTextField;
-    @FXML
-    private TextField emailTextField;
-    @FXML
-    private TextField CPRTextField;
-    @FXML
-    private TextField dateOfBirthTextField;
-    @FXML
-    private TextField lastNameTextField;
-    @FXML
-    private TextField firstNameTextField;
-    @FXML
-    private MenuButton typeMenuButton;
+    private TextArea commentTextArea;
 
     /**
      * Initializes the controller class.
@@ -64,6 +50,14 @@ public class caseComment implements Initializable {
 
     @FXML
     private void saveOnAction(ActionEvent event) {
+    }
+
+    @FXML
+    private void saveDraftOnAction(ActionEvent event) {
+    }
+
+    @FXML
+    private void attachFileOnAction(ActionEvent event) {
     }
 
     
