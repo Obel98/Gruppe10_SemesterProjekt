@@ -5,6 +5,7 @@
  */
 package Presentation;
 
+import Aquaintance.IBusiness;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -66,10 +67,14 @@ public class citizenHomeController implements Initializable {
     private Label emailLabel11;
     @FXML
     private Label caseStatusLabel11;
-
+    private IBusiness Business;
     /**
      * Initializes the controller class.
      */
+    
+    public void injectBusiness(IBusiness business) {
+        this.Business = business;
+    }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

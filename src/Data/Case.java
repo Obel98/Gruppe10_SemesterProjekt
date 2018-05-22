@@ -16,7 +16,7 @@ import java.sql.Statement;
  * @author borga
  */
 public class Case implements ICase
-{    
+{   
     private int ID;
     private String firtName;
     private String lastName;
