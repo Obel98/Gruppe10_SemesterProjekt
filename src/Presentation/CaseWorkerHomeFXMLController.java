@@ -84,6 +84,7 @@ public class CaseWorkerHomeFXMLController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         UI = PresentationFacade.getUI();
+        UI.getCase(3);
         caseIDLabel.setText(String.valueOf(UI.getID()));
         firstNameLabel.setText(String.valueOf(UI.getFirstName()));
         lastNameLabel.setText(String.valueOf(UI.getLastName()));

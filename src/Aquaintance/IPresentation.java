@@ -15,7 +15,7 @@ public interface IPresentation {
 
     void start();
 
-    void loadHome();
+    void getCase(int ID);
 
     int getID();
 
