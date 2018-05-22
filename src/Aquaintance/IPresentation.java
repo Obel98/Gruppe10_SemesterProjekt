@@ -27,7 +27,7 @@ public interface IPresentation {
 
     String getEmail();
 
-    int getBirthday();
+    String getBirthday();
 
     int getCPR();
 

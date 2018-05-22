@@ -16,14 +16,13 @@ import java.sql.Statement;
  * @author borga
  */
 public class Case implements ICase
-{
-
+{    
     private int ID;
     private String firtName;
     private String lastName;
     private int phoneNumber;
     private String email;
-    private int birthday;
+    private String birthday;
     private int CPR;
     private String address;
     private String journal;
@@ -52,11 +51,11 @@ public class Case implements ICase
                 int i = 1;
                 while (i < rs.getMetaData().getColumnCount())
                 {
-                    System.out.print(rs.getString(i) + " ");
+                    //System.out.print(rs.getString(i) + " ");
                     result0[i-1] = (rs.getString(i));
                     i++;
                 }
-                System.out.println(rs.getString(i) + " ");
+                //System.out.println(rs.getString(i) + " ");
                 result0[i-1] = (rs.getString(i));
             }
         }
@@ -64,6 +63,10 @@ public class Case implements ICase
         {
             System.out.println(e);
         }
+        
+        this.ID = ID;
+        this.date = result0[1];
+        this.userName = result0[2];
         
         String[] result01 = new String[10];
         try
@@ -84,11 +87,11 @@ public class Case implements ICase
                 int i = 1;
                 while (i < rs.getMetaData().getColumnCount())
                 {
-                    System.out.print(rs.getString(i) + " ");
+                    //System.out.print(rs.getString(i) + " ");
                     result01[i-1] = (rs.getString(i));
                     i++;
                 }
-                System.out.println(rs.getString(i) + " ");
+                //System.out.println(rs.getString(i) + " ");
                 result01[i-1] = (rs.getString(i));
             }
         }
@@ -96,21 +99,18 @@ public class Case implements ICase
         {
             System.out.println(e);
         }
-        this.ID = ID;
-        this.date = result0[1];
-        this.userName = result0[2];
+
         this.firtName = result01[0];
         this.lastName = result01[1];
         this.phoneNumber = Integer.parseInt(result01[2]);
         this.email = result01[3];
-        this.birthday = Integer.parseInt(result01[4]);
+        this.birthday = result01[4];
         this.CPR = Integer.parseInt(result01[5]);
         this.address = result01[6];
         this.journal = result0[3];
         this.status = "Under behandling";
     }
 
-    @Override
     public String getJournal()
     {
         return journal;
@@ -122,73 +122,61 @@ public class Case implements ICase
         return "JournalFormat{" + "ID=" + ID + ", firtName=" + firtName + ", lastName=" + lastName + ", phoneNumber=" + phoneNumber + ", email=" + email + ", birthday=" + birthday + ", CPR=" + CPR + ", addresse=" + address + ", journal=" + journal + ", status=" + status + '}';
     }
 
-    @Override
     public int getID()
     {
         return ID;
     }
 
-    @Override
     public String getFirstName()
     {
         return firtName;
     }
 
-    @Override
     public String getLastName()
     {
         return lastName;
     }
 
-    @Override
     public int getPhoneNumber()
     {
         return phoneNumber;
     }
 
-    @Override
     public String getEmail()
     {
         return email;
     }
 
-    @Override
-    public int getBirthday()
+    public String getBirthday()
     {
         return birthday;
     }
 
-    @Override
     public int getCPR()
     {
         return CPR;
     }
 
-    @Override
     public String getStatus()
     {
         return status;
     }
 
-    @Override
     public ICase getCase()
     {
         return this;
     }
 
-    @Override
     public String getAddress()
     {
         return address;
     }
 
-    @Override
     public String getDate()
     {
         return date;
     }
 
-    @Override
     public String getUserName()
     {
         return userName;

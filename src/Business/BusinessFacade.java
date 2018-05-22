@@ -26,9 +26,9 @@ public class BusinessFacade implements Aquaintance.IBusiness
     }
 
     @Override
-    public void getCase()
+    public void getCase(int ID)
     {
-        ICase temp = data.getCase(3);
+        ICase temp = data.getCase(ID);
         sag = new Case(temp);
     }
 
@@ -63,7 +63,7 @@ public class BusinessFacade implements Aquaintance.IBusiness
     }
 
     @Override
-    public int getBirthday()
+    public String getBirthday()
     {
         return sag.getBirthday();
     }

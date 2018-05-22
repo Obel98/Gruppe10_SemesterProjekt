@@ -10,7 +10,7 @@ public class Case implements Aquaintance.ICase
     private String lastName;
     private int phoneNumber;
     private String email;
-    private int birthday;
+    private String birthday;
     private int CPR;
     private String address;
     private String journal;
@@ -70,7 +70,7 @@ public class Case implements Aquaintance.ICase
         this.email = email;
     }
 
-    public void setBirthday(int birthday)
+    public void setBirthday(String birthday)
     {
         this.birthday = birthday;
     }
@@ -126,7 +126,7 @@ public class Case implements Aquaintance.ICase
     }
 
     @Override
-    public int getBirthday()
+    public String getBirthday()
     {
         return birthday;
     }

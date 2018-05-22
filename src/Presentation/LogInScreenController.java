@@ -91,7 +91,6 @@ public class LogInScreenController implements Initializable {
                     Pane homeRoot = loader.load();
                     CaseWorkerHomeFXMLController controller = loader.getController();
                     controller.injectBusiness(Business);
-                    Business.getCase();
                     Scene home = new Scene(homeRoot);
                     Stage appStage = new Stage();
                     appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();

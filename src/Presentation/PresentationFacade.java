@@ -88,7 +88,7 @@ public class PresentationFacade implements Aquaintance.IPresentation {
     }
 
     @Override
-    public int getBirthday() {
+    public String getBirthday() {
         return Business.getBirthday();
     }
 

@@ -21,7 +21,7 @@ public interface ICase
 
     String getEmail();
 
-    int getBirthday();
+    String getBirthday();
 
     int getCPR();
 

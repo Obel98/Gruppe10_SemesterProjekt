@@ -13,7 +13,7 @@ public interface IBusiness {
 
     void injectData(IData data);
 
-    void getCase();
+    void getCase(int ID);
     
     int getID();
 
@@ -25,7 +25,7 @@ public interface IBusiness {
 
     String getEmail();
 
-    int getBirthday();
+    String getBirthday();
 
     int getCPR();
 
