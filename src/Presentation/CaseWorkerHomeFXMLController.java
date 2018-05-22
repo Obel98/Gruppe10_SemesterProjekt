@@ -57,14 +57,36 @@ public class CaseWorkerHomeFXMLController implements Initializable {
     private Label emailLabel;
     @FXML
     private Label caseStatusLabel;
-    @FXML
     private TextArea caseTextArea;
-    @FXML
     private Button viewCaseButton;
     @FXML
     private MenuItem menuButton;
     @FXML
     private VBox VBox;
+    @FXML
+    private Label caseIDLabel1;
+    @FXML
+    private Label firstNameLabel1;
+    @FXML
+    private Label lastNameLabel1;
+    @FXML
+    private Label PhonenumberLabel1;
+    @FXML
+    private Label emailLabel1;
+    @FXML
+    private Label caseStatusLabel1;
+    @FXML
+    private Label caseIDLabel11;
+    @FXML
+    private Label firstNameLabel11;
+    @FXML
+    private Label lastNameLabel11;
+    @FXML
+    private Label PhonenumberLabel11;
+    @FXML
+    private Label emailLabel11;
+    @FXML
+    private Label caseStatusLabel11;
 
     /**
      * Initializes the controller class.
@@ -125,7 +147,6 @@ public class CaseWorkerHomeFXMLController implements Initializable {
         }
     }
 
-    @FXML
     private void viewCaseAction(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/viewCase.fxml"));
         Stage stage = new Stage();
