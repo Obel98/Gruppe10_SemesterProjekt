@@ -2,49 +2,44 @@ package Data;
 
 public class Borger {
 
-    private String name;
+    private String firstName;
     private String lastName;
     private String address;
-    private String phoneNumber;
+    private int phoneNumber;
     private String email;
-    //private case Sag;
     private String contact;
-    //private ArrayList<Sag> history;
     private String password;
-    private String CPR;
-    private String birthday;
+    private int CPR;
+    private int birthday;
     private String username;
 
-    public Borger(String CPR, String name, String lastName, String address, String phoneNumber, String email) {
+    public Borger(int CPR, String name, String lastName, String address, int phoneNumber, String email) {
         this.CPR = CPR;
-        this.name = name;
+        this.firstName = name;
         this.lastName = lastName;
         this.address = address;
         this.phoneNumber = phoneNumber;
         this.email = email;
 
-        this.password = password;
-
         //this.case =Sag();
-        this.contact = contact;
         //this.ArrayList < Sag > history;
 
     }
 
-    public String getCPR() {
+    public int getCPR() {
         return CPR;
     }
 
-    public void setCPR(String CPR) {
+    public void setCPR(int CPR) {
         this.CPR = CPR;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String name) {
+        this.firstName = name;
     }
 
     public String getLastName() {
@@ -63,11 +58,11 @@ public class Borger {
         this.address = address;
     }
 
-    public String getPhoneNumber() {
+    public int getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
+    public void setPhoneNumber(int phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
@@ -83,12 +78,12 @@ public class Borger {
         return password;
     }
 
-    public String getBirthday()
+    public int getBirthday()
     {
         return birthday;
     }
 
-    public void setBirthday(String birthday)
+    public void setBirthday(int birthday)
     {
         this.birthday = birthday;
     }

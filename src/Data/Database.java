@@ -12,26 +12,26 @@ import java.util.ArrayList;
  *
  * @author Obel
  */
-public class Database {
+public class Database
+{
 
-    private final String dburl;
-    private final String dbusername;
-    private final String dbpassword;
-    private ArrayList<String> result;
+    private final String dburl = "jdbc:postgresql://elmer.db.elephantsql.com:5432/jkclsvjn";
+    private final String dbusername = "jkclsvjn";
+    private final String dbpassword = "5vckjZ8LGdP6g2S6eHLeP5w34mASozc1";
 
-    public Database() {
-        this.dburl = "jdbc:postgresql://elmer.db.elephantsql.com:5432/jkclsvjn";
-        this.dbusername = "jkclsvjn";
-        this.dbpassword = "5vckjZ8LGdP6g2S6eHLeP5w34mASozc1";
+    public Database()
+    {
     }
 
     public ArrayList<String> sendQuery(String query)
     {
-        
+        ArrayList<String> result = new ArrayList<>();
         try
         {
             Class.forName("org.postgresql.Driver");
-        } catch (ClassNotFoundException ex) {
+        }
+        catch (ClassNotFoundException ex)
+        {
             System.out.println(ex);
         }
 
@@ -39,7 +39,6 @@ public class Database {
                 Statement st = db.createStatement();
                 ResultSet rs = st.executeQuery(query);)
         {
-            result = new ArrayList<>();
             while (rs.next())
             {
                 int i = 1;
@@ -60,42 +59,5 @@ public class Database {
             System.out.println(e);
         }
         return result;
-    }
-    
-    public String sendQueryTest(String query)
-    {
-        String resultString = "";
-        try
-        {
-            Class.forName("org.postgresql.Driver");
-        } catch (ClassNotFoundException ex) {
-            System.out.println(ex);
-        }
-
-        try (Connection db = DriverManager.getConnection(dburl, dbusername, dbpassword);
-                Statement st = db.createStatement();
-                ResultSet rs = st.executeQuery(query);)
-        {
-            //String resultString = "";
-            while (rs.next())
-            {
-                int i = 1;
-                while (i < rs.getMetaData().getColumnCount())
-                {
-                    //System.out.print(rs.getString(i) + " ");
-                    resultString += rs.getString(i);
-                    i++;
-                }
-                //System.out.println(rs.getString(i) + " ");
-                resultString += rs.getString(i);
-            }
-            System.out.println(resultString);
-            //return result;
-        }
-        catch (Exception e)
-        {
-            System.out.println(e);
-        }
-        return resultString;
     }
 }

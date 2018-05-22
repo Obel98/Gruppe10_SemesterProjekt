@@ -4,18 +4,17 @@
  * and open the template in the editor.
  */
 package Aquaintance;
-
-import java.sql.ResultSet;
-import java.util.ArrayList;
-
 /**
  *
  * @author Mads Obel Jensen
  */
 public interface IData {
 
-    public ICase getCase();
-    public ArrayList<String> sendQuery(String query);
-    public String sendQueryTest(String query);
-    public ICase getCase(int id);
+    ICase getCase(int ID);
+    
+    boolean validateUserName(String username);
+    
+    boolean validatePassword(String username, String password);
+    
+    String getUserType(String username, String password);
 }

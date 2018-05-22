@@ -47,11 +47,11 @@ public class CaseReader {
                 temp[i] = input.nextLine();
                 i++;
             }
-            cf = new Case(Integer.parseInt(temp[1]), temp[2],
-                    temp[3], Integer.parseInt(temp[4]),
-                    temp[5], Integer.parseInt(temp[6]),
-                    Integer.parseInt(temp[7]), temp[8],
-                    temp[9],temp[10]);
+//            cf = new Case(Integer.parseInt(temp[1]), temp[2],
+//                    temp[3], Integer.parseInt(temp[4]),
+//                    temp[5], Integer.parseInt(temp[6]),
+//                    Integer.parseInt(temp[7]), temp[8],
+//                    temp[9],temp[10]);
             System.out.println(cf.toString());
 
         } catch (FileNotFoundException ex) {

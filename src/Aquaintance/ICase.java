@@ -10,8 +10,7 @@ package Aquaintance;
  * @author Mads Obel Jensen
  */
 public interface ICase
-{
-
+{   
     int getID();
 
     String getFirstName();
@@ -26,11 +25,15 @@ public interface ICase
 
     int getCPR();
 
-    String getAddresse();
+    String getAddress();
 
-    String getCommentar();
+    String getJournal();
 
     String getStatus();
     
-    ICase getCase(int ID);
+    ICase getCase();
+    
+    String getDate();
+    
+    String getUserName();
 }

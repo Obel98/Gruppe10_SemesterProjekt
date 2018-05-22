@@ -15,9 +15,6 @@ import Aquaintance.IPresentation;
 import Business.BusinessFacade;
 import Data.DataFacade;
 import Presentation.PresentationFacade;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
 import javafx.stage.Stage;
@@ -38,12 +35,6 @@ public class Starter extends Application {
         Business.injectData(Data);
         UI.injectBusiness(Business);
         UI.start();
-        //Data.getCase();
-        Business.getCase();
-        //String eba = "test";
-        //System.out.println(eba.equals("Sagsbehandler"));
-        //System.out.println(UI.getAddresse());
-        //System.out.println(Data.sendQueryTest("SELECT type FROM users WHERE username = 'tota' AND password = 'abcabc'"));
         // Sagsbehandler: tota // abcabc
         // Admin: admin // 12345
         // Borger: borgar30 // 12345

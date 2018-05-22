@@ -6,7 +6,6 @@
 package Data;
 
 import Aquaintance.ICase;
-import java.sql.ResultSet;
 import java.util.ArrayList;
 
 /**
@@ -15,49 +14,41 @@ import java.util.ArrayList;
  */
 public class DataFacade implements Aquaintance.IData
 {
-    final String dburl = "jdbc:postgresql://elmer.db.elephantsql.com:5432/jkclsvjn";
-    final String dbusername = "jkclsvjn";
-    final String dbpassword = "5vckjZ8LGdP6g2S6eHLeP5w34mASozc1";
     private ICase iCase;
-    private ResultSet rs;
 
     @Override
-    public ICase getCase()
-    {
-        CaseReader IC = new CaseReader("Sag1.txt");
-        iCase = IC.getCase();
-        return iCase; 
-        
-    }
-
-    @Override
-    public ArrayList<String> sendQuery(String query)
-    {
-        Database db = new Database("jdbc:postgresql://elmer.db.elephantsql.com:5432/jkclsvjn",
-                "jkclsvjn", "5vckjZ8LGdP6g2S6eHLeP5w34mASozc1");
-        //rs = 
-        return db.sendQuery(query);
-        //return rs;
-    }
-    
-    @Override
-    public String sendQueryTest(String query)
-    {
-        Database db = new Database("jdbc:postgresql://elmer.db.elephantsql.com:5432/jkclsvjn",
-                "jkclsvjn", "5vckjZ8LGdP6g2S6eHLeP5w34mASozc1");
-        //rs = 
-        return db.sendQueryTest(query);
-        //return rs;
-    }
-    
     public ICase getCase(int id)
     {
-         Database db = new Database("jdbc:postgresql://elmer.db.elephantsql.com:5432/jkclsvjn",
-                "jkclsvjn", "5vckjZ8LGdP6g2S6eHLeP5w34mASozc1");
-        //rs = 
-         String result = db.sendQueryTest("select * from casefile where caseid = 3");
-        CaseFormat sag = new CaseFormat(1, "", "", 1, "", 1, 1, "", "", "");
-        return sag;
+        Case sag = new Case(id);
+        iCase = sag.getCase();
+        return iCase;
+    }
+
+    @Override
+    public boolean validateUserName(String username)
+    {
+        Database db = new Database();
+        ArrayList<String> temp = new ArrayList<>();
+        temp = db.sendQuery("SELECT username FROM users");
+        return temp.contains(username);
+    }
+
+    @Override
+    public boolean validatePassword(String username, String password)
+    {
+        Database db = new Database();
+        ArrayList<String> temp = new ArrayList<>();
+        temp = db.sendQuery("SELECT password FROM users WHERE username = '" + username + "'");
+        return temp.contains(password);
+    }
+
+    @Override
+    public String getUserType(String username, String password)
+    {
+        Database db = new Database();
+        ArrayList<String> temp = new ArrayList<>();
+        temp = db.sendQuery("SELECT type FROM users WHERE username = '" + username + "' AND password = '" + password + "'");
+        return temp.toString();
     }
 
 }

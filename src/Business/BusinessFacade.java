@@ -7,147 +7,113 @@ package Business;
 
 import Aquaintance.ICase;
 import Aquaintance.IData;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.util.ArrayList;
 
 /**
  *
  * @author Mads Obel Jensen
  */
-public class BusinessFacade implements Aquaintance.IBusiness {
+public class BusinessFacade implements Aquaintance.IBusiness
+{
 
     private IData data;
-    //Add to set instead.
     private Case sag;
-    private ResultSet rs;
-    private static Connection db;
+    //Add to set instead.
 
     @Override
-    public void injectData(IData data) {
+    public void injectData(IData data)
+    {
         this.data = data;
     }
 
     @Override
-    public void getCase() {
-        //ICase newCase = data.getCase();
-//        Borger borge = new Borger(CPR, name, lastName, address, phoneNumber, email):
-        ICase sag = data.getCase(3);
-        //sag = new Case(Integer.parseInt(data.sendQueryTest("SELECT caseid FROM accessto WHERE username = 'tota'")), "Problemer med TEXT column", new Borger(data.sendQueryTest("SELECT cpr FROM users WHERE username = 'borgar30'"), data.sendQueryTest("SELECT firstname FROM users WHERE username = 'borgar30'"), data.sendQueryTest("SELECT lastname FROM users WHERE username = 'borgar30'"), data.sendQueryTest("SELECT address FROM users WHERE username = 'borgar30'"), data.sendQueryTest("SELECT telephonenumber FROM users WHERE username = 'borgar30'"), data.sendQueryTest("SELECT email FROM users WHERE username = 'borgar30'")), data.sendQueryTest("SELECT date FROM casefile WHERE caseid = (SELECT caseid FROM accessto WHERE username = 'tota')"));
-        //sag.getBorger().setUsername("borgar30");
-        //sag.getBorger().setBirthday("SELECT birthday FROM users WHERE username = 'borgar30'");
-        //ICase newCase = sag;
-        /*sag.setID(newCase.getID());
-        sag.setFirstName(newCase.getFirstName());
-        sag.setLastName(newCase.getLastName());
-        sag.setPhoneNumber(newCase.getPhoneNumber());
-        sag.setEmail(newCase.getEmail());
-        sag.setBirthday(newCase.getBirthday());
-        sag.setCPR(newCase.getCPR());
-        sag.setAddresse(newCase.getAddresse());
-        sag.setCommentar(newCase.getCommentar());
-        sag.setStatus(newCase.getStatus());*/
+    public void getCase()
+    {
+        ICase temp = data.getCase(3);
+        sag = new Case(temp);
     }
 
     @Override
-    public int getID() {
+    public int getID()
+    {
         return sag.getID();
     }
 
     @Override
-    public String getFirstName() {
-        return sag.getBorger().getName();
+    public String getFirstName()
+    {
+        return sag.getFirstName();
     }
 
     @Override
-    public String getLastName() {
-        return sag.getBorger().getLastName();
+    public String getLastName()
+    {
+        return sag.getLastName();
     }
 
     @Override
-    public int getPhoneNumber() {
-        return Integer.parseInt(sag.getBorger().getPhoneNumber());
+    public int getPhoneNumber()
+    {
+        return sag.getPhoneNumber();
     }
 
     @Override
-    public String getEmail() {
-        return sag.getBorger().getEmail();
+    public String getEmail()
+    {
+        return sag.getEmail();
     }
 
     @Override
-    public int getBirthday() {
-        return Integer.parseInt(sag.getBorger().getBirthday());
+    public int getBirthday()
+    {
+        return sag.getBirthday();
     }
 
     @Override
-    public int getCPR() {
-        return Integer.parseInt(sag.getBorger().getCPR());
+    public int getCPR()
+    {
+        return sag.getCPR();
     }
 
     @Override
-    public String getAddress() {
-        return sag.getBorger().getAddress();
+    public String getAddress()
+    {
+        return sag.getAddress();
     }
 
     @Override
-    public String getJournal() {
-        return sag.getCommentar();
+    public String getJournal()
+    {
+        return sag.getJournal();
     }
-    
+
     @Override
-    public String getStatus() {
+    public String getStatus()
+    {
         return sag.getStatus();
     }
-    
+
     @Override
     public String getUsername()
     {
-        return sag.getBorger().getUsername();
+        return sag.getUserName();
     }
 
     @Override
-    public void sendQuery(String query)
+    public boolean validateUsername(String username)
     {
-        //rs = 
-        data.sendQuery(query);
-        //return rs;
+        return data.validateUserName(username);
     }
-    
+
     @Override
-    public boolean validUsername(String username)
+    public boolean validatePassword(String username, String password)
     {
-        ArrayList<String> list;
-        list = data.sendQuery("SELECT username FROM users");
-        return list.contains(username);
-        
+        return data.validatePassword(username, password);
     }
-    
-    @Override
-    public boolean validPassword(String username, String password)
-    {
-        ArrayList<String> list;
-        list = data.sendQuery("SELECT password FROM users WHERE username = '" + username + "'");
-        return list.contains(password);
-        
-    }
-    
+
     @Override
     public String getUserType(String username, String password)
     {
-        ArrayList<String> list;
-        list = data.sendQuery("SELECT type FROM users WHERE username = '" + username + "' AND password = '" + password + "'");
-        //System.out.println(list.toString());
-        return list.toString();
-        
+        return data.getUserType(username, password);
     }
-    
-    @Override
-    public String passThrough(String query)
-    {
-        return data.sendQueryTest(query);
-    }
-    
-    
-    
 
 }

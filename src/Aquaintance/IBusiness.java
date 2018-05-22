@@ -5,9 +5,6 @@
  */
 package Aquaintance;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-
 /**
  *
  * @author Mads Obel Jensen
@@ -18,8 +15,6 @@ public interface IBusiness {
 
     void getCase();
     
-    void sendQuery(String query);
-
     int getID();
 
     String getFirstName();
@@ -42,12 +37,10 @@ public interface IBusiness {
     
     String getUsername();
     
-    boolean validUsername(String username);
+    boolean validateUsername(String username);
     
-    boolean validPassword(String username, String password);
+    boolean validatePassword(String username, String password);
     
     String getUserType(String username, String password);
-    
-    public String passThrough(String query);
-    
+        
 }

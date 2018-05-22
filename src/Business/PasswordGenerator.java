@@ -15,12 +15,12 @@ public class PasswordGenerator {
 
     private static SecureRandom random = new SecureRandom();
 
-    private static final String ALPHA_CAPS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    private static final String ALPHA = "abcdefghijklmnopqrstuvwxyz";
-    private static final String NUMERIC = "0123456789";
-    private static final String SPECIAL_CHARS = "!@#$%^&*_=+-/";
+    private final String ALPHA_CAPS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    private final String ALPHA = "abcdefghijklmnopqrstuvwxyz";
+    private final String NUMERIC = "0123456789";
+    private final String SPECIAL_CHARS = "!@#$%^&*_=+-/";
 
-    private static String generatePassword(int len, String dic) {
+    private String generatePassword(int len, String dic) {
         String password = "";
         for (int i = 0; i < len; i++) {
             int index = random.nextInt(dic.length());
@@ -29,11 +29,11 @@ public class PasswordGenerator {
         return password;
     }
 
-    public static void setRandom(SecureRandom random) {
+    public void setRandom(SecureRandom random) {
         PasswordGenerator.random = random;
     }
 
-    public static SecureRandom getRandom() {
+    public SecureRandom getRandom() {
         return random;
     }
 }
