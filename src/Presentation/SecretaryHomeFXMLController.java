@@ -21,7 +21,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.TextArea;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 /**
@@ -37,17 +39,65 @@ public class SecretaryHomeFXMLController implements Initializable {
     @FXML
     private Label AdminIDLabel;
     @FXML
-    private Label IDLabel;
-    @FXML
-    private Label nameLabel;
-    @FXML
-    private Label statusLabel;
-    @FXML
-    private Label textLabel;
-    @FXML
-    private Button viewCaseButton;
-    @FXML
     private MenuItem menuButton;
+    @FXML
+    private VBox VBox;
+    @FXML
+    private Label caseIDLabel;
+    @FXML
+    private Label firstNameLabel1;
+    @FXML
+    private Label lastNameLabel1;
+    @FXML
+    private Label PhonenumberLabel;
+    @FXML
+    private Label emailLabel;
+    @FXML
+    private Label caseStatusLabel;
+    @FXML
+    private TextArea caseTextArea;
+    @FXML
+    private Label caseIDLabel1;
+    @FXML
+    private Label firstNameLabel11;
+    @FXML
+    private Label lastNameLabel11;
+    @FXML
+    private Label PhonenumberLabel1;
+    @FXML
+    private Label emailLabel1;
+    @FXML
+    private Label caseStatusLabel1;
+    @FXML
+    private TextArea caseTextArea1;
+    @FXML
+    private Label caseIDLabel11;
+    @FXML
+    private Label firstNameLabel111;
+    @FXML
+    private Label lastNameLabel111;
+    @FXML
+    private Label PhonenumberLabel11;
+    @FXML
+    private Label emailLabel11;
+    @FXML
+    private Label caseStatusLabel11;
+    @FXML
+    private TextArea caseTextArea11;
+    @FXML
+    private Label caseIDLabel111;
+    @FXML
+    private Label firstNameLabel1111;
+    @FXML
+    private Label lastNameLabel1111;
+    @FXML
+    private Label PhonenumberLabel111;
+    @FXML
+    private Label emailLabel111;
+    @FXML
+    private Label caseStatusLabel111;
+    @FXML
+    private TextArea caseTextArea111;
 
     /**
      * Initializes the controller class.
@@ -82,9 +132,6 @@ public class SecretaryHomeFXMLController implements Initializable {
         }
     }
 
-    @FXML
-    private void viewCaseAction(ActionEvent event) {
-    }
 
     @FXML
     private void changePassword(ActionEvent event) {
