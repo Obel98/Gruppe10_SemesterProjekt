@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
@@ -14,7 +18,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="480.0" minWidth="900.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.DetermineTreatmentController">
+<AnchorPane minHeight="480.0" minWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.DetermineTreatmentController">
    <children>
       <Separator layoutX="-281.0" layoutY="221.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0" />
       <Pane layoutX="123.0" layoutY="65.0" prefHeight="50.0" style="-fx-background-color: #39A67f;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -93,9 +97,9 @@
                      <children>
                         <MenuButton layoutX="74.0" layoutY="25.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="98.0" AnchorPane.leftAnchor="74.0" AnchorPane.topAnchor="25.0">
                            <items>
-                              <MenuItem mnemonicParsing="false" text="Månedydelse" />
-                              <MenuItem mnemonicParsing="false" text="Dagligydelse" />
-                              <MenuItem mnemonicParsing="false" text="Årligyde" />
+                              <MenuItem mnemonicParsing="false" text="Månedsydelse" />
+                              <MenuItem mnemonicParsing="false" text="Dagsydelse" />
+                              <MenuItem mnemonicParsing="false" text="Årsydelse" />
                            </items>
                         </MenuButton>
                         <Label layoutX="74.0" layoutY="6.0" text="Ydelsesenhed">
@@ -187,7 +191,7 @@
                         </Label>
                         <MenuButton layoutX="75.0" layoutY="25.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="98.0">
                            <items>
-                              <MenuItem mnemonicParsing="false" text="Andrt længevarende botilbud til voksne" />
+                              <MenuItem mnemonicParsing="false" text="Andet længevarende botilbud til voksne" />
                               <MenuItem mnemonicParsing="false" text="Action 2" />
                            </items>
                         </MenuButton>

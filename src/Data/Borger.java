@@ -1,6 +1,7 @@
 package Data;
 
-public class Borger {
+public class Borger implements Aquaintance.IBorger
+{
 
     private String firstName;
     private String lastName;
@@ -25,7 +26,7 @@ public class Borger {
         //this.ArrayList < Sag > history;
 
     }
-
+    @Override
     public int getCPR() {
         return CPR;
     }
@@ -33,7 +34,7 @@ public class Borger {
     public void setCPR(int CPR) {
         this.CPR = CPR;
     }
-
+    @Override
     public String getFirstName() {
         return firstName;
     }
@@ -42,6 +43,7 @@ public class Borger {
         this.firstName = name;
     }
 
+    @Override
     public String getLastName() {
         return lastName;
     }
@@ -50,6 +52,7 @@ public class Borger {
         this.lastName = lastName;
     }
 
+    @Override
     public String getAddress() {
         return address;
     }
@@ -57,7 +60,7 @@ public class Borger {
     public void setAddress(String address) {
         this.address = address;
     }
-
+    @Override
     public int getPhoneNumber() {
         return phoneNumber;
     }
@@ -66,6 +69,7 @@ public class Borger {
         this.phoneNumber = phoneNumber;
     }
 
+    @Override
     public String getEmail() {
         return email;
     }
@@ -74,10 +78,11 @@ public class Borger {
         this.email = email;
     }
 
+    @Override
     public String getPassword() {
         return password;
     }
-
+    @Override
     public int getBirthday()
     {
         return birthday;
@@ -88,6 +93,7 @@ public class Borger {
         this.birthday = birthday;
     }
 
+    @Override
     public String getUsername()
     {
         return username;
