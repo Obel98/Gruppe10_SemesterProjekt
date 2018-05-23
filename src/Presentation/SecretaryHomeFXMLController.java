@@ -39,15 +39,13 @@ public class SecretaryHomeFXMLController implements Initializable {
     @FXML
     private Label AdminIDLabel;
     @FXML
-    private MenuItem menuButton;
-    @FXML
     private VBox VBox;
     @FXML
     private Label caseIDLabel;
     @FXML
-    private Label firstNameLabel1;
+    private Label firstNameLabel;
     @FXML
-    private Label lastNameLabel1;
+    private Label lastNameLabel;
     @FXML
     private Label PhonenumberLabel;
     @FXML
@@ -57,47 +55,8 @@ public class SecretaryHomeFXMLController implements Initializable {
     @FXML
     private TextArea caseTextArea;
     @FXML
-    private Label caseIDLabel1;
-    @FXML
-    private Label firstNameLabel11;
-    @FXML
-    private Label lastNameLabel11;
-    @FXML
-    private Label PhonenumberLabel1;
-    @FXML
-    private Label emailLabel1;
-    @FXML
-    private Label caseStatusLabel1;
-    @FXML
-    private TextArea caseTextArea1;
-    @FXML
-    private Label caseIDLabel11;
-    @FXML
-    private Label firstNameLabel111;
-    @FXML
-    private Label lastNameLabel111;
-    @FXML
-    private Label PhonenumberLabel11;
-    @FXML
-    private Label emailLabel11;
-    @FXML
-    private Label caseStatusLabel11;
-    @FXML
-    private TextArea caseTextArea11;
-    @FXML
-    private Label caseIDLabel111;
-    @FXML
-    private Label firstNameLabel1111;
-    @FXML
-    private Label lastNameLabel1111;
-    @FXML
-    private Label PhonenumberLabel111;
-    @FXML
-    private Label emailLabel111;
-    @FXML
-    private Label caseStatusLabel111;
-    @FXML
-    private TextArea caseTextArea111;
+    private MenuItem menuButton;
+    
 
     /**
      * Initializes the controller class.
@@ -105,7 +64,7 @@ public class SecretaryHomeFXMLController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void LogOutAction(ActionEvent event) throws IOException {

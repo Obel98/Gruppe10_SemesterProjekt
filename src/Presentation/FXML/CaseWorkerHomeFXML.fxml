@@ -23,7 +23,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Label fx:id="AdminIDLabel" alignment="CENTER" layoutX="10.0" layoutY="10.0" maxWidth="-Infinity" text="Home - Sagsbehandler" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="10.0">
+      <Label fx:id="AdminIDLabel" alignment="CENTER" layoutX="10.0" layoutY="10.0" maxWidth="-Infinity" text="Hjem - Sagsbehandler" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="10.0">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -46,7 +46,7 @@
                                                    <children>
                                                       <VBox>
                                                          <children>
-                                                            <Label text="CaseID:" wrapText="true">
+                                                            <Label text="Sag ID:" wrapText="true">
                                                                <font>
                                                                   <Font size="18.0" />
                                                                </font>
@@ -54,7 +54,7 @@
                                                                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                                </VBox.margin>
                                                             </Label>
-                                                            <Label text="Name:">
+                                                            <Label text="Navn">
                                                                <font>
                                                                   <Font size="18.0" />
                                                                </font>
@@ -62,7 +62,7 @@
                                                                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                                                </VBox.margin>
                                                             </Label>
-                                                            <Label text="Phonenumber">
+                                                            <Label text="Tlf.nr.">
                                                                <font>
                                                                   <Font size="18.0" />
                                                                </font>
@@ -175,7 +175,7 @@
                                           <Separator orientation="VERTICAL" />
                                           <VBox>
                                              <children>
-                                                <Button fx:id="viewCaseButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#viewCaseAction" prefHeight="50.0" prefWidth="100.0" text="View Case">
+                                                <Button fx:id="viewCaseButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#viewCaseAction" prefHeight="50.0" prefWidth="100.0" text="Vis Sag">
                                                    <font>
                                                       <Font name="System Bold" size="12.0" />
                                                    </font>
