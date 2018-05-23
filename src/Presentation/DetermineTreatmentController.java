@@ -41,7 +41,7 @@ public class DetermineTreatmentController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void backOnAction(ActionEvent event) {
@@ -63,5 +63,5 @@ public class DetermineTreatmentController implements Initializable {
         stage.initOwner(benefitsButton.getScene().getWindow());
         stage.showAndWait();
     }
-    
+
 }

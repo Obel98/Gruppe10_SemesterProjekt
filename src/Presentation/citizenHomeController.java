@@ -68,17 +68,19 @@ public class citizenHomeController implements Initializable {
     @FXML
     private Label caseStatusLabel11;
     private IBusiness Business;
+
     /**
      * Initializes the controller class.
      */
-    
+
     public void injectBusiness(IBusiness business) {
         this.Business = business;
     }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void LogOutAction(ActionEvent event) {
@@ -87,5 +89,5 @@ public class citizenHomeController implements Initializable {
     @FXML
     private void changePassword(ActionEvent event) {
     }
-    
+
 }

@@ -24,7 +24,6 @@ public class Borger implements Aquaintance.IBorger
 
         //this.case =Sag();
         //this.ArrayList < Sag > history;
-
     }
     @Override
     public int getCPR() {
@@ -82,29 +81,21 @@ public class Borger implements Aquaintance.IBorger
     public String getPassword() {
         return password;
     }
-    @Override
-    public int getBirthday()
-    {
+
+    public int getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(int birthday)
-    {
+    public void setBirthday(int birthday) {
         this.birthday = birthday;
     }
 
-    @Override
-    public String getUsername()
-    {
+    public String getUsername() {
         return username;
     }
 
-    public void setUsername(String username)
-    {
+    public void setUsername(String username) {
         this.username = username;
     }
-    
-    
 
 }
-

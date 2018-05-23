@@ -56,7 +56,7 @@ public class editUser implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void backOnAction(ActionEvent event) {
@@ -71,5 +71,5 @@ public class editUser implements Initializable {
 
         //todo need logic for saving
     }
-    
+
 }

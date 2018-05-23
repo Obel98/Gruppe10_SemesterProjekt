@@ -34,7 +34,7 @@ public class BenifitsWindowController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void backOnAction(ActionEvent event) {
@@ -45,5 +45,5 @@ public class BenifitsWindowController implements Initializable {
     @FXML
     private void saveOnAction(ActionEvent event) {
     }
-    
+
 }
