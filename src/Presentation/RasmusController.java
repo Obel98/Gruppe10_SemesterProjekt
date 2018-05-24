@@ -13,7 +13,7 @@ public class RasmusController {
     @FXML
     private void initialize() {
         WebEngine engine = webView.getEngine();
-        engine.load("https://www.youtube.com/watch?v=oHg5SJYRHA0");
+        engine.load("http://fakebsod.com/windows-8-and-10");
         Platform.setImplicitExit(false);
     }
 }
