@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Presentation;
 
 import java.net.URL;
@@ -21,7 +16,7 @@ import javafx.stage.Stage;
 /**
  * FXML Controller class
  *
- * @author borga
+ * @author ProjektGruppe 10.
  */
 public class ForgotPasswordController implements Initializable {
 
@@ -48,7 +43,7 @@ public class ForgotPasswordController implements Initializable {
     @FXML
     private void okButtonOnAction(ActionEvent event) {
         if ("admin".equals(UserNameTextField.getText())) {
-            passwordTextField.setText("admin");
+            passwordTextField.setText("12345");
             invalidUserName.setText("");
         } else {
             invalidUserName.setText("Inncorrect username, Try again!");
@@ -68,7 +63,7 @@ public class ForgotPasswordController implements Initializable {
     private void pressEnter(KeyEvent event) {
         if (event.getCode().equals(KeyCode.ENTER)) {
             if ("admin".equals(UserNameTextField.getText())) {
-                passwordTextField.setText("admin");
+                passwordTextField.setText("12345");
                 invalidUserName.setText("");
             } else if ("sagb".equals(UserNameTextField.getText())) {
                 passwordTextField.setText("sagb");

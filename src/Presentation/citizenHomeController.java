@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Presentation;
 
 import Aquaintance.IBusiness;
@@ -19,7 +14,7 @@ import javafx.scene.layout.VBox;
 /**
  * FXML Controller class
  *
- * @author rasmu
+ * @author ProjektGruppe 10.
  */
 public class citizenHomeController implements Initializable {
 
@@ -72,7 +67,6 @@ public class citizenHomeController implements Initializable {
     /**
      * Initializes the controller class.
      */
-
     public void injectBusiness(IBusiness business) {
         this.Business = business;
     }
