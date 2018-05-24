@@ -56,8 +56,7 @@ public class ForgotPasswordController implements Initializable {
         if (UI.validateUsername(usernameTextField.getText())) {
             passwordTextField.setText(UI.showPassword(usernameTextField.getText()));
             invalidUserName.setText("");
-            Stage stage = (Stage) backButton.getScene().getWindow();
-            stage.close();
+            
         } else {
             invalidUserName.setText("Inncorrect username, Try again!");
             invalidUserName.setTextFill(Color.rgb(210, 39, 30));
@@ -78,8 +77,6 @@ public class ForgotPasswordController implements Initializable {
             if (UI.validateUsername(usernameTextField.getText())) {
                 passwordTextField.setText(UI.showPassword(usernameTextField.getText()));
                 invalidUserName.setText("");
-                Stage stage = (Stage) backButton.getScene().getWindow();
-                stage.close();
             } else {
                 invalidUserName.setText("Inncorrect username, Try again!");
                 invalidUserName.setTextFill(Color.rgb(210, 39, 30));
