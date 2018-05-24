@@ -11,19 +11,23 @@ package Aquaintance;
  */
 public interface IUser
 {
-    
+
     String getUsername();
-    
+
     String getPassword();
-    
+
     String getFirstname();
-    
+
     String getLastname();
-    
+
     String getEmail();
-    
-    int getPhonenumber();
-    
-    
-    
+
+    int getPhoneNumber();
+
+    int getCPR();
+
+    String getAddress();
+
+    String getBirthday();
+
 }

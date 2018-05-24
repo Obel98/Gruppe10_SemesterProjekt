@@ -13,41 +13,93 @@ import Aquaintance.IUser;
  */
 public class DataUser implements IUser
 {
+    //Attributes for the Borger class.
+
+    private String firstname;
+    private String lastname;
+    private String address;
+    private int phoneNumber;
+    private String email;
+    private String password;
+    private int CPR;
+    private String birthday;
+    private String username;
+
+    /**
+     * Constructor for Borger
+     *
+     * @param CPR Sets the CPR of the Borger.
+     * @param name Sets the name of the Borger.
+     * @param lastName Sets the lastName of the Borger.
+     * @param address Sets the address of the Borger.
+     * @param phoneNumber Sets the phoneNumber of the Borger.
+     * @param email Sets the email of the Borger.
+     */
+    public DataUser(int CPR, String firstname, String lastName, String address, int phoneNumber, String email, int cpr, String birthday, String username)
+    {
+        this.CPR = CPR;
+        this.firstname = firstname;
+        this.lastname = lastName;
+        this.address = address;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.CPR = cpr;
+        this.birthday = birthday;
+        this.username = username;
+    }
 
     @Override
     public String getUsername()
     {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return username;
     }
 
     @Override
     public String getPassword()
     {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return password;
     }
 
     @Override
     public String getFirstname()
     {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return firstname;
     }
 
     @Override
     public String getLastname()
     {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return lastname;
     }
 
     @Override
     public String getEmail()
     {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return email;
     }
 
     @Override
-    public int getPhonenumber()
+    public int getPhoneNumber()
     {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return phoneNumber;
     }
-    
+
+    @Override
+    public int getCPR()
+    {
+        return CPR;
+    }
+
+    @Override
+    public String getAddress()
+    {
+        return address;
+    }
+
+    @Override
+    public String getBirthday()
+    {
+        return birthday;
+    }
+
 }
