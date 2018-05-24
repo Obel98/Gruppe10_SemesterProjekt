@@ -20,8 +20,7 @@ import javafx.stage.Stage;
  *
  * @author ProjektGruppe 10.
  */
-public class ForgotPasswordController implements Initializable
-{
+public class ForgotPasswordController implements Initializable {
 
     private IBusiness Business;
     private IPresentation UI;
@@ -39,30 +38,27 @@ public class ForgotPasswordController implements Initializable
 
     /**
      * Initializes the controller class.
+     *
      * @param url
      * @param rb
      */
     @Override
-    public void initialize(URL url, ResourceBundle rb)
-    {
+    public void initialize(URL url, ResourceBundle rb) {
         UI = PresentationFacade.getUI();
     }
 
-    public void injectBusiness(IBusiness business)
-    {
+    public void injectBusiness(IBusiness business) {
         this.Business = business;
     }
 
     @FXML
-    private void okButtonOnAction(ActionEvent event)
-    {
-        if (UI.validateUsername(usernameTextField.getText()))
-        {
+    private void okButtonOnAction(ActionEvent event) {
+        if (UI.validateUsername(usernameTextField.getText())) {
             passwordTextField.setText(UI.showPassword(usernameTextField.getText()));
             invalidUserName.setText("");
-        }
-        else
-        {
+            Stage stage = (Stage) backButton.getScene().getWindow();
+            stage.close();
+        } else {
             invalidUserName.setText("Inncorrect username, Try again!");
             invalidUserName.setTextFill(Color.rgb(210, 39, 30));
             passwordTextField.setText("");
@@ -71,24 +67,20 @@ public class ForgotPasswordController implements Initializable
 
     @FXML
 
-    private void backOnAction(ActionEvent event)
-    {
+    private void backOnAction(ActionEvent event) {
         Stage stage = (Stage) backButton.getScene().getWindow();
         stage.close();
     }
 
     @FXML
-    private void pressEnter(KeyEvent event)
-    {
-        if (event.getCode().equals(KeyCode.ENTER))
-        {
-            if (UI.validateUsername(usernameTextField.getText()))
-            {
+    private void pressEnter(KeyEvent event) {
+        if (event.getCode().equals(KeyCode.ENTER)) {
+            if (UI.validateUsername(usernameTextField.getText())) {
                 passwordTextField.setText(UI.showPassword(usernameTextField.getText()));
                 invalidUserName.setText("");
-            }
-            else
-            {
+                Stage stage = (Stage) backButton.getScene().getWindow();
+                stage.close();
+            } else {
                 invalidUserName.setText("Inncorrect username, Try again!");
                 invalidUserName.setTextFill(Color.rgb(210, 39, 30));
                 passwordTextField.setText("");
