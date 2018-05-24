@@ -13,7 +13,7 @@ public class Administrator {
     private String userName;
 
     /**
-     * Constructor for Borger
+     * Constructor for Administrator
      * @param name Sets the name of the Administrator.
      * @param id Sets the id of the Administrator.
      */

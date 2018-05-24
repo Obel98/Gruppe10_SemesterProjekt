@@ -16,7 +16,7 @@ public class Case implements ICase {
 
     //Attributes for the Case class.
     private int ID;
-    private String firtName;
+    private String firstName;
     private String lastName;
     private int phoneNumber;
     private String email;
@@ -86,7 +86,7 @@ public class Case implements ICase {
             System.out.println(e);
         }
 
-        this.firtName = result01[0];
+        this.firstName = result01[0];
         this.lastName = result01[1];
         this.phoneNumber = Integer.parseInt(result01[2]);
         this.email = result01[3];
@@ -104,7 +104,7 @@ public class Case implements ICase {
 
     @Override
     public String toString() {
-        return "JournalFormat{" + "ID=" + ID + ", firtName=" + firtName + ", lastName=" + lastName + ", phoneNumber=" + phoneNumber + ", email=" + email + ", birthday=" + birthday + ", CPR=" + CPR + ", addresse=" + address + ", journal=" + journal + ", status=" + status + '}';
+        return "JournalFormat{" + "ID=" + ID + ", firtName=" + firstName + ", lastName=" + lastName + ", phoneNumber=" + phoneNumber + ", email=" + email + ", birthday=" + birthday + ", CPR=" + CPR + ", addresse=" + address + ", journal=" + journal + ", status=" + status + '}';
     }
 
     @Override
@@ -114,7 +114,7 @@ public class Case implements ICase {
 
     @Override
     public String getFirstName() {
-        return firtName;
+        return firstName;
     }
 
     @Override
