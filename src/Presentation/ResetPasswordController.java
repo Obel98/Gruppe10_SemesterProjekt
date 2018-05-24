@@ -63,6 +63,8 @@ public class ResetPasswordController implements Initializable
         if (newPasswordField.getText().equals(newPasswordFieldRepeat.getText()))
         {
             UI.setPassword(oldPasswordField.getText(), newPasswordField.getText());
+            Stage stage = (Stage) backButton.getScene().getWindow();
+            stage.close();
         }
     }
 
