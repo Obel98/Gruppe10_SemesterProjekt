@@ -1,5 +1,6 @@
 package Presentation;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
@@ -13,5 +14,6 @@ public class RasmusController {
     private void initialize() {
         WebEngine engine = webView.getEngine();
         engine.load("https://www.youtube.com/watch?v=oHg5SJYRHA0");
+        Platform.setImplicitExit(false);
     }
 }
