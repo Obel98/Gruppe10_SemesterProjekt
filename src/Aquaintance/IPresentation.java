@@ -3,7 +3,8 @@ package Aquaintance;
 /**
  * IPresentation interface
  */
-public interface IPresentation {
+public interface IPresentation
+{
 
     void injectBusiness(IBusiness business);
 
@@ -32,7 +33,15 @@ public interface IPresentation {
     String getStatus();
 
     String getUsername();
-    
+
     void setPassword(String oldPassword, String newPassword);
+
+    boolean validateUsername(String username);
+
+    boolean validatePassword(String username, String password);
+
+    String getUserType(String username, String password);
+    
+    String showPassword(String username);
 
 }

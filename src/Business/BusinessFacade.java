@@ -204,4 +204,10 @@ public class BusinessFacade implements Aquaintance.IBusiness
         data.setPassword(oldPassword, newPassword);
     }
 
+    @Override
+    public String showPassword(String username)
+    {
+        return data.showPassword(username);
+    }
+
 }

@@ -1,5 +1,7 @@
 package Presentation;
 
+import Aquaintance.IBusiness;
+import Aquaintance.IPresentation;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -19,7 +21,11 @@ import javafx.scene.control.PasswordField;
  *
  * @author ProjektGruppe 10.
  */
-public class ResetPasswordController implements Initializable {
+public class ResetPasswordController implements Initializable
+{
+
+    private IBusiness Business;
+    private IPresentation UI;
 
     @FXML
     private Button RestButton;
@@ -28,44 +34,53 @@ public class ResetPasswordController implements Initializable {
     @FXML
     private Label invalidUserName;
     @FXML
-    private TextField UserNameTextField;
-    @FXML
     private Label InvaldInputLabel;
-    @FXML
-    private PasswordField password2;
-    @FXML
-    private PasswordField password1;
     PasswordGenerator pg = new PasswordGenerator();
+    @FXML
+    private TextField oldPasswordField;
+    @FXML
+    private PasswordField newPasswordFieldRepeat;
+    @FXML
+    private PasswordField newPasswordField;
 
     /**
      * Initializes the controller class.
      */
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+    public void initialize(URL url, ResourceBundle rb)
+    {
+        UI = PresentationFacade.getUI();
+    }
+
+    public void injectBusiness(IBusiness business)
+    {
+        this.Business = business;
     }
 
     @FXML
-    private void ResetButtonOnAction(ActionEvent event) {
-        if (password1.equals(password2)) {
-            Stage stage = (Stage) RestButton.getScene().getWindow();
-            stage.close();
-
+    private void ResetButtonOnAction(ActionEvent event)
+    {
+        if (newPasswordField.getText().equals(newPasswordFieldRepeat.getText()))
+        {
+            UI.setPassword(oldPasswordField.getText(), newPasswordField.getText());
         }
     }
 
     @FXML
-    private void backOnAction(ActionEvent event) {
+    private void backOnAction(ActionEvent event)
+    {
         Stage stage = (Stage) backButton.getScene().getWindow();
         stage.close();
     }
 
     @FXML
-    private void pressEnter(KeyEvent event) {
+    private void pressEnter(KeyEvent event)
+    {
 
     }
 
     @FXML
-    private void userNameOnAction(ActionEvent event) {
+    private void userNameOnAction(ActionEvent event)
+    {
     }
 }

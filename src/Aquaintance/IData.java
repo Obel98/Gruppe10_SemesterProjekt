@@ -13,4 +13,6 @@ public interface IData {
     
     void setPassword(String oldPassword, String newPassword);
     
+    String showPassword(String username);
+    
 }

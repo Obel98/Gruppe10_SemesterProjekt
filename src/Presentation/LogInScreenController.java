@@ -74,10 +74,10 @@ public class LogInScreenController implements Initializable {
         if (event.getCode().equals(KeyCode.ENTER)) {
             String username = UsernameBox.getText();
 
-            if (Business.validateUsername(username)) {
+            if (UI.validateUsername(username)) {
                 String password = PasswordBox.getText();
-                if (Business.validatePassword(username, PasswordBox.getText())) {
-                    if (Business.getUserType(username, password).equals("[Sagsbehandler]")) {
+                if (UI.validatePassword(username, PasswordBox.getText())) {
+                    if (UI.getUserType(username, password).equals("[Sagsbehandler]")) {
 
                         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/CaseWorkerHomeFXML.fxml"));
                         Pane homeRoot = loader.load();
@@ -90,7 +90,7 @@ public class LogInScreenController implements Initializable {
                         appStage.setScene(home);
                         appStage.show();
                     }
-                    if (Business.getUserType(username, password).equals("[Admin]")) {
+                    if (UI.getUserType(username, password).equals("[Admin]")) {
                         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/AdminFXML.fxml"));
                         Pane homeRoot = loader.load();
                         AdminFXML controller = loader.getController();
@@ -103,7 +103,7 @@ public class LogInScreenController implements Initializable {
                         appStage.setFullScreen(true);
                         appStage.show();
                     }
-                    if (Business.getUserType(username, password).equals("[Sekretær]")) {
+                    if (UI.getUserType(username, password).equals("[Sekretær]")) {
                         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/SecretaryHomeFXML.fxml"));
                         Pane root = loader.load();
                         SecretaryHomeFXMLController controller = loader.getController();
@@ -115,7 +115,7 @@ public class LogInScreenController implements Initializable {
                         stage.setScene(secHome);
                         stage.show();
                     }
-                    if (Business.getUserType(username, password).equals("[Borger]")) {
+                    if (UI.getUserType(username, password).equals("[Borger]")) {
                         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/citizenHome.fxml"));
                         Pane root = loader.load();
                         citizenHomeController controller = loader.getController();
@@ -148,10 +148,10 @@ public class LogInScreenController implements Initializable {
     private void LogOnButtonAction(ActionEvent event) throws IOException {
         String username = UsernameBox.getText();
 
-        if (Business.validateUsername(username)) {
+        if (UI.validateUsername(username)) {
             String password = PasswordBox.getText();
-            if (Business.validatePassword(username, PasswordBox.getText())) {
-                if (Business.getUserType(username, password).equals("[Sagsbehandler]")) {
+            if (UI.validatePassword(username, PasswordBox.getText())) {
+                if (UI.getUserType(username, password).equals("[Sagsbehandler]")) {
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/CaseWorkerHomeFXML.fxml"));
                     Pane homeRoot = loader.load();
                     CaseWorkerHomeFXMLController controller = loader.getController();
@@ -163,7 +163,7 @@ public class LogInScreenController implements Initializable {
                     appStage.setScene(home);
                     appStage.show();
                 }
-                if (Business.getUserType(username, password).equals("[Admin]")) {
+                if (UI.getUserType(username, password).equals("[Admin]")) {
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/AdminFXML.fxml"));
                     Pane homeRoot = loader.load();
                     AdminFXML controller = loader.getController();
@@ -175,7 +175,7 @@ public class LogInScreenController implements Initializable {
                     appStage.setScene(caseWorkerHome);
                     appStage.show();
                 }
-                if (Business.getUserType(username, password).equals("[Sekretær]")) {
+                if (UI.getUserType(username, password).equals("[Sekretær]")) {
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/SecretaryHomeFXML.fxml"));
                     Pane root = loader.load();
                     SecretaryHomeFXMLController controller = loader.getController();
@@ -187,7 +187,7 @@ public class LogInScreenController implements Initializable {
                     stage.setScene(secHome);
                     stage.show();
                 }
-                if (Business.getUserType(username, password).equals("[Borger]")) {
+                if (UI.getUserType(username, password).equals("[Borger]")) {
 
                 } else {
                     passwordMsgLabel.setText("Incorrect password or username, Try again!");

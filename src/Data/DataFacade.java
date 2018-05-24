@@ -48,10 +48,17 @@ public class DataFacade implements Aquaintance.IData
     }
 
     @Override
-    public void setPassword(String newPassword, String oldPassword)
+    public void setPassword(String oldPassword, String newPassword)
     {
         Database db = new Database();
         db.sendQuery("Update users set password = '" + newPassword + "' where password = '" + oldPassword + "'");
+    }
+
+    @Override
+    public String showPassword(String username)
+    {
+        Database db = new Database();
+        return db.sendQuery("Select password from users where username ='" + username + "'").get(0);
     }
 
 
