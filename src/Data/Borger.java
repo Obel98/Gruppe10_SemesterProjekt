@@ -5,8 +5,7 @@ package Data;
  *
  * @author Gruppe10
  */
-public class Borger implements Aquaintance.IBorger
-{
+public class Borger implements Aquaintance.IBorger {
 
     //Attributes for the Borger class.
     private String firstname;
@@ -33,8 +32,7 @@ public class Borger implements Aquaintance.IBorger
      * @param email Sets the email of the Borger.
      * @param username
      */
-    public Borger(int CPR, String firstname, String lastName, String address, int phoneNumber, String email, int cpr, String birthday, String username)
-    {
+    public Borger(int CPR, String firstname, String lastName, String address, int phoneNumber, String email, int cpr, String birthday, String username) {
         this.CPR = CPR;
         this.firstname = firstname;
         this.lastname = lastName;
@@ -52,8 +50,7 @@ public class Borger implements Aquaintance.IBorger
      * @return int
      */
     @Override
-    public int getCPR()
-    {
+    public int getCPR() {
         return CPR;
     }
 
@@ -62,8 +59,7 @@ public class Borger implements Aquaintance.IBorger
      *
      * @param CPR to be set as CPR.
      */
-    public void setCPR(int CPR)
-    {
+    public void setCPR(int CPR) {
         this.CPR = CPR;
     }
 
@@ -73,8 +69,7 @@ public class Borger implements Aquaintance.IBorger
      * @return String
      */
     @Override
-    public String getFirstname()
-    {
+    public String getFirstname() {
         return firstname;
     }
 
@@ -84,8 +79,7 @@ public class Borger implements Aquaintance.IBorger
      *
      * @param name to be set as firstName.
      */
-    public void setFirstname(String name)
-    {
+    public void setFirstname(String name) {
         this.firstname = name;
     }
 
@@ -95,8 +89,7 @@ public class Borger implements Aquaintance.IBorger
      * @return String
      */
     @Override
-    public String getLastname()
-    {
+    public String getLastname() {
         return lastname;
     }
 
@@ -106,8 +99,7 @@ public class Borger implements Aquaintance.IBorger
      *
      * @param lastName to be set as lastName.
      */
-    public void setLastname(String lastName)
-    {
+    public void setLastname(String lastName) {
         this.lastname = lastName;
     }
 
@@ -117,8 +109,7 @@ public class Borger implements Aquaintance.IBorger
      * @return String
      */
     @Override
-    public String getAddress()
-    {
+    public String getAddress() {
         return address;
     }
 
@@ -127,8 +118,7 @@ public class Borger implements Aquaintance.IBorger
      *
      * @param address to be set as address.
      */
-    public void setAddress(String address)
-    {
+    public void setAddress(String address) {
         this.address = address;
     }
 
@@ -138,8 +128,7 @@ public class Borger implements Aquaintance.IBorger
      * @return int
      */
     @Override
-    public int getPhoneNumber()
-    {
+    public int getPhoneNumber() {
         return phoneNumber;
     }
 
@@ -149,8 +138,7 @@ public class Borger implements Aquaintance.IBorger
      *
      * @param phoneNumber to be set as phoneNumber.
      */
-    public void setPhoneNumber(int phoneNumber)
-    {
+    public void setPhoneNumber(int phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
@@ -160,8 +148,7 @@ public class Borger implements Aquaintance.IBorger
      * @return String
      */
     @Override
-    public String getEmail()
-    {
+    public String getEmail() {
         return email;
     }
 
@@ -170,8 +157,7 @@ public class Borger implements Aquaintance.IBorger
      *
      * @param email to be set as email.
      */
-    public void setEmail(String email)
-    {
+    public void setEmail(String email) {
         this.email = email;
     }
 
@@ -181,8 +167,7 @@ public class Borger implements Aquaintance.IBorger
      * @return String
      */
     @Override
-    public String getPassword()
-    {
+    public String getPassword() {
         return password;
     }
 
@@ -192,8 +177,7 @@ public class Borger implements Aquaintance.IBorger
      * @return String
      */
     @Override
-    public String getBirthday()
-    {
+    public String getBirthday() {
         return birthday;
     }
 
@@ -203,8 +187,7 @@ public class Borger implements Aquaintance.IBorger
      *
      * @param birthday to be set as birthday.
      */
-    public void setBirthday(String birthday)
-    {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 
@@ -214,8 +197,7 @@ public class Borger implements Aquaintance.IBorger
      * @return String
      */
     @Override
-    public String getUsername()
-    {
+    public String getUsername() {
         return username;
     }
 
@@ -225,8 +207,7 @@ public class Borger implements Aquaintance.IBorger
      *
      * @param username to be set as username.
      */
-    public void setUsername(String username)
-    {
+    public void setUsername(String username) {
         this.username = username;
     }
 
