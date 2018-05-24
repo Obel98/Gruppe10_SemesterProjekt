@@ -225,4 +225,9 @@ public class Borger implements Aquaintance.IBorger
     {
         this.username = username;
     }
+
+    @Override
+    public String setPassword() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

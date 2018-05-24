@@ -111,6 +111,6 @@ public class PresentationFacade implements Aquaintance.IPresentation {
 
     @Override
     public void getCase(int ID) {
-        Business.getCase(ID);
+        Business.setCase(ID);
     }
 }

@@ -45,6 +45,18 @@ public class ForgotPasswordController implements Initializable {
         if ("admin".equals(UserNameTextField.getText())) {
             passwordTextField.setText("12345");
             invalidUserName.setText("");
+        } else if ("tota".equals(UserNameTextField.getText())) {
+            passwordTextField.setText("abcabc");
+            invalidUserName.setText("");
+        } else if ("ras".equals(UserNameTextField.getText())) {
+            passwordTextField.setText("rass");
+            invalidUserName.setText("");
+        } else if ("borgar30".equals(UserNameTextField.getText())) {
+            passwordTextField.setText("12345");
+            invalidUserName.setText("");
+        } else if ("Storm".equals(UserNameTextField.getText())) {
+            passwordTextField.setText("55555");
+            invalidUserName.setText("");
         } else {
             invalidUserName.setText("Inncorrect username, Try again!");
             invalidUserName.setTextFill(Color.rgb(210, 39, 30));
@@ -65,8 +77,17 @@ public class ForgotPasswordController implements Initializable {
             if ("admin".equals(UserNameTextField.getText())) {
                 passwordTextField.setText("12345");
                 invalidUserName.setText("");
-            } else if ("sagb".equals(UserNameTextField.getText())) {
-                passwordTextField.setText("sagb");
+            } else if ("tota".equals(UserNameTextField.getText())) {
+                passwordTextField.setText("abcabc");
+                invalidUserName.setText("");
+            } else if ("ras".equals(UserNameTextField.getText())) {
+                passwordTextField.setText("rass");
+                invalidUserName.setText("");
+            } else if ("borgar30".equals(UserNameTextField.getText())) {
+                passwordTextField.setText("12345");
+                invalidUserName.setText("");
+            } else if ("Storm".equals(UserNameTextField.getText())) {
+                passwordTextField.setText("55555");
                 invalidUserName.setText("");
             } else {
                 invalidUserName.setText("Inncorrect username, Try again!");

@@ -1,8 +1,9 @@
 package Business;
 
 /**
- *
- * @author ProjektGruppe 10.
+ * Administrator class
+ * Used for Administrator information.
+ * @author Gruppe10
  */
 public class Administrator {
 
@@ -11,6 +12,11 @@ public class Administrator {
     private String password;
     private String userName;
 
+    /**
+     * Constructor for Borger
+     * @param name Sets the name of the Administrator.
+     * @param id Sets the id of the Administrator.
+     */
     public Administrator(String name, String id) {
         this.name = name;
         this.id = id;

@@ -4,22 +4,33 @@ import Aquaintance.ICase;
 import Aquaintance.IData;
 
 /**
- *
- * @author ProjektGruppe 10.
+ * BusinessFacade class
+ * Used for communication with the business layer.
+ * implements IBusiness
+ * @author Gruppe10
  */
 public class BusinessFacade implements Aquaintance.IBusiness {
 
+    //Attributes for the BusinessFacade class.
     private IData data;
     private Case sag;
-    //Add to set instead.
 
+    /**
+     * Inject Method for Data
+     * @param data Sets the dataLayer to use.
+     */
     @Override
     public void injectData(IData data) {
         this.data = data;
     }
 
+    /**
+     * Getter Method for CPR
+     * Returns the value of CPR.
+     * @return int
+     */
     @Override
-    public void getCase(int ID) {
+    public void setCase(int ID) {
         ICase temp = data.getCase(ID);
         sag = new Case(temp);
     }
