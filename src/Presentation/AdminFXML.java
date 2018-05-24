@@ -23,12 +23,15 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 /**
- * FXML Controller class
- *
- * @author ProjektGruppe 10.
+ * FXML Controller AdminFXML class
+ * Used to handle the Admin homescreen.
+ * implements Initializable
+ * @author Gruppe 10.
  */
-public class AdminFXML implements Initializable {
+public class AdminFXML implements Initializable 
+{
 
+    //Attributes of the Admin controller class.
     private IBusiness business;
     @FXML
     private Label AdminIDLabel;
@@ -47,23 +50,31 @@ public class AdminFXML implements Initializable {
     @FXML
     private Button deleteUserButton;
 
-    public AdminFXML() {
+    /**
+     * Constructor for AdminFXML
+     */
+    public AdminFXML() 
+    {
     }
 
     /**
      * Initializes the controller class.
      */
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
+    public void initialize(URL url, ResourceBundle rb) 
+    {
         // TODO
     }
 
-    public void injectData(IBusiness business) {
-        this.business = business;
-    }
-
+    /**
+     * Handles the logout action
+     * Shows logInScreen.fxml on use
+     * @param event
+     * @throws IOException
+     */
     @FXML
-    private void logOutOnAction(ActionEvent event) throws IOException {
+    private void logOutOnAction(ActionEvent event) throws IOException 
+    {
         /*Parent root = FXMLLoader.load(getClass().getResource("FXML/LogInScreen.fxml"));
 
         Scene logIn = new Scene(root);
@@ -87,8 +98,15 @@ public class AdminFXML implements Initializable {
 
     }
 
+    /**
+     * Handles the changePassword action
+     * Shows ResetPassword.fxml on use
+     * @param event
+     * @throws IOException
+     */
     @FXML
-    private void changePassword(ActionEvent event) throws IOException {
+    private void changePassword(ActionEvent event) throws IOException 
+    {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/ResetPassword.fxml"));
         Stage stage = new Stage();
         Parent root = loader.load();
@@ -98,16 +116,30 @@ public class AdminFXML implements Initializable {
         stage.showAndWait();
     }
 
-    void injectBusiness(IBusiness Business) {
+    /**
+     * Inject Method for Business
+     * @param business Sets the businessLayer to use.
+     */
+    public void injectBusiness(IBusiness business) 
+    {
         this.business = business;
     }
 
+    //no implementation.
     @FXML
-    private void searchOnAction(ActionEvent event) {
+    private void searchOnAction(ActionEvent event) 
+    {
     }
 
+    /**
+     * Handles the addUser action
+     * Shows addUser.fxml on use
+     * @param event
+     * @throws IOException
+     */
     @FXML
-    private void addUserOnAction(ActionEvent event) throws IOException {
+    private void addUserOnAction(ActionEvent event) throws IOException 
+    {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/addUser.fxml"));
         Stage stage = new Stage();
         Parent root = loader.load();
@@ -117,8 +149,15 @@ public class AdminFXML implements Initializable {
         stage.showAndWait();
     }
 
+    /**
+     * Handles the editUser action
+     * Shows editUser.fxml on use
+     * @param event
+     * @throws IOException
+     */
     @FXML
-    private void editUserOnAction(ActionEvent event) throws IOException {
+    private void editUserOnAction(ActionEvent event) throws IOException 
+    {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/editUser.fxml"));
         Stage stage = new Stage();
         Parent root = loader.load();
