@@ -1,8 +1,7 @@
 package Aquaintance;
 
 /**
- *
- * @author ProjektGruppe 10.
+ * IPresentation interface
  */
 public interface IPresentation {
 

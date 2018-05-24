@@ -6,8 +6,7 @@
 package Aquaintance;
 
 /**
- *
- * @author Mads Obel Jensen
+ * IBusiness interface
  */
 public interface IBusiness {
 

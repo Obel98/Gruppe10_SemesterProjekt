@@ -6,8 +6,7 @@
 package Aquaintance;
 
 /**
- *
- * @author Mads Obel Jensen
+ * ICase interface
  */
 public interface ICase {
 

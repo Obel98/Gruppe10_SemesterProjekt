@@ -6,8 +6,7 @@
 package Aquaintance;
 
 /**
- *
- * @author Mads Obel Jensen
+ * IData interface
  */
 public interface IData {
 

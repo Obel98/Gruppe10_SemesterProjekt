@@ -6,8 +6,7 @@
 package Aquaintance;
 
 /**
- *
- * @author Computer
+ * IBorger interface
  */
 public interface IBorger
 {
