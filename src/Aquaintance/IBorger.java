@@ -9,7 +9,7 @@ package Aquaintance;
  *
  * @author Computer
  */
-public interface IBorger
+public interface IBorger extends IUser
 {
     
 }

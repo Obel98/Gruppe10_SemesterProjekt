@@ -1,9 +1,11 @@
 package Data;
 
-public class Borger {
+import Aquaintance.IBorger;
 
-    private String firstName;
-    private String lastName;
+public class Borger implements IBorger {
+
+    private String firstname;
+    private String lastname;
     private String address;
     private int phoneNumber;
     private String email;
@@ -15,8 +17,8 @@ public class Borger {
 
     public Borger(int CPR, String name, String lastName, String address, int phoneNumber, String email) {
         this.CPR = CPR;
-        this.firstName = name;
-        this.lastName = lastName;
+        this.firstname = name;
+        this.lastname = lastName;
         this.address = address;
         this.phoneNumber = phoneNumber;
         this.email = email;
@@ -34,20 +36,20 @@ public class Borger {
         this.CPR = CPR;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFirstname() {
+        return firstname;
     }
 
     public void setFirstName(String name) {
-        this.firstName = name;
+        this.firstname = name;
     }
 
     public String getLastName() {
-        return lastName;
+        return lastname;
     }
 
     public void setLastName(String lastName) {
-        this.lastName = lastName;
+        this.lastname = lastName;
     }
 
     public String getAddress() {
@@ -97,8 +99,5 @@ public class Borger {
     {
         this.username = username;
     }
-    
-    
-
 }
 
