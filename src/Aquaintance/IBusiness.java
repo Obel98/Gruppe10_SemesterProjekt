@@ -8,7 +8,7 @@ public interface IBusiness {
 
     void injectData(IData data);
 
-    void getCase(int ID);
+    void setCase(int ID);
 
     int getID();
 

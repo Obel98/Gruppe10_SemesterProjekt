@@ -7,11 +7,14 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 /**
- *
- * @author ProjektGruppe 10.
+ * Case class
+ * Used for Case information.
+ * implements ICase
+ * @author Gruppe10
  */
 public class Case implements ICase {
 
+    //Attributes for the Case class.
     private int ID;
     private String firtName;
     private String lastName;
@@ -25,6 +28,11 @@ public class Case implements ICase {
     private String date;
     private String userName;
 
+     /**
+     * Constructor for Case
+     * @param ID Sets the ID of the Case.
+     * Loads the information from the database into the case based on the ID.
+     */
     public Case(int ID) {
         String[] result0 = new String[4];
         try {
