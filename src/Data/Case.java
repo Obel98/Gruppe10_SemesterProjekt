@@ -89,6 +89,7 @@ public class Case implements ICase {
         this.status = "Under behandling";
     }
 
+    @Override
     public String getJournal() {
         return journal;
     }
@@ -98,50 +99,62 @@ public class Case implements ICase {
         return "JournalFormat{" + "ID=" + ID + ", firtName=" + firtName + ", lastName=" + lastName + ", phoneNumber=" + phoneNumber + ", email=" + email + ", birthday=" + birthday + ", CPR=" + CPR + ", addresse=" + address + ", journal=" + journal + ", status=" + status + '}';
     }
 
+    @Override
     public int getID() {
         return ID;
     }
 
+    @Override
     public String getFirstName() {
         return firtName;
     }
 
+    @Override
     public String getLastName() {
         return lastName;
     }
 
+    @Override
     public int getPhoneNumber() {
         return phoneNumber;
     }
 
+    @Override
     public String getEmail() {
         return email;
     }
 
+    @Override
     public String getBirthday() {
         return birthday;
     }
 
+    @Override
     public int getCPR() {
         return CPR;
     }
 
+    @Override
     public String getStatus() {
         return status;
     }
 
+    @Override
     public ICase getCase() {
         return this;
     }
 
+    @Override
     public String getAddress() {
         return address;
     }
 
+    @Override
     public String getDate() {
         return date;
     }
 
+    @Override
     public String getUserName() {
         return userName;
     }
