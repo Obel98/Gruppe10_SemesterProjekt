@@ -36,13 +36,11 @@ public class ResetPasswordController implements Initializable {
     private TextField UserNameTextField;
     @FXML
     private Label InvaldInputLabel;
-
-    PasswordGenerator pg = new PasswordGenerator();
-
     @FXML
     private PasswordField password2;
     @FXML
     private PasswordField password1;
+    PasswordGenerator pg = new PasswordGenerator();
 
     /**
      * Initializes the controller class.
@@ -54,6 +52,11 @@ public class ResetPasswordController implements Initializable {
 
     @FXML
     private void ResetButtonOnAction(ActionEvent event) {
+        if (password1.equals(password2)) {
+            Stage stage = (Stage) RestButton.getScene().getWindow();
+            stage.close();
+
+        }
     }
 
     @FXML
@@ -64,6 +67,7 @@ public class ResetPasswordController implements Initializable {
 
     @FXML
     private void pressEnter(KeyEvent event) {
+
     }
 
     @FXML

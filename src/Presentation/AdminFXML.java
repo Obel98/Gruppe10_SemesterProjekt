@@ -75,8 +75,7 @@ public class AdminFXML implements Initializable {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(logIn);
         stage.show(); */
-        try 
-        {
+        try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/LogInScreen.fxml"));
             Pane root = loader.load();
             LogInScreenController controller = loader.getController();
@@ -87,11 +86,10 @@ public class AdminFXML implements Initializable {
             stage.setScene(logIn);
             stage.show();
             stage.setResizable(false);
-        } catch (IOException ex) 
-        {
+        } catch (IOException ex) {
             Logger.getLogger(PresentationFacade.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
     }
 
     @FXML
@@ -114,7 +112,7 @@ public class AdminFXML implements Initializable {
     }
 
     @FXML
-    private void addUserOnAction(ActionEvent event) throws IOException{
+    private void addUserOnAction(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/addUser.fxml"));
         Stage stage = new Stage();
         Parent root = loader.load();

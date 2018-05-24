@@ -6,15 +6,14 @@
 package Aquaintance;
 
 /**
- *
- * @author Mads Obel Jensen
+ * IBusiness interface
  */
 public interface IBusiness {
 
     void injectData(IData data);
 
     void getCase(int ID);
-    
+
     int getID();
 
     String getFirstName();
@@ -32,15 +31,15 @@ public interface IBusiness {
     String getAddress();
 
     String getJournal();
-    
+
     String getStatus();
-    
+
     String getUsername();
-    
+
     boolean validateUsername(String username);
-    
+
     boolean validatePassword(String username, String password);
-    
+
     String getUserType(String username, String password);
-        
+
 }

@@ -12,38 +12,29 @@ import java.util.ArrayList;
  *
  * @author Obel
  */
-public class Database
-{
+public class Database {
 
     private final String dburl = "jdbc:postgresql://elmer.db.elephantsql.com:5432/jkclsvjn";
     private final String dbusername = "jkclsvjn";
     private final String dbpassword = "5vckjZ8LGdP6g2S6eHLeP5w34mASozc1";
 
-    public Database()
-    {
+    public Database() {
     }
 
-    public ArrayList<String> sendQuery(String query)
-    {
+    public ArrayList<String> sendQuery(String query) {
         ArrayList<String> result = new ArrayList<>();
-        try
-        {
+        try {
             Class.forName("org.postgresql.Driver");
-        }
-        catch (ClassNotFoundException ex)
-        {
+        } catch (ClassNotFoundException ex) {
             System.out.println(ex);
         }
 
         try (Connection db = DriverManager.getConnection(dburl, dbusername, dbpassword);
                 Statement st = db.createStatement();
-                ResultSet rs = st.executeQuery(query);)
-        {
-            while (rs.next())
-            {
+                ResultSet rs = st.executeQuery(query);) {
+            while (rs.next()) {
                 int i = 1;
-                while (i < rs.getMetaData().getColumnCount())
-                {
+                while (i < rs.getMetaData().getColumnCount()) {
                     //System.out.print(rs.getString(i) + " ");
                     result.add(rs.getString(i));
                     i++;
@@ -53,9 +44,7 @@ public class Database
             }
             //System.out.println(result);
             //return result;
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             System.out.println(e);
         }
         return result;

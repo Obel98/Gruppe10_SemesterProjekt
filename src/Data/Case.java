@@ -15,8 +15,8 @@ import java.sql.Statement;
  *
  * @author borga
  */
-public class Case implements ICase
-{    
+public class Case implements ICase {
+
     private int ID;
     private String firtName;
     private String lastName;
@@ -30,73 +30,56 @@ public class Case implements ICase
     private String date;
     private String userName;
 
-    public Case(int ID)
-    {
+    public Case(int ID) {
         String[] result0 = new String[4];
-        try
-        {
+        try {
             Class.forName("org.postgresql.Driver");
-        }
-        catch (ClassNotFoundException ex)
-        {
+        } catch (ClassNotFoundException ex) {
             System.out.println(ex);
         }
 
         try (Connection db = DriverManager.getConnection("jdbc:postgresql://elmer.db.elephantsql.com:5432/jkclsvjn", "jkclsvjn", "5vckjZ8LGdP6g2S6eHLeP5w34mASozc1");
                 Statement st = db.createStatement();
-                ResultSet rs = st.executeQuery("Select * from casefile where caseID = '" + ID + "'");)
-        {
-            while (rs.next())
-            {
+                ResultSet rs = st.executeQuery("Select * from casefile where caseID = '" + ID + "'");) {
+            while (rs.next()) {
                 int i = 1;
-                while (i < rs.getMetaData().getColumnCount())
-                {
+                while (i < rs.getMetaData().getColumnCount()) {
                     //System.out.print(rs.getString(i) + " ");
-                    result0[i-1] = (rs.getString(i));
+                    result0[i - 1] = (rs.getString(i));
                     i++;
                 }
                 //System.out.println(rs.getString(i) + " ");
-                result0[i-1] = (rs.getString(i));
+                result0[i - 1] = (rs.getString(i));
             }
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             System.out.println(e);
         }
-        
+
         this.ID = ID;
         this.date = result0[1];
         this.userName = result0[2];
-        
+
         String[] result01 = new String[10];
-        try
-        {
+        try {
             Class.forName("org.postgresql.Driver");
-        }
-        catch (ClassNotFoundException ex)
-        {
+        } catch (ClassNotFoundException ex) {
             System.out.println(ex);
         }
 
         try (Connection db = DriverManager.getConnection("jdbc:postgresql://elmer.db.elephantsql.com:5432/jkclsvjn", "jkclsvjn", "5vckjZ8LGdP6g2S6eHLeP5w34mASozc1");
                 Statement st = db.createStatement();
-                ResultSet rs = st.executeQuery("Select firstname, lastname, telephonenumber, email, birthday, cpr, address from users where username = '" + userName + "'");)
-        {
-            while (rs.next())
-            {
+                ResultSet rs = st.executeQuery("Select firstname, lastname, telephonenumber, email, birthday, cpr, address from users where username = '" + userName + "'");) {
+            while (rs.next()) {
                 int i = 1;
-                while (i < rs.getMetaData().getColumnCount())
-                {
+                while (i < rs.getMetaData().getColumnCount()) {
                     //System.out.print(rs.getString(i) + " ");
-                    result01[i-1] = (rs.getString(i));
+                    result01[i - 1] = (rs.getString(i));
                     i++;
                 }
                 //System.out.println(rs.getString(i) + " ");
-                result01[i-1] = (rs.getString(i));
+                result01[i - 1] = (rs.getString(i));
             }
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             System.out.println(e);
         }
 
@@ -111,74 +94,60 @@ public class Case implements ICase
         this.status = "Under behandling";
     }
 
-    public String getJournal()
-    {
+    public String getJournal() {
         return journal;
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return "JournalFormat{" + "ID=" + ID + ", firtName=" + firtName + ", lastName=" + lastName + ", phoneNumber=" + phoneNumber + ", email=" + email + ", birthday=" + birthday + ", CPR=" + CPR + ", addresse=" + address + ", journal=" + journal + ", status=" + status + '}';
     }
 
-    public int getID()
-    {
+    public int getID() {
         return ID;
     }
 
-    public String getFirstName()
-    {
+    public String getFirstName() {
         return firtName;
     }
 
-    public String getLastName()
-    {
+    public String getLastName() {
         return lastName;
     }
 
-    public int getPhoneNumber()
-    {
+    public int getPhoneNumber() {
         return phoneNumber;
     }
 
-    public String getEmail()
-    {
+    public String getEmail() {
         return email;
     }
 
-    public String getBirthday()
-    {
+    public String getBirthday() {
         return birthday;
     }
 
-    public int getCPR()
-    {
+    public int getCPR() {
         return CPR;
     }
 
-    public String getStatus()
-    {
+    public String getStatus() {
         return status;
     }
 
-    public ICase getCase()
-    {
+    public ICase getCase() {
         return this;
     }
 
-    public String getAddress()
-    {
+    public String getAddress() {
         return address;
     }
 
-    public String getDate()
-    {
+    public String getDate() {
         return date;
     }
 
-    public String getUserName()
-    {
+    public String getUserName() {
         return userName;
     }
 

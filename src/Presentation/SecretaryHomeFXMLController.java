@@ -16,12 +16,13 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.TextArea;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 /**
@@ -37,17 +38,24 @@ public class SecretaryHomeFXMLController implements Initializable {
     @FXML
     private Label AdminIDLabel;
     @FXML
-    private Label IDLabel;
+    private VBox VBox;
     @FXML
-    private Label nameLabel;
+    private Label caseIDLabel;
     @FXML
-    private Label statusLabel;
+    private Label firstNameLabel;
     @FXML
-    private Label textLabel;
+    private Label lastNameLabel;
     @FXML
-    private Button viewCaseButton;
+    private Label PhonenumberLabel;
+    @FXML
+    private Label emailLabel;
+    @FXML
+    private Label caseStatusLabel;
+    @FXML
+    private TextArea caseTextArea;
     @FXML
     private MenuItem menuButton;
+    
 
     /**
      * Initializes the controller class.
@@ -55,7 +63,7 @@ public class SecretaryHomeFXMLController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void LogOutAction(ActionEvent event) throws IOException {
@@ -64,8 +72,7 @@ public class SecretaryHomeFXMLController implements Initializable {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(logIn);
         stage.show(); */
-        try 
-        {
+        try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/LogInScreen.fxml"));
             Pane root = loader.load();
             LogInScreenController controller = loader.getController();
@@ -76,14 +83,9 @@ public class SecretaryHomeFXMLController implements Initializable {
             stage.setScene(logIn);
             stage.show();
             stage.setResizable(false);
-        } catch (IOException ex) 
-        {
+        } catch (IOException ex) {
             Logger.getLogger(PresentationFacade.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }
-
-    @FXML
-    private void viewCaseAction(ActionEvent event) {
     }
 
     @FXML
@@ -93,5 +95,5 @@ public class SecretaryHomeFXMLController implements Initializable {
     void injectBusiness(IBusiness Business) {
         this.business = business;
     }
-    
+
 }

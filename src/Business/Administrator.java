@@ -1,6 +1,9 @@
 package Business;
 
-
+/**
+ *
+ * @author ProjektGruppe 10.
+ */
 public class Administrator {
 
     private String name;
@@ -8,41 +11,39 @@ public class Administrator {
     private String password;
     private String userName;
 
-    public Administrator(String name, String id){
+    public Administrator(String name, String id) {
         this.name = name;
         this.id = id;
     }
-    
-    
-    public void createUser(){
-        
+
+    public void createUser() {
+
     }
-    public void setPass(){
-        
+
+    public void setPass() {
+
     }
-    
-    public void setUsername(){
-        
+
+    public void setUsername() {
+
     }
-    
-    public String getPassword(){
+
+    public String getPassword() {
         return password;
     }
-    
-    public String getUsername(){
+
+    public String getUsername() {
         return userName;
     }
-    
-    
-    
-    public void setUserRights(){
-        
+
+    public void setUserRights() {
+
     }
-    
-    public void setUserInfo(){
-        
-    } 
-    
+
+    public void setUserInfo() {
+
+    }
+
 //    public boolean getUserRights(){
 //        return
 //    }
@@ -50,6 +51,4 @@ public class Administrator {
 //    public String getUserInfo(){
 //        return
 //    }
-    
-    
 }

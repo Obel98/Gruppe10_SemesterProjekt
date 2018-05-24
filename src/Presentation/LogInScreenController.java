@@ -73,95 +73,88 @@ public class LogInScreenController implements Initializable {
     }
 
     @FXML
-    private void pressEnter(KeyEvent event) throws IOException 
-    {
-        if (event.getCode().equals(KeyCode.ENTER)) 
-        {
+    private void pressEnter(KeyEvent event) throws IOException {
+        if (event.getCode().equals(KeyCode.ENTER)) {
             String username = UsernameBox.getText();
-        
-        if (Business.validateUsername(username))
-        {
-            String password = PasswordBox.getText();
-            if (Business.validatePassword(username, PasswordBox.getText()))
-            {
-                if (Business.getUserType(username, password).equals("[Sagsbehandler]"))
-                {
-                    
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/CaseWorkerHomeFXML.fxml"));
-                    Pane homeRoot = loader.load();
-                    CaseWorkerHomeFXMLController controller = loader.getController();
-                    controller.injectBusiness(Business);
-                    Scene home = new Scene(homeRoot);
-                    Stage appStage = new Stage();
-                    appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                    appStage.setResizable(true);
-                    appStage.setScene(home);
-                    appStage.show(); 
-                }
-                if (Business.getUserType(username, password).equals("[Admin]"))
-                {
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/AdminFXML.fxml"));
-                    Pane homeRoot = loader.load();
-                    AdminFXML controller = loader.getController();
-                    controller.injectBusiness(Business);
-                    Scene caseWorkerHome = new Scene(homeRoot);
-                    Stage appStage = new Stage();
-                    appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                    appStage.setResizable(true);
-                    appStage.setScene(caseWorkerHome);
-                    appStage.show();
-                }
-                if (Business.getUserType(username, password).equals("[Sekretær]"))
-                {
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/SecretaryHomeFXML.fxml"));
-                    Pane root = loader.load();
-                    SecretaryHomeFXMLController controller = loader.getController();
-                    controller.injectBusiness(Business);
-                    Scene secHome = new Scene(root);
-                    Stage stage = new Stage();
-                    stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                    stage.setResizable(true);
-                    stage.setScene(secHome);
-                    stage.show();
-                }
-                if (Business.getUserType(username, password).equals("[Borger]"))
-                {
-                    
-                }
-                else 
-                {
+
+            if (Business.validateUsername(username)) {
+                String password = PasswordBox.getText();
+                if (Business.validatePassword(username, PasswordBox.getText())) {
+                    if (Business.getUserType(username, password).equals("[Sagsbehandler]")) {
+
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/CaseWorkerHomeFXML.fxml"));
+                        Pane homeRoot = loader.load();
+                        CaseWorkerHomeFXMLController controller = loader.getController();
+                        controller.injectBusiness(Business);
+                        Scene home = new Scene(homeRoot);
+                        Stage appStage = new Stage();
+                        appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                        appStage.setResizable(true);
+                        appStage.setScene(home);
+                        appStage.show();
+                    }
+                    if (Business.getUserType(username, password).equals("[Admin]")) {
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/AdminFXML.fxml"));
+                        Pane homeRoot = loader.load();
+                        AdminFXML controller = loader.getController();
+                        controller.injectBusiness(Business);
+                        Scene caseWorkerHome = new Scene(homeRoot);
+                        Stage appStage = new Stage();
+                        appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                        appStage.setResizable(true);
+                        appStage.setScene(caseWorkerHome);
+                        appStage.setFullScreen(true);
+                        appStage.show();
+                    }
+                    if (Business.getUserType(username, password).equals("[Sekretær]")) {
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/SecretaryHomeFXML.fxml"));
+                        Pane root = loader.load();
+                        SecretaryHomeFXMLController controller = loader.getController();
+                        controller.injectBusiness(Business);
+                        Scene secHome = new Scene(root);
+                        Stage stage = new Stage();
+                        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                        stage.setResizable(true);
+                        stage.setScene(secHome);
+                        stage.show();
+                    }
+                    if (Business.getUserType(username, password).equals("[Borger]")) {
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/citizenHome.fxml"));
+                        Pane root = loader.load();
+                        citizenHomeController controller = loader.getController();
+                        controller.injectBusiness(Business);
+                        Scene secHome = new Scene(root);
+                        Stage stage = new Stage();
+                        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                        stage.setResizable(true);
+                        stage.setScene(secHome);
+                        stage.show();
+
+                    } else {
+                        passwordMsgLabel.setText("Incorrect password or username, Try again!");
+                        passwordMsgLabel.setTextFill(Color.rgb(210, 39, 30));
+                    }
+
+                } else {
                     passwordMsgLabel.setText("Incorrect password or username, Try again!");
                     passwordMsgLabel.setTextFill(Color.rgb(210, 39, 30));
                 }
-                
+            } else {
+                passwordMsgLabel.setText("Incorrect password or username, Try again!");
+                passwordMsgLabel.setTextFill(Color.rgb(210, 39, 30));
             }
-            else 
-                {
-                    passwordMsgLabel.setText("Incorrect password or username, Try again!");
-                    passwordMsgLabel.setTextFill(Color.rgb(210, 39, 30));
-                }
         }
-        else 
-                {
-                    passwordMsgLabel.setText("Incorrect password or username, Try again!");
-                    passwordMsgLabel.setTextFill(Color.rgb(210, 39, 30));
-                }
-            }
-        
+
     }
 
     @FXML
-    private void LogOnButtonAction(ActionEvent event) throws IOException 
-    {
+    private void LogOnButtonAction(ActionEvent event) throws IOException {
         String username = UsernameBox.getText();
-        
-        if (Business.validateUsername(username))
-        {
+
+        if (Business.validateUsername(username)) {
             String password = PasswordBox.getText();
-            if (Business.validatePassword(username, PasswordBox.getText()))
-            {
-                if (Business.getUserType(username, password).equals("[Sagsbehandler]"))
-                {
+            if (Business.validatePassword(username, PasswordBox.getText())) {
+                if (Business.getUserType(username, password).equals("[Sagsbehandler]")) {
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/CaseWorkerHomeFXML.fxml"));
                     Pane homeRoot = loader.load();
                     CaseWorkerHomeFXMLController controller = loader.getController();
@@ -171,10 +164,9 @@ public class LogInScreenController implements Initializable {
                     appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                     appStage.setResizable(true);
                     appStage.setScene(home);
-                    appStage.show(); 
+                    appStage.show();
                 }
-                if (Business.getUserType(username, password).equals("[Admin]"))
-                {
+                if (Business.getUserType(username, password).equals("[Admin]")) {
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/AdminFXML.fxml"));
                     Pane homeRoot = loader.load();
                     AdminFXML controller = loader.getController();
@@ -186,8 +178,7 @@ public class LogInScreenController implements Initializable {
                     appStage.setScene(caseWorkerHome);
                     appStage.show();
                 }
-                if (Business.getUserType(username, password).equals("[Sekretær]"))
-                {
+                if (Business.getUserType(username, password).equals("[Sekretær]")) {
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/SecretaryHomeFXML.fxml"));
                     Pane root = loader.load();
                     SecretaryHomeFXMLController controller = loader.getController();
@@ -199,18 +190,15 @@ public class LogInScreenController implements Initializable {
                     stage.setScene(secHome);
                     stage.show();
                 }
-                if (Business.getUserType(username, password).equals("[Borger]"))
-                {
-                    
-                }
-                else 
-                {
+                if (Business.getUserType(username, password).equals("[Borger]")) {
+
+                } else {
                     passwordMsgLabel.setText("Incorrect password or username, Try again!");
                     passwordMsgLabel.setTextFill(Color.rgb(210, 39, 30));
                 }
-                
+
             }
         }
-    } 
+    }
 
 }

@@ -107,8 +107,7 @@ public class CaseWorkerHomeFXMLController implements Initializable {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(logIn);
         stage.show();*/
-        try 
-        {
+        try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/LogInScreen.fxml"));
             Pane root = loader.load();
             LogInScreenController controller = loader.getController();
@@ -119,8 +118,7 @@ public class CaseWorkerHomeFXMLController implements Initializable {
             stage.setScene(logIn);
             stage.show();
             stage.setResizable(false);
-        } catch (IOException ex) 
-        {
+        } catch (IOException ex) {
             Logger.getLogger(PresentationFacade.class.getName()).log(Level.SEVERE, null, ex);
         }
     }

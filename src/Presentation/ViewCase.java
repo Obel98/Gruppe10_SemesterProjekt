@@ -119,5 +119,4 @@ public class ViewCase implements Initializable {
     private void attachFileOnAction(ActionEvent event) {
     }
 
-
 }

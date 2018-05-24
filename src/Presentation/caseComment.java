@@ -42,7 +42,7 @@ public class caseComment implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void backOnAction(ActionEvent event) {
@@ -60,5 +60,4 @@ public class caseComment implements Initializable {
     private void attachFileOnAction(ActionEvent event) {
     }
 
-    
 }
