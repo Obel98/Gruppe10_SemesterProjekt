@@ -37,5 +37,7 @@ public interface IBusiness {
     boolean validatePassword(String username, String password);
 
     String getUserType(String username, String password);
-
+    
+    void setPassword(String oldPassword, String newPassword);
+    
 }

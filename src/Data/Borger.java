@@ -23,11 +23,15 @@ public class Borger implements Aquaintance.IBorger
      * Constructor for Borger
      *
      * @param CPR Sets the CPR of the Borger.
+     * @param firstname
      * @param name Sets the name of the Borger.
      * @param lastName Sets the lastName of the Borger.
      * @param address Sets the address of the Borger.
      * @param phoneNumber Sets the phoneNumber of the Borger.
+     * @param cpr
+     * @param birthday
      * @param email Sets the email of the Borger.
+     * @param username
      */
     public Borger(int CPR, String firstname, String lastName, String address, int phoneNumber, String email, int cpr, String birthday, String username)
     {
@@ -227,7 +231,9 @@ public class Borger implements Aquaintance.IBorger
     }
 
     @Override
-    public String setPassword() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void setPassword(String newPassword, String oldPassword)
+    {
+        Database db = new Database();
+        db.sendQuery("Update users set password = '" + newPassword + "' where password = '" + oldPassword + "'");
     }
 }

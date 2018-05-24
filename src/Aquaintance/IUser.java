@@ -15,8 +15,6 @@ public interface IUser
     String getUsername();
 
     String getPassword();
-    
-    String setPassword();
 
     String getFirstname();
 

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Data;
+package Business;
 
 import Aquaintance.IUser;
 
@@ -11,7 +11,7 @@ import Aquaintance.IUser;
  *
  * @author Obel
  */
-public class DataUser implements IUser
+public class User implements IUser
 {
     //Attributes for the Borger class.
 
@@ -35,7 +35,7 @@ public class DataUser implements IUser
      * @param phoneNumber Sets the phoneNumber of the Borger.
      * @param email Sets the email of the Borger.
      */
-    public DataUser(int CPR, String firstname, String lastName, String address, int phoneNumber, String email, int cpr, String birthday, String username)
+    public User(int CPR, String firstname, String lastName, String address, int phoneNumber, String email, int cpr, String birthday, String username)
     {
         this.CPR = CPR;
         this.firstname = firstname;
@@ -101,5 +101,5 @@ public class DataUser implements IUser
     {
         return birthday;
     }
-
+    
 }
