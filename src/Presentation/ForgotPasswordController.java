@@ -54,6 +54,9 @@ public class ForgotPasswordController implements Initializable {
         } else if ("borgar30".equals(UserNameTextField.getText())) {
             passwordTextField.setText("12345");
             invalidUserName.setText("");
+        } else if ("Storm".equals(UserNameTextField.getText())) {
+            passwordTextField.setText("55555");
+            invalidUserName.setText("");
         } else {
             invalidUserName.setText("Inncorrect username, Try again!");
             invalidUserName.setTextFill(Color.rgb(210, 39, 30));
@@ -82,6 +85,9 @@ public class ForgotPasswordController implements Initializable {
                 invalidUserName.setText("");
             } else if ("borgar30".equals(UserNameTextField.getText())) {
                 passwordTextField.setText("12345");
+                invalidUserName.setText("");
+            } else if ("Storm".equals(UserNameTextField.getText())) {
+                passwordTextField.setText("55555");
                 invalidUserName.setText("");
             } else {
                 invalidUserName.setText("Inncorrect username, Try again!");

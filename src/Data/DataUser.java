@@ -53,6 +53,12 @@ public class DataUser implements IUser
     {
         return username;
     }
+    
+    @Override
+    public String setPassword() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 
     @Override
     public String getPassword()
@@ -102,4 +108,5 @@ public class DataUser implements IUser
         return birthday;
     }
 
+    
 }
