@@ -230,10 +230,4 @@ public class Borger implements Aquaintance.IBorger
         this.username = username;
     }
 
-    @Override
-    public void setPassword(String newPassword, String oldPassword)
-    {
-        Database db = new Database();
-        db.sendQuery("Update users set password = '" + newPassword + "' where password = '" + oldPassword + "'");
-    }
 }

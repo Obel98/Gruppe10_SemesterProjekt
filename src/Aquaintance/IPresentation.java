@@ -32,5 +32,7 @@ public interface IPresentation {
     String getStatus();
 
     String getUsername();
+    
+    void setPassword(String oldPassword, String newPassword);
 
 }

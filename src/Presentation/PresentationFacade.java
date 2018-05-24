@@ -113,4 +113,10 @@ public class PresentationFacade implements Aquaintance.IPresentation {
     public void getCase(int ID) {
         Business.setCase(ID);
     }
+
+    @Override
+    public void setPassword(String oldPassword, String newPassword)
+    {
+        Business.setPassword(oldPassword, newPassword);
+    }
 }
