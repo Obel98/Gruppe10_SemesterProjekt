@@ -100,5 +100,4 @@ public class citizenHomeController implements Initializable {
         stage.initOwner(menuButton.getParentPopup().getOwnerWindow());
         stage.showAndWait();
     }
-
 }
