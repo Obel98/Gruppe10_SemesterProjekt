@@ -21,12 +21,15 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 /**
- * FXML Controller class
- *
- * @author ProjektGruppe 10.
+ * FXML Controller SecretaryHomeFXMLController class
+ * Used to handle the Secretary homescreen.
+ * implements Initializable
+ * @author Gruppe 10.
  */
-public class SecretaryHomeFXMLController implements Initializable {
+public class SecretaryHomeFXMLController implements Initializable 
+{
 
+    //Attributes of the SecretaryHomeFXMLController class.
     private IBusiness business;
     @FXML
     private Button logOutButton;
@@ -52,21 +55,32 @@ public class SecretaryHomeFXMLController implements Initializable {
     private MenuItem menuButton;
 
     /**
-     * Initializes the controller class.
+     * Initializes the SecretaryHomeFXMLController class.
+     * @param url
+     * @param rb
      */
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
+    public void initialize(URL url, ResourceBundle rb) 
+    {
         // TODO
     }
 
+    /**
+     * Handles the logout action
+     * Shows logInScreen.fxml on use
+     * @param event
+     * @throws IOException
+     */
     @FXML
-    private void LogOutAction(ActionEvent event) throws IOException {
+    private void LogOutAction(ActionEvent event) throws IOException 
+    {
         /*Parent root = FXMLLoader.load(getClass().getResource("FXML/LogInScreen.fxml"));
         Scene logIn = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(logIn);
         stage.show(); */
-        try {
+        try 
+        {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/LogInScreen.fxml"));
             Pane root = loader.load();
             LogInScreenController controller = loader.getController();
@@ -77,16 +91,28 @@ public class SecretaryHomeFXMLController implements Initializable {
             stage.setScene(logIn);
             stage.show();
             stage.setResizable(false);
-        } catch (IOException ex) {
+        } catch (IOException ex) 
+        {
             Logger.getLogger(PresentationFacade.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
+    /**
+     * Handles the changePassword action
+     * No implementation.
+     * @param event
+     */
     @FXML
-    private void changePassword(ActionEvent event) {
+    private void changePassword(ActionEvent event) 
+    {
     }
 
-    void injectBusiness(IBusiness Business) {
+    /**
+     * Inject Method for Business
+     * @param business Sets the businessLayer to use.
+     */
+    void injectBusiness(IBusiness Business) 
+    {
         this.business = business;
     }
 

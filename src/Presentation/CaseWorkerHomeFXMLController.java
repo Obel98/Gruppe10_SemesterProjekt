@@ -26,12 +26,15 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 /**
- * FXML Controller class
- *
- * @author ProjektGruppe 10.
+ * FXML Controller CaseWorkerHomeFXMLController class
+ * Used to handle the CaseWorker homescreen.
+ * implements Initializable
+ * @author Gruppe 10.
  */
-public class CaseWorkerHomeFXMLController implements Initializable {
+public class CaseWorkerHomeFXMLController implements Initializable 
+{
 
+    //Attributes of the CaseWorkerHomeFXMLController class.
     private IBusiness Business;
     private IPresentation UI;
     private ICase sag;
@@ -62,22 +65,34 @@ public class CaseWorkerHomeFXMLController implements Initializable {
     private VBox VBox;
 
     /**
-     * Initializes the controller class.
-     *
-     * @param url
-     * @param rb
+     * Inject Method for Business
+     * @param business Sets the businessLayer to use.
      */
-    public void injectBusiness(IBusiness business) {
+    public void injectBusiness(IBusiness business) 
+    {
         this.Business = business;
     }
 
-    private void addCase() throws IOException {
+    /**
+     * Method addCase
+     * Shows casePreview.fxml when called
+     * @throws IOException
+     */
+    private void addCase() throws IOException 
+    {
         Pane newVBox = FXMLLoader.load(getClass().getResource("FXML/casePreview.fxml"));
         VBox.getChildren().add(newVBox);
     }
 
+    /**
+     * Initializes the CaseWorkerHomeFXMLController class.
+     * Sets values into labels
+     * @param url
+     * @param rb
+     */
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
+    public void initialize(URL url, ResourceBundle rb) 
+    {
         UI = PresentationFacade.getUI();
         UI.getCase(3);
         caseIDLabel.setText(String.valueOf(UI.getID()));
@@ -88,21 +103,31 @@ public class CaseWorkerHomeFXMLController implements Initializable {
         caseTextArea.setText((String.valueOf(UI.getJournal())));
         caseStatusLabel.setText(UI.getStatus());
 
-        try {
+        try 
+        {
             addCase();
-        } catch (IOException ex) {
+        } catch (IOException ex) 
+        {
             Logger.getLogger(CaseWorkerHomeFXMLController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
+    /**
+     * Handles the logOut action
+     * Shows LogInScreen.fxml on use
+     * @param event
+     * @throws IOException
+     */
     @FXML
-    private void LogOutAction(ActionEvent event) throws IOException {
+    private void LogOutAction(ActionEvent event) throws IOException 
+    {
         /*Parent root = FXMLLoader.load(getClass().getResource("FXML/LogInScreen.fxml"));
         Scene logIn = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(logIn);
         stage.show();*/
-        try {
+        try 
+        {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/LogInScreen.fxml"));
             Pane root = loader.load();
             LogInScreenController controller = loader.getController();
@@ -113,13 +138,21 @@ public class CaseWorkerHomeFXMLController implements Initializable {
             stage.setScene(logIn);
             stage.show();
             stage.setResizable(false);
-        } catch (IOException ex) {
+        } catch (IOException ex) 
+        {
             Logger.getLogger(PresentationFacade.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
+    /**
+     * Handles the viewCase action
+     * Shows viewCase.fxml on use
+     * @param event
+     * @throws IOException
+     */
     @FXML
-    private void viewCaseAction(ActionEvent event) throws IOException {
+    private void viewCaseAction(ActionEvent event) throws IOException 
+    {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/viewCase.fxml"));
         Stage stage = new Stage();
         Parent root = loader.load();
@@ -129,8 +162,15 @@ public class CaseWorkerHomeFXMLController implements Initializable {
         stage.showAndWait();
     }
 
+    /**
+     * Handles the changePassword action
+     * Shows ResetPassword.fxml on use
+     * @param event
+     * @throws IOException
+     */
     @FXML
-    private void changePassword(ActionEvent event) throws IOException {
+    private void changePassword(ActionEvent event) throws IOException 
+    {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/ResetPassword.fxml"));
         Stage stage = new Stage();
         Parent root = loader.load();

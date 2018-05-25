@@ -29,7 +29,7 @@ public class User implements IUser
      * Constructor for Borger
      *
      * @param CPR Sets the CPR of the Borger.
-     * @param name Sets the name of the Borger.
+     * @param firstname Sets the name of the Borger.
      * @param lastName Sets the lastName of the Borger.
      * @param address Sets the address of the Borger.
      * @param phoneNumber Sets the phoneNumber of the Borger.

@@ -9,12 +9,15 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 /**
- * FXML Controller class
- *
- * @author ProjektGruppe 10.
+ * FXML Controller promptView class
+ * Used to handle the promptView screen.
+ * implements Initializable
+ * @author Gruppe 10.
  */
-public class promptView implements Initializable {
+public class promptView implements Initializable 
+{
 
+    //Attributes of the promptView controller class.
     @FXML
     private Button yesButton;
     @FXML
@@ -23,19 +26,34 @@ public class promptView implements Initializable {
     private Label passwordMsgLabel1;
 
     /**
-     * Initializes the controller class.
+     * Initializes the Admin controller class.
+     * @param url
+     * @param rb
      */
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
+    public void initialize(URL url, ResourceBundle rb) 
+    {
         // TODO
     }
 
+    /**
+     * Handles the yesOn action
+     * No implementation.
+     * @param event
+     */
     @FXML
-    private void yesOnAction(ActionEvent event) {
+    private void yesOnAction(ActionEvent event) 
+    {
     }
 
+    /**
+     * Handles the cancelOn action
+     * No implementation.
+     * @param event
+     */
     @FXML
-    private void cancelOnAction(ActionEvent event) {
+    private void cancelOnAction(ActionEvent event) 
+    {
     }
 
 }

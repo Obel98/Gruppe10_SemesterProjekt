@@ -27,35 +27,46 @@ import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
 /**
- * FXML Controller class
- *
- * @author ProjektGruppe 10.
+ * FXML Controller LogInScreenController class
+ * Used to handle the LogIn screen.
+ * implements Initializable
+ * @author Gruppe 10.
  */
-public class LogInScreenController implements Initializable {
+public class LogInScreenController implements Initializable 
+{
 
+    //Attributes of the LogInScreenController class.
     private IPresentation UI;
     private IBusiness Business;
 
     @FXML
     private PasswordField PasswordBox;
-
     @FXML
     private TextField UsernameBox;
-
     @FXML
     private Button LogOnButton;
-
     @FXML
     private Button ResetPasswordButton;
-
     @FXML
     private Label passwordMsgLabel;
 
+    /**
+     * Initializes the LogInScreenController class.
+     * Sets the UI attribute to the PresentationFacade.
+     * @param location
+     * @param resources
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         UI = PresentationFacade.getUI();
     }
 
+    /**
+     * Handles the ResetPassword action
+     * Shows ForgotPassword.fxml on use
+     * @param event
+     * @throws IOException
+     */
     @FXML
     private void ResetPasswordAction(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/ForgotPassword.fxml"));
@@ -68,10 +79,21 @@ public class LogInScreenController implements Initializable {
         stage.showAndWait();
     }
 
-    public void injectBusiness(IBusiness business) {
+    /**
+     * Inject Method for Business
+     * @param business Sets the businessLayer to use.
+     */
+    public void injectBusiness(IBusiness business) 
+    {
         this.Business = business;
     }
 
+    /**
+     * Handles the pressEnter action
+     * Checks LogIn information and shows the FXML scene associated with the Type of the User.
+     * @param event
+     * @throws IOException
+     */
     @FXML
     private void pressEnter(KeyEvent event) throws IOException {
         if (event.getCode().equals(KeyCode.ENTER)) {
@@ -144,6 +166,12 @@ public class LogInScreenController implements Initializable {
 //            System.out.println("midsterste");
     }
 
+    /**
+     * Handles the LogOnButton action
+     * Checks LogIn information and shows the FXML scene associated with the Type of the User.
+     * @param event
+     * @throws IOException
+     */
     @FXML
     private void LogOnButtonAction(ActionEvent event) throws IOException {
         String username = UsernameBox.getText();
