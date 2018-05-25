@@ -20,12 +20,15 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 /**
- * FXML Controller class
- *
- * @author rasmu
+ * FXML Controller ViewCase class
+ * Used to handle the ViewCase screen.
+ * implements Initializable
+ * @author Gruppe 10.
  */
-public class ViewCase implements Initializable {
+public class ViewCase implements Initializable 
+{
 
+    //Attributes of the ViewCase controller class.
     private IPresentation UI;
     private IBusiness business;
 
@@ -63,10 +66,14 @@ public class ViewCase implements Initializable {
     private Label caseworkerLabel;
 
     /**
-     * Initializes the controller class.
+     * Initializes the ViewCase controller class.
+     * Sets values into labels
+     * @param url
+     * @param rb
      */
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
+    public void initialize(URL url, ResourceBundle rb) 
+    {
         UI = PresentationFacade.getUI();
         UI.getCase(4);
         caseIDLabel.setText(String.valueOf(UI.getID()));
@@ -80,14 +87,27 @@ public class ViewCase implements Initializable {
         IDLabel.setText(UI.getUsername());
     }
 
+    /**
+     * Handles the backOn action
+     * Closes the scene.
+     * @param event
+     */
     @FXML
-    private void backOnAction(ActionEvent event) {
+    private void backOnAction(ActionEvent event) 
+    {
         Stage stage = (Stage) backButton.getScene().getWindow();
         stage.close();
     }
 
+    /**
+     * Handles the caseEvaluationOn action
+     * Shows DetermineTreatment.fxml on use
+     * @param event
+     * @throws IOException
+     */
     @FXML
-    private void caseEvaluationOnAction(ActionEvent event) throws IOException {
+    private void caseEvaluationOnAction(ActionEvent event) throws IOException 
+    {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/DetermineTreatment.fxml"));
         Stage stage = new Stage();
         Parent root = loader.load();
@@ -99,8 +119,15 @@ public class ViewCase implements Initializable {
 
     }
 
+    /**
+     * Handles the addToCaseOn action
+     * Shows caseComment.fxml on use
+     * @param event
+     * @throws IOException
+     */
     @FXML
-    private void addToCaseOnAction(ActionEvent event) throws IOException {
+    private void addToCaseOnAction(ActionEvent event) throws IOException 
+    {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/caseComment.fxml"));
         Stage stage = new Stage();
         Parent root = loader.load();
@@ -110,8 +137,14 @@ public class ViewCase implements Initializable {
         stage.showAndWait();
     }
 
+    /**
+     * Handles the attachFileOn action
+     * No implementation.
+     * @param event
+     */
     @FXML
-    private void attachFileOnAction(ActionEvent event) {
+    private void attachFileOnAction(ActionEvent event) 
+    {
     }
 
 }

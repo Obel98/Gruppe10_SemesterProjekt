@@ -12,12 +12,15 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 /**
- * FXML Controller class
- *
- * @author ProjektGruppe 10.
+ * FXML Controller addUser class
+ * Used to handle the addUser screen.
+ * implements Initializable
+ * @author Gruppe 10.
  */
-public class addUser implements Initializable {
+public class addUser implements Initializable 
+{
 
+    //Attributes of the addUser controller class.
     @FXML
     private TextField TempCodeTextField;
     @FXML
@@ -46,21 +49,36 @@ public class addUser implements Initializable {
     private Button backButton;
 
     /**
-     * Initializes the controller class.
+     * Initializes the Admin controller class.
+     * @param url
+     * @param rb
      */
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
+    public void initialize(URL url, ResourceBundle rb) 
+    {
         // TODO
     }
 
+    /**
+     * Handles the backOn action
+     * Closes the scene.
+     * @param event
+     */
     @FXML
-    private void backOnAction(ActionEvent event) {
+    private void backOnAction(ActionEvent event) 
+    {
         Stage stage = (Stage) backButton.getScene().getWindow();
         stage.close();
     }
 
+    /**
+     * Handles the SaveOn action
+     * Closes the scene.
+     * @param event
+     */
     @FXML
-    private void SaveOnAction(ActionEvent event) {
+    private void SaveOnAction(ActionEvent event) 
+    {
         Stage stage = (Stage) backButton.getScene().getWindow();
         stage.close();
 

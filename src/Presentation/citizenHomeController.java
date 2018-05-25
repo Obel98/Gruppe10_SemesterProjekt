@@ -23,16 +23,17 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 /**
- * FXML Controller class
- *
- * @author ProjektGruppe 10.
+ * FXML Controller citizenHomeController class
+ * Used to handle the citizen homescreen.
+ * implements Initializable
+ * @author Gruppe 10.
  */
-public class citizenHomeController implements Initializable {
+public class citizenHomeController implements Initializable 
+{
 
-
-    
     private IBusiness Business;
     private IPresentation UI;
+    //Attributes of the citizenHomeController class.
     @FXML
     private Button logOutButton;
     @FXML
@@ -54,14 +55,20 @@ public class citizenHomeController implements Initializable {
     @FXML
     private Label caseStatusLabel;
 
-
     /**
-     * Initializes the controller class.
+     * Inject Method for Business
+     * @param business Sets the businessLayer to use.
      */
-    public void injectBusiness(IBusiness business) {
+    public void injectBusiness(IBusiness business) 
+    {
         this.Business = business;
     }
 
+    /**
+     * Initializes the Admin controller class.
+     * @param url
+     * @param rb
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         UI = PresentationFacade.getUI();
@@ -72,9 +79,13 @@ public class citizenHomeController implements Initializable {
         PhonenumberLabel.setText((String.valueOf(UI.getPhoneNumber())));
         emailLabel.setText(String.valueOf((UI.getEmail())));
         caseStatusLabel.setText(UI.getStatus());
-
     }
 
+    /**
+     * Handles the LogOut action
+     * No implemetation.
+     * @param event
+     */
     @FXML
     private void LogOutAction(ActionEvent event) {
         try {
@@ -93,6 +104,11 @@ public class citizenHomeController implements Initializable {
         }
     }
 
+    /**
+     * Handles the changePassword action
+     * No implemetation.
+     * @param event
+     */
     @FXML
     private void changePassword(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/ResetPassword.fxml"));
@@ -104,5 +120,4 @@ public class citizenHomeController implements Initializable {
         stage.initOwner(menuButton.getParentPopup().getOwnerWindow());
         stage.showAndWait();
     }
-
 }

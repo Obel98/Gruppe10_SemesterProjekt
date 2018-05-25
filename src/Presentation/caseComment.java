@@ -8,14 +8,18 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.stage.Stage;
 
 /**
- * FXML Controller class
- *
- * @author ProjektGruppe 10.
+ * FXML Controller caseComment class
+ * Used to handle the caseComment screen.
+ * implements Initializable
+ * @author Gruppe 10.
  */
-public class caseComment implements Initializable {
+public class caseComment implements Initializable 
+{
 
+    //Attributes of the caseComment controller class.
     @FXML
     private Label AdminIDLabel;
     @FXML
@@ -30,27 +34,58 @@ public class caseComment implements Initializable {
     private TextArea commentTextArea;
 
     /**
-     * Initializes the controller class.
+     * Initializes the Admin controller class.
+     * @param url
+     * @param rb
      */
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
+    public void initialize(URL url, ResourceBundle rb) 
+    {
         // TODO
     }
 
+    /**
+     * Handles the backOn action
+     * No implemetation.
+     * @param event
+     */
     @FXML
-    private void backOnAction(ActionEvent event) {
+
+    private void backOnAction(ActionEvent event) 
+    {
+        Stage stage = (Stage) backButton.getScene().getWindow();
+        stage.close();
     }
 
+
+    /**
+     * Handles the saveOn action
+     * No implemetation.
+     * @param event
+     */
     @FXML
-    private void saveOnAction(ActionEvent event) {
+    private void saveOnAction(ActionEvent event) 
+    {
     }
 
+    /**
+     * Handles the saveDraftOn action
+     * No implemetation.
+     * @param event
+     */
     @FXML
-    private void saveDraftOnAction(ActionEvent event) {
+    private void saveDraftOnAction(ActionEvent event) 
+    {
     }
 
+    /**
+     * Handles the attachFileOn action
+     * No implemetation.
+     * @param event
+     */
     @FXML
-    private void attachFileOnAction(ActionEvent event) {
+    private void attachFileOnAction(ActionEvent event) 
+    {
     }
 
 }

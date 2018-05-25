@@ -16,12 +16,15 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 /**
- * FXML Controller class
- *
- * @author ProjektGruppe 10.
+ * FXML Controller CasePreviewController class
+ * Used to handle CasePreview.
+ * implements Initializable
+ * @author Gruppe 10.
  */
-public class CasePreviewController implements Initializable {
+public class CasePreviewController implements Initializable 
+{
 
+    //Attributes of the CasePreviewController class.
     @FXML
     private Label caseIDLabel;
     @FXML
@@ -40,15 +43,25 @@ public class CasePreviewController implements Initializable {
     private Button viewCaseButton;
 
     /**
-     * Initializes the controller class.
+     * Initializes the CasePreviewController class.
+     * @param url
+     * @param rb
      */
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
+    public void initialize(URL url, ResourceBundle rb) 
+    {
         // TODO
     }
 
+    /**
+     * Handles the viewCase action
+     * Shows viewCase.fxml on use
+     * @param event
+     * @throws IOException
+     */
     @FXML
-    private void viewCaseAction(ActionEvent event) throws IOException {
+    private void viewCaseAction(ActionEvent event) throws IOException 
+    {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/viewCase.fxml"));
         Stage stage = new Stage();
         Parent root = loader.load();

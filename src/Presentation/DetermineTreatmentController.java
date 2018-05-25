@@ -15,12 +15,15 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 /**
- * FXML Controller class
- *
- * @author ProjektGruppe 10.
+ * FXML Controller DetermineTreatmentController class
+ * Used to handle the Determine Treatment screen.
+ * implements Initializable
+ * @author Gruppe 10.
  */
-public class DetermineTreatmentController implements Initializable {
+public class DetermineTreatmentController implements Initializable 
+{
 
+    //Attributes of the DetermineTreatmentController class.
     @FXML
     private Button backButton;
     @FXML
@@ -31,25 +34,47 @@ public class DetermineTreatmentController implements Initializable {
     private Button benefitsButton;
 
     /**
-     * Initializes the controller class.
+     * Initializes the DetermineTreatmentController class.
+     * @param url
+     * @param rb
      */
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
+    public void initialize(URL url, ResourceBundle rb) 
+    {
         // TODO
     }
 
+    /**
+     * Handles the backOn action
+     * Closes the scene.
+     * @param event
+     */
     @FXML
-    private void backOnAction(ActionEvent event) {
+    private void backOnAction(ActionEvent event) 
+    {
         Stage stage = (Stage) backButton.getScene().getWindow();
         stage.close();
     }
 
+    /**
+     * Handles the SaveOn action
+     * No implementation.
+     * @param event
+     */
     @FXML
-    private void SaveOnAction(ActionEvent event) {
+    private void SaveOnAction(ActionEvent event) 
+    {
     }
 
+    /**
+     * Handles the benefitsOn action
+     * Shows BenifitsWindow.fxml on use
+     * @param event
+     * @throws IOException
+     */
     @FXML
-    private void benefitsOnAction(ActionEvent event) throws IOException {
+    private void benefitsOnAction(ActionEvent event) throws IOException 
+    {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/BenifitsWindow.fxml"));
         Stage stage = new Stage();
         Parent root = loader.load();

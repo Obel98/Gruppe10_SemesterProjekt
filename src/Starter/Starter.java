@@ -1,14 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Starter;
 
-/**
- *
- * @author Mads Obel Jensen
- */
+
 import Aquaintance.IBusiness;
 import Aquaintance.IData;
 import Aquaintance.IPresentation;
@@ -20,18 +12,27 @@ import static javafx.application.Application.launch;
 import javafx.stage.Stage;
 
 /**
- *
- * @author Obel
+ * Starter class Used to start the program. 
+ * extends Application
+ * @author Gruppe10
  */
-public class Starter extends Application {
+public class Starter extends Application 
+{
 
+    /**
+     * Starter Method for our program.
+     * Calls Facade Constructors and Inject Methods. Starts the program.
+     * @param stage
+     * @throws Exception
+     */
     @Override
-    public void start(Stage stage) throws Exception {
+    public void start(Stage stage) throws Exception 
+    {
         
         IData Data = new DataFacade();
         IBusiness Business = new BusinessFacade();
-        IPresentation UI = new PresentationFacade();
-
+        IPresentation UI = PresentationFacade.getUI(); //new PresentationFacade();
+                
         Business.injectData(Data);
         UI.injectBusiness(Business);
         UI.start();
@@ -43,9 +44,11 @@ public class Starter extends Application {
     }
 
     /**
+     * Main Method.
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         launch(args);
     }
 
