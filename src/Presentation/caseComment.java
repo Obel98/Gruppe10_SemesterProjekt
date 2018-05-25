@@ -50,16 +50,13 @@ public class caseComment implements Initializable
      * @param event
      */
     @FXML
-<<<<<<< Updated upstream
-    private void backOnAction(ActionEvent event) {
-        Stage stage = (Stage) backButton.getScene().getWindow();
-        stage.close();
 
-=======
     private void backOnAction(ActionEvent event) 
     {
->>>>>>> Stashed changes
+        Stage stage = (Stage) backButton.getScene().getWindow();
+        stage.close();
     }
+
 
     /**
      * Handles the saveOn action
