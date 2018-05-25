@@ -24,19 +24,22 @@
       </Button>
       <AnchorPane layoutX="161.0" layoutY="50.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0">
          <children>
-            <TableView layoutX="-14.0" layoutY="-13.0" prefHeight="433.0" prefWidth="900.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <TableView fx:id="tableIDTableView" layoutX="-14.0" layoutY="-13.0" prefHeight="433.0" prefWidth="900.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <columns>
-                <TableColumn minWidth="-Infinity" text="Username" />
-                <TableColumn minWidth="-1.0" prefWidth="60.0" text="User" />
-                  <TableColumn minWidth="-Infinity" prefWidth="60.0" text="Name" />
-                  <TableColumn minWidth="-Infinity" prefWidth="60.0" text="Email" />
-                  <TableColumn minWidth="-Infinity" prefWidth="106.22222900390625" text="Phonenumber" />
-                  <TableColumn minWidth="-Infinity" prefWidth="60.0" text="Adress" />
+                <TableColumn fx:id="firstNameTableColumn" minWidth="100.0" prefWidth="-1.0" text="Fornavn" />
+                <TableColumn fx:id="lastNameTableColumn" minWidth="100.0" prefWidth="-1.0" text="Efternavn" />
+                  <TableColumn fx:id="addressTableColumn" minWidth="100.0" prefWidth="-1.0" text="Adrasse" />
+                  <TableColumn fx:id="emailTableColumn" minWidth="100.0" prefWidth="-1.0" text="Email" />
+                  <TableColumn fx:id="TypeTableColumn" minWidth="100.0" prefWidth="-1.0" text="Type" />
+                  <TableColumn fx:id="usernameTableColumn" minWidth="100.0" prefWidth="-1.0" text="Brugernavn" />
+                  <TableColumn fx:id="CPRTableColumn" minWidth="100.0" prefWidth="-1.0" text="CPR" />
+                  <TableColumn fx:id="phonenumberTableColumn" minWidth="100.0" prefWidth="-1.0" text="Tlf.nr." />
+                  <TableColumn fx:id="birthdayTableColumn" minWidth="100.0" prefWidth="-1.0" text="Fødselsdag" />
               </columns>
             </TableView>
          </children>
       </AnchorPane>
-      <Label fx:id="AdminIDLabel" alignment="CENTER" maxWidth="-Infinity" text="Home - Administrator" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="10.0">
+      <Label fx:id="AdminIDLabel" alignment="CENTER" maxWidth="-Infinity" text="Hjem - Administrator" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="10.0">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -63,22 +66,17 @@
                </HBox.margin>
             </Button>
             <Pane HBox.hgrow="ALWAYS" />
-            <Button fx:id="addUserButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addUserOnAction" prefHeight="25.0" prefWidth="100.0" text="Add">
+            <Button fx:id="addUserButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addUserOnAction" prefHeight="25.0" prefWidth="100.0" text="Tilføj">
                <HBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="editUserButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#editUserOnAction" prefHeight="25.0" prefWidth="100.0" text="Edit">
+            <Button fx:id="editUserButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#editUserOnAction" prefHeight="25.0" prefWidth="100.0" text="Rediger">
                <HBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="deleteUserButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Delete">
-               <HBox.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </HBox.margin>
-            </Button>
-            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Button">
+            <Button fx:id="deleteUserButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Slet">
                <HBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>

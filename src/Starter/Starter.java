@@ -38,6 +38,7 @@ public class Starter extends Application {
         // Sagsbehandler: tota // abcabc
         // Admin: admin // 12345
         // Borger: borgar30 // 12345
+        // Sekratær: ras // rass
 
     }
 

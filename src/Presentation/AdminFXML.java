@@ -7,6 +7,10 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import Aquaintance.IPresentation;
+import Data.User;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,7 +21,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -33,10 +40,30 @@ public class AdminFXML implements Initializable
 
     //Attributes of the Admin controller class.
     private IBusiness business;
-    @FXML
-    private Label AdminIDLabel;
+    private IPresentation UI;
+
     @FXML
     private Button logOutButton;
+    @FXML
+    private TableColumn<User, String> firstNameTableColumn;
+    @FXML
+    private TableColumn<?, ?> lastNameTableColumn;
+    @FXML
+    private TableColumn<?, ?> addressTableColumn;
+    @FXML
+    private TableColumn<?, ?> emailTableColumn;
+    @FXML
+    private TableColumn<?, ?> TypeTableColumn;
+    @FXML
+    private TableColumn<?, ?> usernameTableColumn;
+    @FXML
+    private TableColumn<?, ?> CPRTableColumn;
+    @FXML
+    private TableColumn<?, ?> phonenumberTableColumn;
+    @FXML
+    private TableColumn<?, ?> birthdayTableColumn;
+    @FXML
+    private Label AdminIDLabel;
     @FXML
     private MenuItem menuButton;
     @FXML
@@ -49,6 +76,8 @@ public class AdminFXML implements Initializable
     private Button editUserButton;
     @FXML
     private Button deleteUserButton;
+    @FXML
+    private TableView<User> tableIDTableView;
 
     /**
      * Constructor for AdminFXML
@@ -167,4 +196,83 @@ public class AdminFXML implements Initializable
         stage.showAndWait();
     }
 
+    public TableColumn<User, String> getFirstNameTableColumn() {
+        return firstNameTableColumn;
+    }
+
+    public void setFirstNameTableColumn(TableColumn<User, String> firstNameTableColumn) {
+        this.firstNameTableColumn = firstNameTableColumn;
+    }
+
+    public TableColumn<?, ?> getLastNameTableColumn() {
+        return lastNameTableColumn;
+    }
+
+    public void setLastNameTableColumn(TableColumn<?, ?> lastNameTableColumn) {
+        this.lastNameTableColumn = lastNameTableColumn;
+    }
+
+    public TableColumn<?, ?> getAddressTableColumn() {
+        return addressTableColumn;
+    }
+
+    public void setAddressTableColumn(TableColumn<?, ?> addressTableColumn) {
+        this.addressTableColumn = addressTableColumn;
+    }
+
+    public TableColumn<?, ?> getEmailTableColumn() {
+        return emailTableColumn;
+    }
+
+    public void setEmailTableColumn(TableColumn<?, ?> emailTableColumn) {
+        this.emailTableColumn = emailTableColumn;
+    }
+
+    public TableColumn<?, ?> getTypeTableColumn() {
+        return TypeTableColumn;
+    }
+
+    public void setTypeTableColumn(TableColumn<?, ?> typeTableColumn) {
+        TypeTableColumn = typeTableColumn;
+    }
+
+    public TableColumn<?, ?> getUsernameTableColumn() {
+        return usernameTableColumn;
+    }
+
+    public void setUsernameTableColumn(TableColumn<?, ?> usernameTableColumn) {
+        this.usernameTableColumn = usernameTableColumn;
+    }
+
+    public TableColumn<?, ?> getCPRTableColumn() {
+        return CPRTableColumn;
+    }
+
+    public void setCPRTableColumn(TableColumn<?, ?> CPRTableColumn) {
+        this.CPRTableColumn = CPRTableColumn;
+    }
+
+    public TableColumn<?, ?> getPhonenumberTableColumn() {
+        return phonenumberTableColumn;
+    }
+
+    public void setPhonenumberTableColumn(TableColumn<?, ?> phonenumberTableColumn) {
+        this.phonenumberTableColumn = phonenumberTableColumn;
+    }
+
+    public TableColumn<?, ?> getBirthdayTableColumn() {
+        return birthdayTableColumn;
+    }
+
+    public void setBirthdayTableColumn(TableColumn<?, ?> birthdayTableColumn) {
+        this.birthdayTableColumn = birthdayTableColumn;
+    }
+
+    public TableView<User> getTableIDTableView() {
+        return tableIDTableView;
+    }
+
+    public void setTableIDTableView(TableView<User> tableIDTableView) {
+        this.tableIDTableView = tableIDTableView;
+    }
 }
