@@ -12,17 +12,15 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
-
-import Business.PasswordGenerator;
 import javafx.scene.control.PasswordField;
+import javafx.scene.input.KeyCode;
 
 /**
  * FXML Controller class
  *
  * @author ProjektGruppe 10.
  */
-public class ResetPasswordController implements Initializable
-{
+public class ResetPasswordController implements Initializable {
 
     private IBusiness Business;
     private IPresentation UI;
@@ -35,7 +33,6 @@ public class ResetPasswordController implements Initializable
     private Label invalidUserName;
     @FXML
     private Label InvaldInputLabel;
-    PasswordGenerator pg = new PasswordGenerator();
     @FXML
     private TextField oldPasswordField;
     @FXML
@@ -47,21 +44,17 @@ public class ResetPasswordController implements Initializable
      * Initializes the controller class.
      */
     @Override
-    public void initialize(URL url, ResourceBundle rb)
-    {
+    public void initialize(URL url, ResourceBundle rb) {
         UI = PresentationFacade.getUI();
     }
 
-    public void injectBusiness(IBusiness business)
-    {
+    public void injectBusiness(IBusiness business) {
         this.Business = business;
     }
 
     @FXML
-    private void ResetButtonOnAction(ActionEvent event)
-    {
-        if (newPasswordField.getText().equals(newPasswordFieldRepeat.getText()))
-        {
+    private void ResetButtonOnAction(ActionEvent event) {
+        if (newPasswordField.getText().equals(newPasswordFieldRepeat.getText())) {
             UI.setPassword(oldPasswordField.getText(), newPasswordField.getText());
             Stage stage = (Stage) backButton.getScene().getWindow();
             stage.close();
@@ -69,20 +62,19 @@ public class ResetPasswordController implements Initializable
     }
 
     @FXML
-    private void backOnAction(ActionEvent event)
-    {
+    private void backOnAction(ActionEvent event) {
         Stage stage = (Stage) backButton.getScene().getWindow();
         stage.close();
     }
 
     @FXML
-    private void pressEnter(KeyEvent event)
-    {
-
-    }
-
-    @FXML
-    private void userNameOnAction(ActionEvent event)
-    {
+    private void pressEnter(KeyEvent event) {
+        if (event.getCode().equals(KeyCode.ENTER)) {
+            if (newPasswordField.getText().equals(newPasswordFieldRepeat.getText())) {
+                UI.setPassword(oldPasswordField.getText(), newPasswordField.getText());
+                Stage stage = (Stage) backButton.getScene().getWindow();
+                stage.close();
+            }
+        }
     }
 }

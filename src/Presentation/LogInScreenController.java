@@ -113,7 +113,6 @@ public class LogInScreenController implements Initializable
                         appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                         appStage.setResizable(true);
                         appStage.setScene(caseWorkerHome);
-                        appStage.setFullScreen(true);
                         appStage.show();
                     }
                     if (UI.getUserType(username, password).equals("[Sekretær]"))

@@ -73,6 +73,7 @@ public class citizenHomeController implements Initializable {
     private Label emailLabel11;
     @FXML
     private Label caseStatusLabel11;
+    
     private IBusiness Business;
     private IPresentation UI;
 
@@ -93,7 +94,6 @@ public class citizenHomeController implements Initializable {
         PhonenumberLabel.setText((String.valueOf(UI.getPhoneNumber())));
         emailLabel.setText(String.valueOf((UI.getEmail())));
         caseStatusLabel.setText(UI.getStatus());
-
     }
 
     @FXML
