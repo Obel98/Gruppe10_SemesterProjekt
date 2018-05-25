@@ -32,6 +32,7 @@ public class citizenHomeController implements Initializable {
 
     
     private IBusiness Business;
+    private IPresentation UI;
     @FXML
     private Button logOutButton;
     @FXML
