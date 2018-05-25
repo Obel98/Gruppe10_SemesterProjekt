@@ -9,23 +9,9 @@ package Aquaintance;
  *
  * @author Obel
  */
-public interface IUser
+public interface IAdmin
 {
-
-    String getUsername();
-
-    String getFirstname();
-
-    String getLastname();
-
-    String getEmail();
-
-    int getPhoneNumber();
-
-    int getCPR();
-
-    String getAddress();
-
-    String getBirthday();
-
+    
+    void createUser(int CPR, String firstname, String lastname, String address, int phoneNumber, String email, int cpr, String birthday, String username, String type, String password);
+    
 }

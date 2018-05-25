@@ -5,7 +5,7 @@ package Data;
  * implements IBorger
  * @author Gruppe10
  */
-public class Borger implements Aquaintance.IBorger {
+public class Borger implements Aquaintance.IUser{
 
     //Attributes for the Borger class.
     private String firstname;
@@ -13,7 +13,6 @@ public class Borger implements Aquaintance.IBorger {
     private String address;
     private int phoneNumber;
     private String email;
-    private String password;
     private int CPR;
     private String birthday;
     private String username;
@@ -160,15 +159,6 @@ public class Borger implements Aquaintance.IBorger {
         this.email = email;
     }
 
-    /**
-     * Getter Method for password Returns the value of password.
-     *
-     * @return String
-     */
-    @Override
-    public String getPassword() {
-        return password;
-    }
 
     /**
      * Getter Method for birthday Returns the value of birthday.

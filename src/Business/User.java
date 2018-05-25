@@ -20,7 +20,6 @@ public class User implements IUser
     private String address;
     private int phoneNumber;
     private String email;
-    private String password;
     private int CPR;
     private String birthday;
     private String username;
@@ -35,11 +34,11 @@ public class User implements IUser
      * @param phoneNumber Sets the phoneNumber of the Borger.
      * @param email Sets the email of the Borger.
      */
-    public User(int CPR, String firstname, String lastName, String address, int phoneNumber, String email, int cpr, String birthday, String username)
+    public User(int CPR, String firstname, String lastname, String address, int phoneNumber, String email, int cpr, String birthday, String username)
     {
         this.CPR = CPR;
         this.firstname = firstname;
-        this.lastname = lastName;
+        this.lastname = lastname;
         this.address = address;
         this.phoneNumber = phoneNumber;
         this.email = email;
@@ -52,12 +51,6 @@ public class User implements IUser
     public String getUsername()
     {
         return username;
-    }
-
-    @Override
-    public String getPassword()
-    {
-        return password;
     }
 
     @Override

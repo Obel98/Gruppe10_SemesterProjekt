@@ -1,60 +1,42 @@
 package Business;
 
 /**
- * Administrator class
- * Used for Administrator information.
+ * Administrator class Used for Administrator information.
+ *
  * @author Gruppe10
  */
-public class Administrator {
+public class Administrator extends User implements Aquaintance.IAdmin
+{
 
-    private String name;
-    private String id;
-    private String password;
-    private String userName;
+    public Administrator(int CPR, String firstname, String lastname, String address, int phoneNumber, String email, int cpr, String birthday, String username)
+    {
+        super(CPR, firstname, lastname, address, phoneNumber, email, cpr, birthday, username);
+    }
 
     /**
      * Constructor for Administrator
+     *
      * @param name Sets the name of the Administrator.
      * @param id Sets the id of the Administrator.
      */
-    public Administrator(String name, String id) {
-        this.name = name;
-        this.id = id;
+    @Override
+    public void createUser(int CPR, String firstname, String lastname, String address, int phoneNumber, String email, int cpr, String birthday, String usernam, String type, String password)
+    {
+        
     }
 
-    public void createUser() {
-
-    }
-
-    public void setPass() {
-
-    }
-
-    public void setUsername() {
+    public void setPass()
+    {
 
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public String getUsername() {
-        return userName;
-    }
-
-    public void setUserRights() {
+    public void setUsername()
+    {
 
     }
 
-    public void setUserInfo() {
+    public void setUserRights()
+    {
 
     }
-
-//    public boolean getUserRights(){
-//        return
-//    }
-//    
-//    public String getUserInfo(){
-//        return
-//    }
 }

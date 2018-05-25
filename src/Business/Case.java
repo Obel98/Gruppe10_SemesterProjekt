@@ -49,8 +49,8 @@ public class Case implements Aquaintance.ICase {
         this.ID = ID;
     }
 
-    public void setFirstName(String firtName) {
-        this.firstName = firtName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public void setLastName(String lastName) {
