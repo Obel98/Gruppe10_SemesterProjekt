@@ -29,9 +29,8 @@ import javafx.stage.Stage;
  */
 public class citizenHomeController implements Initializable {
 
-
-    
     private IBusiness Business;
+    private IPresentation UI;
     @FXML
     private Button logOutButton;
     @FXML
@@ -52,7 +51,6 @@ public class citizenHomeController implements Initializable {
     private Label emailLabel;
     @FXML
     private Label caseStatusLabel;
-
 
     /**
      * Initializes the controller class.
