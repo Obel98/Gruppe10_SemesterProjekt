@@ -16,15 +16,18 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.input.KeyCode;
 
 /**
- * FXML Controller class
- *
- * @author ProjektGruppe 10.
+ * FXML Controller ResetPasswordController class
+ * Used to handle the ResetPassword screen.
+ * implements Initializable
+ * @author Gruppe 10.
  */
-public class ResetPasswordController implements Initializable {
+public class ResetPasswordController implements Initializable 
+{
 
     private IBusiness Business;
     private IPresentation UI;
 
+    //Attributes of the ResetPasswordController class.
     @FXML
     private Button RestButton;
     @FXML
@@ -41,7 +44,9 @@ public class ResetPasswordController implements Initializable {
     private PasswordField newPasswordField;
 
     /**
-     * Initializes the controller class.
+     * Initializes the ResetPasswordController class.
+     * @param url
+     * @param rb
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -52,6 +57,11 @@ public class ResetPasswordController implements Initializable {
         this.Business = business;
     }
 
+    /**
+     * Handles the ResetButtonOn action
+     * Closes the scene.
+     * @param event
+     */
     @FXML
     private void ResetButtonOnAction(ActionEvent event) {
         if (newPasswordField.getText().equals(newPasswordFieldRepeat.getText())) {
@@ -61,12 +71,23 @@ public class ResetPasswordController implements Initializable {
         }
     }
 
+    /**
+     * Handles the backOn action
+     * Closes the scene.
+     * @param event
+     */
     @FXML
-    private void backOnAction(ActionEvent event) {
+    private void backOnAction(ActionEvent event) 
+    {
         Stage stage = (Stage) backButton.getScene().getWindow();
         stage.close();
     }
 
+    /**
+     * Handles the pressEnter action
+     * No implementation.
+     * @param event
+     */
     @FXML
     private void pressEnter(KeyEvent event) {
         if (event.getCode().equals(KeyCode.ENTER)) {
@@ -76,5 +97,15 @@ public class ResetPasswordController implements Initializable {
                 stage.close();
             }
         }
+    }
+
+    /**
+     * Handles the userNameOn action
+     * No implementation.
+     * @param event
+     */
+    @FXML
+    private void userNameOnAction(ActionEvent event) 
+    {
     }
 }

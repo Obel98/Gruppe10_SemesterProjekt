@@ -1,8 +1,8 @@
 package Data;
 
 /**
- * Borger class Used for Borger information. implements IBorger
- *
+ * Borger class Used for Borger information. 
+ * implements IBorger
  * @author Gruppe10
  */
 public class Borger implements Aquaintance.IBorger {
@@ -22,8 +22,7 @@ public class Borger implements Aquaintance.IBorger {
      * Constructor for Borger
      *
      * @param CPR Sets the CPR of the Borger.
-     * @param firstname
-     * @param name Sets the name of the Borger.
+     * @param firstname Sets the name of the Borger.
      * @param lastName Sets the lastName of the Borger.
      * @param address Sets the address of the Borger.
      * @param phoneNumber Sets the phoneNumber of the Borger.

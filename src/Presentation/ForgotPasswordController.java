@@ -16,15 +16,18 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 /**
- * FXML Controller class
- *
- * @author ProjektGruppe 10.
+ * FXML Controller ForgotPasswordController class
+ * Used to handle Forgot Password.
+ * implements Initializable
+ * @author Gruppe 10.
  */
-public class ForgotPasswordController implements Initializable {
+public class ForgotPasswordController implements Initializable 
+{
 
     private IBusiness Business;
     private IPresentation UI;
 
+    //Attributes of the ForgotPasswordController class.
     @FXML
     private TextField usernameTextField;
     @FXML
@@ -37,8 +40,7 @@ public class ForgotPasswordController implements Initializable {
     private Button okButton;
 
     /**
-     * Initializes the controller class.
-     *
+     * Initializes the ForgotPasswordController class.
      * @param url
      * @param rb
      */
@@ -51,6 +53,11 @@ public class ForgotPasswordController implements Initializable {
         this.Business = business;
     }
 
+    /**
+     * Handles the okButton action
+     * To be changed.
+     * @param event
+     */
     @FXML
     private void okButtonOnAction(ActionEvent event) {
         if (UI.validateUsername(usernameTextField.getText())) {
@@ -64,15 +71,26 @@ public class ForgotPasswordController implements Initializable {
         }
     }
 
+    /**
+     * Handles the backOn action
+     * Closes the scene.
+     * @param event
+     */
     @FXML
-
-    private void backOnAction(ActionEvent event) {
+    private void backOnAction(ActionEvent event) 
+    {
         Stage stage = (Stage) backButton.getScene().getWindow();
         stage.close();
     }
 
+    /**
+     * Handles the pressEnter action
+     * To be changed.
+     * @param event
+     */
     @FXML
-    private void pressEnter(KeyEvent event) {
+    private void pressEnter(KeyEvent event) 
+    {
         if (event.getCode().equals(KeyCode.ENTER)) {
             if (UI.validateUsername(usernameTextField.getText())) {
                 passwordTextField.setText(UI.showPassword(usernameTextField.getText()));

@@ -87,7 +87,9 @@ public class AdminFXML implements Initializable
     }
 
     /**
-     * Initializes the controller class.
+     * Initializes the Admin controller class.
+     * @param url
+     * @param rb
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) 
