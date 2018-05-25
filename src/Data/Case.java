@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Data;
 
 import Aquaintance.ICase;
@@ -12,13 +7,16 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 /**
- *
- * @author borga
+ * Case class
+ * Used for Case information.
+ * implements ICase
+ * @author Gruppe10
  */
 public class Case implements ICase {
 
+    //Attributes for the Case class.
     private int ID;
-    private String firtName;
+    private String firstName;
     private String lastName;
     private int phoneNumber;
     private String email;
@@ -30,6 +28,11 @@ public class Case implements ICase {
     private String date;
     private String userName;
 
+     /**
+     * Constructor for Case
+     * @param ID Sets the ID of the Case.
+     * Loads the information from the database into the case based on the ID.
+     */
     public Case(int ID) {
         String[] result0 = new String[4];
         try {
@@ -83,7 +86,7 @@ public class Case implements ICase {
             System.out.println(e);
         }
 
-        this.firtName = result01[0];
+        this.firstName = result01[0];
         this.lastName = result01[1];
         this.phoneNumber = Integer.parseInt(result01[2]);
         this.email = result01[3];
@@ -94,59 +97,72 @@ public class Case implements ICase {
         this.status = "Under behandling";
     }
 
+    @Override
     public String getJournal() {
         return journal;
     }
 
     @Override
     public String toString() {
-        return "JournalFormat{" + "ID=" + ID + ", firtName=" + firtName + ", lastName=" + lastName + ", phoneNumber=" + phoneNumber + ", email=" + email + ", birthday=" + birthday + ", CPR=" + CPR + ", addresse=" + address + ", journal=" + journal + ", status=" + status + '}';
+        return "JournalFormat{" + "ID=" + ID + ", firtName=" + firstName + ", lastName=" + lastName + ", phoneNumber=" + phoneNumber + ", email=" + email + ", birthday=" + birthday + ", CPR=" + CPR + ", addresse=" + address + ", journal=" + journal + ", status=" + status + '}';
     }
 
+    @Override
     public int getID() {
         return ID;
     }
 
+    @Override
     public String getFirstName() {
-        return firtName;
+        return firstName;
     }
 
+    @Override
     public String getLastName() {
         return lastName;
     }
 
+    @Override
     public int getPhoneNumber() {
         return phoneNumber;
     }
 
+    @Override
     public String getEmail() {
         return email;
     }
 
+    @Override
     public String getBirthday() {
         return birthday;
     }
 
+    @Override
     public int getCPR() {
         return CPR;
     }
 
+    @Override
     public String getStatus() {
         return status;
     }
 
+    @Override
     public ICase getCase() {
         return this;
     }
 
+    @Override
     public String getAddress() {
         return address;
     }
 
+    @Override
     public String getDate() {
         return date;
     }
 
+    @Override
     public String getUserName() {
         return userName;
     }

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Presentation;
 
 import Aquaintance.IBusiness;
@@ -73,7 +68,7 @@ public class ViewCase implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         UI = PresentationFacade.getUI();
-        UI.getCase(3);
+        UI.getCase(4);
         caseIDLabel.setText(String.valueOf(UI.getID()));
         firstNameLabel.setText(UI.getFirstName());
         lastNameLabel.setText(UI.getLastName());

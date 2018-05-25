@@ -1,18 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Presentation;
 
 import Aquaintance.IBusiness;
-
+import Aquaintance.IPresentation;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -31,7 +25,7 @@ import javafx.stage.Stage;
 /**
  * FXML Controller class
  *
- * @author rasmu
+ * @author ProjektGruppe 10.
  */
 public class citizenHomeController implements Initializable {
 
@@ -63,24 +57,25 @@ public class citizenHomeController implements Initializable {
     /**
      * Initializes the controller class.
      */
-
     public void injectBusiness(IBusiness business) {
         this.Business = business;
     }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        UI = PresentationFacade.getUI();
+        UI.getCase(3);
+        caseIDLabel.setText(String.valueOf(UI.getID()));
+        firstNameLabel.setText(String.valueOf(UI.getFirstName()));
+        lastNameLabel.setText(String.valueOf(UI.getLastName()));
+        PhonenumberLabel.setText((String.valueOf(UI.getPhoneNumber())));
+        emailLabel.setText(String.valueOf((UI.getEmail())));
+        caseStatusLabel.setText(UI.getStatus());
+
     }
 
     @FXML
-    private void LogOutAction(ActionEvent event) throws IOException {
-        /*Parent root = FXMLLoader.load(getClass().getResource("FXML/LogInScreen.fxml"));
-
-        Scene logIn = new Scene(root);
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(logIn);
-        stage.show(); */
+    private void LogOutAction(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/LogInScreen.fxml"));
             Pane root = loader.load();

@@ -1,10 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Presentation;
 
+import Aquaintance.IBusiness;
+import Aquaintance.IPresentation;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -21,17 +18,19 @@ import javafx.stage.Stage;
 /**
  * FXML Controller class
  *
- * @author borga
+ * @author ProjektGruppe 10.
  */
 public class ForgotPasswordController implements Initializable {
 
+    private IBusiness Business;
+    private IPresentation UI;
+
     @FXML
-    private TextField UserNameTextField;
+    private TextField usernameTextField;
     @FXML
     private TextField passwordTextField;
     @FXML
     private Button backButton;
-
     @FXML
     private Label invalidUserName;
     @FXML
@@ -39,17 +38,25 @@ public class ForgotPasswordController implements Initializable {
 
     /**
      * Initializes the controller class.
+     *
+     * @param url
+     * @param rb
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        UI = PresentationFacade.getUI();
+    }
+
+    public void injectBusiness(IBusiness business) {
+        this.Business = business;
     }
 
     @FXML
     private void okButtonOnAction(ActionEvent event) {
-        if ("admin".equals(UserNameTextField.getText())) {
-            passwordTextField.setText("admin");
+        if (UI.validateUsername(usernameTextField.getText())) {
+            passwordTextField.setText(UI.showPassword(usernameTextField.getText()));
             invalidUserName.setText("");
+            
         } else {
             invalidUserName.setText("Inncorrect username, Try again!");
             invalidUserName.setTextFill(Color.rgb(210, 39, 30));
@@ -67,11 +74,8 @@ public class ForgotPasswordController implements Initializable {
     @FXML
     private void pressEnter(KeyEvent event) {
         if (event.getCode().equals(KeyCode.ENTER)) {
-            if ("admin".equals(UserNameTextField.getText())) {
-                passwordTextField.setText("admin");
-                invalidUserName.setText("");
-            } else if ("sagb".equals(UserNameTextField.getText())) {
-                passwordTextField.setText("sagb");
+            if (UI.validateUsername(usernameTextField.getText())) {
+                passwordTextField.setText(UI.showPassword(usernameTextField.getText()));
                 invalidUserName.setText("");
             } else {
                 invalidUserName.setText("Inncorrect username, Try again!");

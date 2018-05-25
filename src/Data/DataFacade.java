@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Data;
 
 import Aquaintance.ICase;
@@ -10,21 +5,24 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Mads Obel Jensen
+ * @author ProjektGruppe 10.
  */
-public class DataFacade implements Aquaintance.IData {
+public class DataFacade implements Aquaintance.IData
+{
 
     private ICase iCase;
-
+    
     @Override
-    public ICase getCase(int id) {
+    public ICase getCase(int id)
+    {
         Case sag = new Case(id);
         iCase = sag.getCase();
         return iCase;
     }
 
     @Override
-    public boolean validateUserName(String username) {
+    public boolean validateUserName(String username)
+    {
         Database db = new Database();
         ArrayList<String> temp = new ArrayList<>();
         temp = db.sendQuery("SELECT username FROM users");
@@ -32,7 +30,8 @@ public class DataFacade implements Aquaintance.IData {
     }
 
     @Override
-    public boolean validatePassword(String username, String password) {
+    public boolean validatePassword(String username, String password)
+    {
         Database db = new Database();
         ArrayList<String> temp = new ArrayList<>();
         temp = db.sendQuery("SELECT password FROM users WHERE username = '" + username + "'");
@@ -40,11 +39,27 @@ public class DataFacade implements Aquaintance.IData {
     }
 
     @Override
-    public String getUserType(String username, String password) {
+    public String getUserType(String username, String password)
+    {
         Database db = new Database();
         ArrayList<String> temp = new ArrayList<>();
         temp = db.sendQuery("SELECT type FROM users WHERE username = '" + username + "' AND password = '" + password + "'");
         return temp.toString();
     }
+
+    @Override
+    public void setPassword(String oldPassword, String newPassword)
+    {
+        Database db = new Database();
+        db.sendQuery("Update users set password = '" + newPassword + "' where password = '" + oldPassword + "'");
+    }
+
+    @Override
+    public String showPassword(String username)
+    {
+        Database db = new Database();
+        return db.sendQuery("Select password from users where username ='" + username + "'").get(0);
+    }
+
 
 }

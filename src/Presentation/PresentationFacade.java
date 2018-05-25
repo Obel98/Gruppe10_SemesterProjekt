@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Presentation;
 
 import Aquaintance.IBusiness;
@@ -16,33 +11,41 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 /**
+ * FXML Controller class
  *
- * @author Mads Obel Jensen
+ * @author ProjektGruppe 10.
  */
-public class PresentationFacade implements Aquaintance.IPresentation {
+public class PresentationFacade implements Aquaintance.IPresentation
+{
 
     private static IBusiness Business;
     private static IPresentation UI;
     private Stage stage = new Stage();
 
-    public PresentationFacade() {
+    public PresentationFacade()
+    {
     }
 
-    public static IPresentation getUI() {
-        if (UI == null) {
+    public static IPresentation getUI()
+    {
+        if (UI == null)
+        {
             UI = new PresentationFacade();
         }
         return UI;
     }
 
     @Override
-    public void injectBusiness(IBusiness business) {
+    public void injectBusiness(IBusiness business)
+    {
         this.Business = business;
     }
 
     @Override
-    public void start() {
-        try {
+    public void start()
+    {
+        try
+        {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/LogInScreen.fxml"));
             Pane root = loader.load();
             LogInScreenController controller = loader.getController();
@@ -53,68 +56,112 @@ public class PresentationFacade implements Aquaintance.IPresentation {
             stage.setScene(logIn);
             stage.show();
             stage.setResizable(false);
-        } catch (IOException ex) {
+        }
+        catch (IOException ex)
+        {
             Logger.getLogger(PresentationFacade.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
     @Override
-    public int getID() {
+    public int getID()
+    {
         return Business.getID();
     }
 
     @Override
-    public String getFirstName() {
+    public String getFirstName()
+    {
         return Business.getFirstName();
     }
 
     @Override
-    public String getLastName() {
+    public String getLastName()
+    {
         return Business.getLastName();
     }
 
     @Override
-    public int getPhoneNumber() {
+    public int getPhoneNumber()
+    {
         return Business.getPhoneNumber();
     }
 
     @Override
-    public String getEmail() {
+    public String getEmail()
+    {
         return Business.getEmail();
     }
 
     @Override
-    public String getBirthday() {
+    public String getBirthday()
+    {
         return Business.getBirthday();
     }
 
     @Override
-    public int getCPR() {
+    public int getCPR()
+    {
         return Business.getCPR();
     }
 
     @Override
-    public String getAddress() {
+    public String getAddress()
+    {
         return Business.getAddress();
     }
 
     @Override
-    public String getJournal() {
+    public String getJournal()
+    {
         return Business.getJournal();
     }
 
     @Override
-    public String getStatus() {
+    public String getStatus()
+    {
         return Business.getStatus();
     }
 
     @Override
-    public String getUsername() {
+    public String getUsername()
+    {
         return Business.getUsername();
     }
 
     @Override
-    public void getCase(int ID) {
-        Business.getCase(ID);
+    public void getCase(int ID)
+    {
+        Business.setCase(ID);
+    }
+
+    @Override
+    public void setPassword(String oldPassword, String newPassword)
+    {
+        Business.setPassword(oldPassword, newPassword);
+    }
+
+    @Override
+    public boolean validateUsername(String username)
+    {
+        return Business.validateUsername(username);
+    }
+
+    @Override
+    public boolean validatePassword(String username, String password)
+    {
+        return Business.validatePassword(username, password);
+    }
+
+    @Override
+    public String getUserType(String username, String password)
+    {
+        return Business.getUserType(username, password);
+    }
+
+    @Override
+    public String showPassword(String username)
+    {
+        return Business.showPassword(username);
     }
 }

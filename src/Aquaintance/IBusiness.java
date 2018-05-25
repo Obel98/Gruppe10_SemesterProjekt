@@ -1,19 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Aquaintance;
 
 /**
  *
- * @author Mads Obel Jensen
+ * @author ProjektGruppe 10.
  */
 public interface IBusiness {
 
     void injectData(IData data);
 
-    void getCase(int ID);
+    void setCase(int ID);
 
     int getID();
 
@@ -42,5 +37,9 @@ public interface IBusiness {
     boolean validatePassword(String username, String password);
 
     String getUserType(String username, String password);
-
+    
+    void setPassword(String oldPassword, String newPassword);
+    
+    String showPassword(String username);
+    
 }

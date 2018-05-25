@@ -2,6 +2,10 @@ package Business;
 
 import Aquaintance.ICase;
 
+/**
+ *
+ * @author ProjektGruppe 10.
+ */
 public class Case implements Aquaintance.ICase {
 
     private int ID;
