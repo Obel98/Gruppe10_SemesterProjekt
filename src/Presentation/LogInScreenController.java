@@ -27,13 +27,12 @@ import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
 /**
- * FXML Controller LogInScreenController class
- * Used to handle the LogIn screen.
+ * FXML Controller LogInScreenController class Used to handle the LogIn screen.
  * implements Initializable
+ *
  * @author Gruppe 10.
  */
-public class LogInScreenController implements Initializable 
-{
+public class LogInScreenController implements Initializable {
 
     //Attributes of the LogInScreenController class.
     private IPresentation UI;
@@ -51,8 +50,9 @@ public class LogInScreenController implements Initializable
     private Label passwordMsgLabel;
 
     /**
-     * Initializes the LogInScreenController class.
-     * Sets the UI attribute to the PresentationFacade.
+     * Initializes the LogInScreenController class. Sets the UI attribute to the
+     * PresentationFacade.
+     *
      * @param location
      * @param resources
      */
@@ -62,8 +62,8 @@ public class LogInScreenController implements Initializable
     }
 
     /**
-     * Handles the ResetPassword action
-     * Shows ForgotPassword.fxml on use
+     * Handles the ResetPassword action Shows ForgotPassword.fxml on use
+     *
      * @param event
      * @throws IOException
      */
@@ -81,16 +81,17 @@ public class LogInScreenController implements Initializable
 
     /**
      * Inject Method for Business
+     *
      * @param business Sets the businessLayer to use.
      */
-    public void injectBusiness(IBusiness business) 
-    {
+    public void injectBusiness(IBusiness business) {
         this.Business = business;
     }
 
     /**
-     * Handles the pressEnter action
-     * Checks LogIn information and shows the FXML scene associated with the Type of the User.
+     * Handles the pressEnter action Checks LogIn information and shows the FXML
+     * scene associated with the Type of the User.
+     *
      * @param event
      * @throws IOException
      */
@@ -153,25 +154,30 @@ public class LogInScreenController implements Initializable
 
                     }
 
+                } else {
+                    passwordMsgLabel.setText("Incorrect password or username, Try again!");
+                    passwordMsgLabel.setTextFill(Color.rgb(210, 39, 30));
+                    System.out.println("");
+                    System.out.println("Wrong password");
                 }
+
             } else {
                 passwordMsgLabel.setText("Incorrect password or username, Try again!");
                 passwordMsgLabel.setTextFill(Color.rgb(210, 39, 30));
-                System.out.println("inderste");
+                System.out.println("");
+                System.out.println("Wrong username");
             }
         }
-//        } else {
-//            passwordMsgLabel.setText("Incorrect password or username, Try again!");
-//            passwordMsgLabel.setTextFill(Color.rgb(210, 39, 30));
-//            System.out.println("midsterste");
     }
 
     /**
-     * Handles the LogOnButton action
-     * Checks LogIn information and shows the FXML scene associated with the Type of the User.
+     * Handles the LogOnButton action Checks LogIn information and shows the
+     * FXML scene associated with the Type of the User.
+     *
      * @param event
      * @throws IOException
      */
+    
     @FXML
     private void LogOnButtonAction(ActionEvent event) throws IOException {
         String username = UsernameBox.getText();
@@ -244,13 +250,18 @@ public class LogInScreenController implements Initializable
                             event.consume();
                         }
                     });
-                } else {
-                    passwordMsgLabel.setText("Incorrect password or username, Try again!");
-                    passwordMsgLabel.setTextFill(Color.rgb(210, 39, 30));
                 }
-
+            } else {
+                passwordMsgLabel.setText("Incorrect password or username, Try again!");
+                passwordMsgLabel.setTextFill(Color.rgb(210, 39, 30));
+                System.out.println("");
+                System.out.println("Wrong password");
             }
+        } else {
+            passwordMsgLabel.setText("Incorrect password or username, Try again!");
+            passwordMsgLabel.setTextFill(Color.rgb(210, 39, 30));
+            System.out.println("");
+            System.out.println("Wrong username");
         }
     }
-
 }
