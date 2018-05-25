@@ -42,7 +42,6 @@ public class caseComment implements Initializable {
     private void backOnAction(ActionEvent event) {
         Stage stage = (Stage) backButton.getScene().getWindow();
         stage.close();
-
     }
 
     @FXML
