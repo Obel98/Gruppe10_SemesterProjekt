@@ -20,7 +20,6 @@ public class DataUser implements IUser
     private String address;
     private int phoneNumber;
     private String email;
-    private String password;
     private int CPR;
     private String birthday;
     private String username;
@@ -52,12 +51,6 @@ public class DataUser implements IUser
     public String getUsername()
     {
         return username;
-    }
-
-    @Override
-    public String getPassword()
-    {
-        return password;
     }
 
     @Override

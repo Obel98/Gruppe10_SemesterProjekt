@@ -2,6 +2,7 @@ package Presentation;
 
 import Aquaintance.IBusiness;
 import Aquaintance.IPresentation;
+import Aquaintance.IUser;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -22,6 +23,7 @@ public class PresentationFacade implements Aquaintance.IPresentation
     //Attributes of the PresentationFacade class.
     private static IBusiness Business;
     private static IPresentation UI;
+    private IUser activeUser;
     private Stage stage = new Stage();
 
     /**
