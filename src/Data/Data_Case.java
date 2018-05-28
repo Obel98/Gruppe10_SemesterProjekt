@@ -12,7 +12,7 @@ import java.sql.Statement;
  * implements ICase
  * @author Gruppe10
  */
-public class Case implements ICase {
+public class Data_Case implements ICase {
 
     //Attributes for the Case class.
     private int ID;
@@ -33,7 +33,7 @@ public class Case implements ICase {
      * @param ID Sets the ID of the Case.
      * Loads the information from the database into the case based on the ID.
      */
-    public Case(int ID) {
+    public Data_Case(int ID) {
         String[] result0 = new String[4];
         try {
             Class.forName("org.postgresql.Driver");

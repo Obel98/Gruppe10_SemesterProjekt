@@ -6,7 +6,7 @@ import Aquaintance.ICase;
  *
  * @author ProjektGruppe 10.
  */
-public class Case implements Aquaintance.ICase {
+public class Bussiness_Case implements Aquaintance.ICase {
 
     private int ID;
     private String firstName;
@@ -21,7 +21,7 @@ public class Case implements Aquaintance.ICase {
     private String date;
     private String userName;
 
-    public Case(ICase ic) {
+    public Bussiness_Case(ICase ic) {
         this.ID = ic.getID();
         this.journal = ic.getJournal();
         this.status = "Under behandling";
