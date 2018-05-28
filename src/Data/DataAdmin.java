@@ -12,13 +12,13 @@ package Data;
 public class DataAdmin extends DataUser implements Aquaintance.IAdmin
 {
 
-    public DataAdmin(int CPR, String firstname, String lastname, String address, int phoneNumber, String email, int cpr, String birthday, String username)
+    public DataAdmin(int CPR, String firstname, String lastname, String address, int phoneNumber, String email, String birthday, String username)
     {
-        super(CPR, firstname, lastname, address, phoneNumber, email, cpr, birthday, username);
+        super(CPR, firstname, lastname, address, phoneNumber, email, birthday, username);
     }
 
     @Override
-    public void createUser(int CPR, String firstname, String lastname, String address, int phoneNumber, String email, int cpr, String birthday, String username, String type, String password)
+    public void createUser(int CPR, String firstname, String lastname, String address, int phoneNumber, String email, String birthday, String username, String type, String password)
     {
         Database db = new Database();
         db.sendQuery("Insert into users values ('" + firstname + "', '" + lastname + "', '" + address + "', '" + email + "', '"

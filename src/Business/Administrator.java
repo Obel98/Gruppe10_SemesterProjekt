@@ -8,9 +8,9 @@ package Business;
 public class Administrator extends User implements Aquaintance.IAdmin
 {
 
-    public Administrator(int CPR, String firstname, String lastname, String address, int phoneNumber, String email, int cpr, String birthday, String username)
+    public Administrator(int CPR, String firstname, String lastname, String address, int phoneNumber, String email, String birthday, String username)
     {
-        super(CPR, firstname, lastname, address, phoneNumber, email, cpr, birthday, username);
+        super(CPR, firstname, lastname, address, phoneNumber, email, birthday, username);
     }
 
     /**
@@ -20,9 +20,9 @@ public class Administrator extends User implements Aquaintance.IAdmin
      * @param id Sets the id of the Administrator.
      */
     @Override
-    public void createUser(int CPR, String firstname, String lastname, String address, int phoneNumber, String email, int cpr, String birthday, String usernam, String type, String password)
+    public void createUser(int CPR, String firstname, String lastname, String address, int phoneNumber, String email, String birthday, String usernam, String type, String password)
     {
-        
+
     }
 
     public void setPass()

@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package Aquaintance;
-
 /**
  *
  * @author Obel
@@ -12,6 +11,6 @@ package Aquaintance;
 public interface IAdmin
 {
     
-    void createUser(int CPR, String firstname, String lastname, String address, int phoneNumber, String email, int cpr, String birthday, String username, String type, String password);
-    
+    void createUser(int CPR, String firstname, String lastname, String address, int phoneNumber, String email, String birthday, String username, String type, String password);
+
 }

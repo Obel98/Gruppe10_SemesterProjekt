@@ -34,7 +34,7 @@ public class User implements IUser
      * @param phoneNumber Sets the phoneNumber of the Borger.
      * @param email Sets the email of the Borger.
      */
-    public User(int CPR, String firstname, String lastname, String address, int phoneNumber, String email, int cpr, String birthday, String username)
+    public User(int CPR, String firstname, String lastname, String address, int phoneNumber, String email, String birthday, String username)
     {
         this.CPR = CPR;
         this.firstname = firstname;
@@ -42,7 +42,6 @@ public class User implements IUser
         this.address = address;
         this.phoneNumber = phoneNumber;
         this.email = email;
-        this.CPR = cpr;
         this.birthday = birthday;
         this.username = username;
     }
