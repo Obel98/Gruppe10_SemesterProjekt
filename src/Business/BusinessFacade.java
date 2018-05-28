@@ -14,7 +14,7 @@ public class BusinessFacade implements Aquaintance.IBusiness
 
     //Attributes for the BusinessFacade class.
     private IData data;
-    private Case sag;
+    private Bussiness_Case sag;
 
     /**
      * Inject Method for Data
@@ -36,7 +36,7 @@ public class BusinessFacade implements Aquaintance.IBusiness
     public void setCase(int ID)
     {
         ICase temp = data.getCase(ID);
-        sag = new Case(temp);
+        sag = new Bussiness_Case(temp);
     }
 
     /**

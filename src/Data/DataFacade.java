@@ -15,7 +15,7 @@ public class DataFacade implements Aquaintance.IData
     @Override
     public ICase getCase(int id)
     {
-        Case sag = new Case(id);
+        Data_Case sag = new Data_Case(id);
         iCase = sag.getCase();
         return iCase;
     }

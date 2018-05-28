@@ -1,13 +1,13 @@
 package Data;
 
 /**
- * Borger class Used for Borger information. 
+ * Citizen class Used for Citizen information. 
  * implements IBorger
  * @author Gruppe10
  */
-public class Borger implements Aquaintance.IUser{
+public class Citizen implements Aquaintance.IUser{
 
-    //Attributes for the Borger class.
+    //Attributes for the Citizen class.
     private String firstname;
     private String lastname;
     private String address;
@@ -30,7 +30,7 @@ public class Borger implements Aquaintance.IUser{
      * @param email Sets the email of the Borger.
      * @param username
      */
-    public Borger(int CPR, String firstname, String lastName, String address, int phoneNumber, String email, int cpr, String birthday, String username) {
+    public Citizen(int CPR, String firstname, String lastName, String address, int phoneNumber, String email, int cpr, String birthday, String username) {
         this.CPR = CPR;
         this.firstname = firstname;
         this.lastname = lastName;
