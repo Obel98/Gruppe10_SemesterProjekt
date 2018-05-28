@@ -77,8 +77,8 @@ public class Case implements Aquaintance.ICase {
         this.address = address;
     }
 
-    public void setCommentar(String commentar) {
-        this.journal = commentar;
+    public void setComment(String comment) {
+        this.journal = comment  ;
     }
 
     public void setStatus(String status) {
