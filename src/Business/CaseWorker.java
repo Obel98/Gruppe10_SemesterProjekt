@@ -4,7 +4,7 @@ package Business;
  *
  * @author ProjektGruppe 10.
  */
-public class Sagsbehandler {
+public class CaseWorker {
 
     private String name;
     private String id;
@@ -12,7 +12,7 @@ public class Sagsbehandler {
     private String phoneNumber;
     private String email;
 
-    public Sagsbehandler(String name, String phoneNumber, String email) {
+    public CaseWorker(String name, String phoneNumber, String email) {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.email = email;
