@@ -1,5 +1,7 @@
 package Aquaintance;
 
+import Data.Data_Case;
+
 /**
  *
  * @author ProjektGruppe 10.
@@ -26,7 +28,7 @@ public interface ICase {
 
     String getStatus();
 
-    ICase getCase();
+    Data_Case getCase();
 
     String getDate();
 

@@ -148,7 +148,7 @@ public class Data_Case implements ICase {
     }
 
     @Override
-    public ICase getCase() {
+    public Data_Case getCase() {
         return this;
     }
 
