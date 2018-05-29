@@ -75,7 +75,7 @@ public class ViewCase implements Initializable
     public void initialize(URL url, ResourceBundle rb) 
     {
         UI = PresentationFacade.getUI();
-        UI.getCase(4);
+        UI.getCase(3);
         caseIDLabel.setText(String.valueOf(UI.getID()));
         firstNameLabel.setText(UI.getFirstName());
         lastNameLabel.setText(UI.getLastName());
